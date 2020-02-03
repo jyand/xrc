@@ -1,0 +1,119 @@
+for_window [class="^.*"] border pixel 4
+gaps inner 8
+gaps outer 0
+set $term $TERMINAL
+set $mod Mod4
+
+# Set wallpaper
+exec feh --bg-fill ~/scripts/bkgnd.jpg
+
+# Set Xresources colors:
+set_from_resource $darkblack	color0  #000000
+set_from_resource $black	color8  #000000
+set_from_resource $darkred	color1  #000000
+set_from_resource $red		color9  #000000
+set_from_resource $darkgreen	color2  #000000
+set_from_resource $green	color10 #000000
+set_from_resource $darkyellow	color3  #000000
+set_from_resource $yellow	color11 #000000
+set_from_resource $darkblue	color4  #000000
+set_from_resource $blue		color12 #000000
+set_from_resource $darkmagenta	color5  #000000
+set_from_resource $magenta	color13 #000000
+set_from_resource $darkcyan	color6  #000000
+set_from_resource $cyan		color14 #000000
+set_from_resource $darkwhite	color7  #000000
+set_from_resource $white	color15 #000000
+
+#                       BORDER		BACKGROUND	TEXT		INDICATOR   CHILD_BORDER
+client.focused		$red		$red		$magenta	$darkmagenta		$darkblue
+client.unfocused	$transparent	$blue		$white		$darkblue		$darkblack
+client.focused_inactive	$transparent	$blue		$white		$darkblue		$darkblack
+client.urgent		$darkred	$darkred	$black		$darkred		$darkred
+client.background $black
+
+bar {
+	font pango:mono 8
+	colors {
+			background $darkblack
+			statusline $white
+			separator $red
+			focused_workspace $cyan $darkwhite $darkmagenta
+      			inactive_workspace $magenta $darkmagenta $black
+        }
+	status_command i3blocks
+	position top
+	mode dock
+	modifier None
+}
+
+bindsym $mod+q			[con_id="__focused__"] kill
+
+bindsym $mod+Return             exec $term $FILE
+bindsym $mod+Escape 		exec $term -e fish
+bindsym $mod+parenleft          gaps outer current minus 8
+bindsym $mod+slash              gaps outer current plus 8
+bindsym $mod+equal              gaps inner current minus 2
+bindsym $mod+minus              gaps inner current plus 2
+bindsym $mod+space		split toggle
+
+bindsym $mod+y                  exec ~/scripts/displayselect.sh
+bindsym $mod+t                  exec $term -e nmtui
+
+bindsym $mod+u  		exec ~/scripts/i3resize.sh left
+bindsym $mod+i		        exec ~/scripts/i3resize.sh down
+bindsym $mod+o 			exec ~/scripts/i3resize.sh up
+bindsym $mod+p			exec ~/scripts/i3resize.sh right
+
+bindsym $mod+r                  exec redshift -O 2500
+bindsym $mod+e                  exec redshift -x
+
+bindsym $mod+d			exec dmenu_run
+bindsym $mod+s            	exec maim -s ~/img/screenshots/$(date +%s).png
+
+bindsym $mod+f			fullscreen toggle
+bindsym $mod+g                  bar mode toggle
+bindsym $mod+a			floating toggle
+
+bindsym $mod+h			focus left
+bindsym $mod+period             move left 30
+bindsym $mod+j			focus down
+bindsym $mod+underscore         move down 30
+bindsym $mod+k			focus up
+bindsym $mod+parenright		move up 30
+bindsym $mod+l			focus right
+bindsym $mod+semicolon	        move right 30
+
+bindsym $mod+v 		        exec torbrowser-launcher
+bindsym $mod+b                  exec $BROWSER ~/.homepage
+
+bindsym $mod+c                   exec pamixer -i 5
+bindsym $mod+x                   exec pamixer -d 5
+bindsym $mod+z                   exec pamixer -t
+
+bindsym $mod+asciitilde         exec $term -e gotop -c vice -pafs
+bindsym $mod+Tab                exec $term -e htop -t --sort-key PERCENT_CPU --sort-key USER --sort-key PERCENT_MEM
+
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+
+# switch to workspace
+bindsym $mod+w          workspace back_and_forth
+bindsym $mod+n  	workspace $ws1
+bindsym $mod+m  	workspace $ws2
+bindsym $mod+comma  	workspace $ws3
+bindsym $mod+colon  	workspace $ws4
+
+# move focused container to workspace
+bindsym $mod+1          move container to workspace $ws1
+bindsym $mod+2 	        move container to workspace $ws2
+bindsym $mod+3          move container to workspace $ws3
+bindsym $mod+4          move container to workspace $ws4
+
+for_window [class="Zathura"] floating enable
+for_window [class="feh"] floating enable
+
+for_window [window_role="GtkFileChooserDialog"] resize set 800 600
+for_window [window_role="GtkFileChooserDialog"] move position center

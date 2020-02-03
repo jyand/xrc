@@ -1,0 +1,36 @@
+*.foreground:  #ffffff
+*.background:  #000000
+! black
+*.color0:      #000000
+*.color8:      #ffff07
+! red
+*.color1:      #ff8100
+*.color9:      #aa5500
+! green
+*.color2:      #ff00f3
+*.color10:     #ff00f3
+! yellow
+*.color3:      #aaaa7f
+*.color11:     #00c27b
+! blue
+*.color4:      #33ff00
+*.color12:     #ffdbfa
+! magenta
+*.color5:      #8c00ff
+*.color13:     #aa0049
+! cyan
+*.color6:      #00ffff
+*.color14:     #ffff07
+! white
+*.color7:      #ff0000
+*.color15:     #ffa4a6
+
+*.font: xft:IBM Plex Mono SemiBold:pixelsize=13
+*cursorBlink: true
+*antialias: true
+
+XTerm.vt100.saveLines: 64
+XTerm.vt100.scrollBar: false
+
+Ctrl Shift <Key>C: copy-selection(CLIPBOARD) \n\
+Ctrl Shift <Key>V: insert-selection(CLIPBOARD)

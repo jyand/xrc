@@ -1,0 +1,14 @@
+set selection-clipboard clipboard
+set input-bg "FFBDFA"
+set input-fg "8C00FF"
+set statusbar-h-padding 4
+set statusbar-v-padding 4
+set page-padding 0
+map u scroll half-up
+map i scroll half-down
+map r reload
+map R rotate
+map H zoom in
+map L zoom out
+map <Return> recolor
+map p print
