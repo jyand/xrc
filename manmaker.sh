@@ -1,6 +1,7 @@
 #!/bin/sh
+# converts all man pages to .pdf
 
-cd ~/mans
+mkdir mands && cd mans
 length=8
 i=0
 
