@@ -1,8 +1,8 @@
 for_window [class="^.*"] border pixel 4
 gaps inner 8
 gaps outer 0
-set $term $TERMINAL
-set $mod Mod4
+set $t $TERMINAL
+set $m Mod4
 
 # Set wallpaper
 exec feh --bg-fill ~/scripts/bkgnd.jpg
@@ -47,52 +47,52 @@ bar {
 	modifier None
 }
 
-bindsym $mod+q			[con_id="__focused__"] kill
+bindsym $m+q			kill
 
-bindsym $mod+Return             exec $term $FILE
-bindsym $mod+Escape 		exec $term -e fish
-bindsym $mod+parenleft          gaps outer current minus 8
-bindsym $mod+slash              gaps outer current plus 8
-bindsym $mod+equal              gaps inner current minus 2
-bindsym $mod+minus              gaps inner current plus 2
-bindsym $mod+space		split toggle
+bindsym $m+Return               exec $t $FILE
+bindsym $m+Escape 		exec st -e fish
+bindsym $m+plus                 gaps outer current minus 8
+bindsym $m+slash                gaps outer current plus 8
+bindsym $m+equal                gaps inner current minus 2
+bindsym $m+minus                gaps inner current plus 2
+bindsym $m+space		split toggle
 
-bindsym $mod+y                  exec ~/scripts/displayselect.sh
-bindsym $mod+t                  exec $term -e nmtui
+bindsym $m+y                    exec dispsel
+bindsym $m+t                    exec $t -e nmtui
 
-bindsym $mod+u  		exec ~/scripts/i3resize.sh left
-bindsym $mod+i		        exec ~/scripts/i3resize.sh down
-bindsym $mod+o 			exec ~/scripts/i3resize.sh up
-bindsym $mod+p			exec ~/scripts/i3resize.sh right
+bindsym $m+u  		        exec winresize left
+bindsym $m+i		        exec winresize down
+bindsym $m+o 			exec winresize up
+bindsym $m+p			exec winresize right
 
-bindsym $mod+r                  exec redshift -O 2500
-bindsym $mod+e                  exec redshift -x
+bindsym $m+r                    exec redshift -O 2500
+bindsym $m+e                    exec redshift -x
 
-bindsym $mod+d			exec dmenu_run
-bindsym $mod+s            	exec maim -s ~/img/screenshots/$(date +%s).png
+bindsym $m+d			exec dmenu_run
+bindsym $m+s            	exec maim -s ~/img/screenshots/$(date +%s).png
 
-bindsym $mod+f			fullscreen toggle
-bindsym $mod+g                  bar mode toggle
-bindsym $mod+a			floating toggle
+bindsym $m+f			fullscreen toggle
+bindsym $m+g                    bar mode toggle
+bindsym $m+a			floating toggle
 
-bindsym $mod+h			focus left
-bindsym $mod+period             move left 30
-bindsym $mod+j			focus down
-bindsym $mod+underscore         move down 30
-bindsym $mod+k			focus up
-bindsym $mod+parenright		move up 30
-bindsym $mod+l			focus right
-bindsym $mod+semicolon	        move right 30
+bindsym $m+h			focus left
+bindsym $m+period               move left 30
+bindsym $m+j			focus down
+bindsym $m+underscore           move down 30
+bindsym $m+k			focus up
+bindsym $m+asterisk		move up 30
+bindsym $m+l			focus right
+bindsym $m+semicolon	        move right 30
 
-bindsym $mod+v 		        exec torbrowser-launcher
-bindsym $mod+b                  exec $BROWSER ~/.homepage
+bindsym $m+v 		        exec torbrowser-launcher
+bindsym $m+b                    exec $BROWSER ~/.homepage
 
-bindsym $mod+c                   exec pamixer -i 5
-bindsym $mod+x                   exec pamixer -d 5
-bindsym $mod+z                   exec pamixer -t
+bindsym $m+c                    exec pamixer -i 5
+bindsym $m+x                    exec pamixer -d 5
+bindsym $m+z                    exec pamixer -t
 
-bindsym $mod+asciitilde         exec $term -e gotop -c vice -pafs
-bindsym $mod+Tab                exec $term -e htop -t --sort-key PERCENT_CPU --sort-key USER --sort-key PERCENT_MEM
+bindsym $m+asciitilde           exec $t -e gotop -c vice -pafs
+bindsym $m+Tab                  exec $t -e htop -t --sort-key PERCENT_CPU --sort-key USER --sort-key PERCENT_MEM
 
 set $ws1 "1"
 set $ws2 "2"
@@ -100,20 +100,23 @@ set $ws3 "3"
 set $ws4 "4"
 
 # switch to workspace
-bindsym $mod+w          workspace back_and_forth
-bindsym $mod+n  	workspace $ws1
-bindsym $mod+m  	workspace $ws2
-bindsym $mod+comma  	workspace $ws3
-bindsym $mod+colon  	workspace $ws4
+bindsym $m+w            workspace back_and_forth
+bindsym $m+n  	        workspace $ws1
+bindsym $m+m  	        workspace $ws2
+bindsym $m+comma  	workspace $ws3
+bindsym $m+colon  	workspace $ws4
 
 # move focused container to workspace
-bindsym $mod+1          move container to workspace $ws1
-bindsym $mod+2 	        move container to workspace $ws2
-bindsym $mod+3          move container to workspace $ws3
-bindsym $mod+4          move container to workspace $ws4
+bindsym $m+1            move container to workspace $ws1
+bindsym $m+2 	        move container to workspace $ws2
+bindsym $m+3            move container to workspace $ws3
+bindsym $m+4            move container to workspace $ws4
 
 for_window [class="Zathura"] floating enable
+for_window [class="mpv"] floating enable
+for_window [class="sxiv"] floating enable
 for_window [class="feh"] floating enable
-
-for_window [window_role="GtkFileChooserDialog"] resize set 800 600
-for_window [window_role="GtkFileChooserDialog"] move position center
+for_window [class="png"] floating enable
+for_window [class="jpg"] floating enable
+for_window [class="bmp"] floating enable
+for_window [class="gif"] floating enable

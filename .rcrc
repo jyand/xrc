@@ -1,0 +1,19 @@
+#!/bin/rc
+
+PATH=$PATH:/usr/lib/plan9/bin
+# Default Applications
+WIN=i3
+TERMINAL=xterm
+EDITOR=nvim
+FILE=vifm
+READER=zathura
+IMAGE=sxiv
+BROWSER=firefox
+sh -c export export $PATH $WIN $TERMINAL $EDITOR $FILE $READER $IMAGE $BROWSER > /dev/null
+
+# Auto-start desktop after logging in from tty
+if (! pgrep -x $WIN > /dev/null) {
+        doas swapon /dev/sda1 > /dev/null
+        doas mount /dev/mmcblk0p1 /fat
+        exec startx
+}

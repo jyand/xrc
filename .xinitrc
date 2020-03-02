@@ -5,8 +5,7 @@ xrdb -merge ~/.Xresources
 
 xset r rate 200 50
 
+xcompmgr &
 xbanish &
 
-xcompmgr &
-
-exec i3
+exec $WIN

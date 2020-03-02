@@ -4,16 +4,17 @@
 # requires a DOS table with one part for boot and a second for the LVM
 
 # For the LVM partition to be encrypted (LUKS), run:
-#       cryptsetup -v --cipher serpent-xts-plain64 -s --iter-time 1000 --use-random luksFormat /dev/sda2
+#       cryptsetup --use-random luksFormat /dev/sda2
 #       cryptsetup luksOpen /dev/sda2 lvm
 # before executing this script
 
 mkfs.ext2 -L boot /dev/sda1
 
 pvcreate /dev/mapper/lvm
-echo $(pvdisplay) > log.dat
+pvdisplay > log.dat
+echo '' >> log.dat
 vgcreate matrix /dev/mapper/lvm
-echo $(vgdisplay) > log.dat
+vgdisplay >> log.dat
 echo '' >> log.dat
 
 lvcreate -L 24G matrix -n swapfs
@@ -30,7 +31,7 @@ mkdir -p /mnt/home
 mount /dev/matrix/homefs /mnt/home
 mkdir -p /mnt/boot
 mount /dev/sda1 /mnt/boot
-echo $(lsblk) >> log.dat
+lsblk >> log.dat
 echo '' >> log.dat
 
 cd / ; for d in dev proc sys; do
@@ -41,7 +42,8 @@ done
 # for the musl-libc version
 export XBPS_ARCH=x86_64-musl
 # change .../current/musl ... to .../current ... for glibc instead
-xbps-install -Sy -R https://alpha.de.repo.voidlinux.org/current/musl -r /mnt base-system lvm2 cryptsetup grub git NetworkManager
+xbps-install -Sy -R https://alpha.de.repo.voidlinux.org/current/musl -r /mnt base-system lvm2 cryptsetup grub git NetworkManager >> log.dat
+echo '' >> log.dat
 
-cp fstab log.dat chrootsetup.sh /mnt
+#cp fstab log.dat chrootsetup.sh /mnt
 # When this script finishes, chroot into /mnt, set the password, and execute chrootsetup.sh
