@@ -4,7 +4,7 @@
 # requires a DOS table with one part for boot and a second for the LVM
 
 # For the LVM partition to be encrypted (LUKS), run:
-#       cryptsetup --use-random luksFormat /dev/sda2
+#       cryptsetup --use-urandom luksFormat /dev/sda2
 #       cryptsetup luksOpen /dev/sda2 lvm
 # before executing this script
 

@@ -1,3 +1,5 @@
+#!/usr/bin/i3
+
 for_window [class="^.*"] border pixel 4
 gaps inner 8
 gaps outer 0
@@ -91,8 +93,8 @@ bindsym $m+c                    exec pamixer -i 5
 bindsym $m+x                    exec pamixer -d 5
 bindsym $m+z                    exec pamixer -t
 
-bindsym $m+asciitilde           exec $t -e gotop -c vice -pafs
-bindsym $m+Tab                  exec $t -e htop -t --sort-key PERCENT_CPU --sort-key USER --sort-key PERCENT_MEM
+bindsym $m+asciitilde           exec st -e gotop -c vice -pafs
+bindsym $m+Tab                  exec $t -e htop
 
 set $ws1 "1"
 set $ws2 "2"
@@ -120,3 +122,4 @@ for_window [class="png"] floating enable
 for_window [class="jpg"] floating enable
 for_window [class="bmp"] floating enable
 for_window [class="gif"] floating enable
+for_window [class="st"] floating enable
