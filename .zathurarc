@@ -1,3 +1,4 @@
+#!/usr/bin/zathura
 set selection-clipboard clipboard
 set input-bg "FFBDFA"
 set input-fg "8C00FF"
