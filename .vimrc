@@ -1,4 +1,4 @@
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"nvim
 syntax on
 
 " Tabs are 8 space characters
@@ -41,7 +41,4 @@ set nocompatible
 call plug#begin('~/.local/share/nvim/plugged')
 "Plug 'JuliaEditorSupport/julia-vim'
 call plug#end()
-
-"colorscheme darkblue
-"colorscheme delek
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"nvim

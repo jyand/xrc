@@ -1,15 +1,15 @@
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!xmodmap
 clear Lock
 clear Mod1
 clear Mod2
 clear Mod3
 clear Mod4
 clear Mod5
-add Mod4 = Alt_L
-add Mod4 = Alt_R
-add Mod4 = Super_L
-add Mod4 = Super_R
-keycode  9 = Hyper_L Escape Hyper_L
+add Mod4 = Hyper_L
+add Mod4 = Hyper_R
+add Mod4 = Meta_L
+add Mod4 = Meta_R
+keycode  9 = Escape Escape
 keycode  10 = 1 exclam 1 exclam
 keycode  11 = 2 dollar 2 dollar
 keycode  12 = 3 numbersign 3 numbersign
@@ -76,47 +76,20 @@ keycode  73 = F7
 keycode  74 = F8
 keycode  75 = F9
 keycode  76 = F10 F10 F10 F10 F10 F10
-keycode  77 = Num_Lock NoSymbol Num_Lock
-keycode  78 = Menu NoSymbol Menu NoSymbol
-keycode  79 = KP_Home KP_7 KP_Home KP_7
-keycode  80 = KP_Up KP_8 KP_Up KP_8
-keycode  81 = KP_Prior KP_9 KP_Prior KP_9
-keycode  82 = KP_Subtract KP_Subtract KP_Subtract KP_Subtract
-keycode  83 = KP_Left KP_4 KP_Left KP_4
-keycode  84 = KP_Begin KP_5 KP_Begin KP_5
-keycode  85 = KP_Right KP_6 KP_Right KP_6
-keycode  86 = KP_Add KP_Add KP_Add KP_Add KP_Add KP_Add XF86Next_VMode
-keycode  87 = KP_End KP_1 KP_End KP_1
-keycode  88 = KP_Down KP_2 KP_Down KP_2
-keycode  89 = KP_Next KP_3 KP_Next KP_3
-keycode  90 = KP_Insert KP_0 KP_Insert KP_0
-keycode  91 = KP_Delete KP_Decimal KP_Delete KP_Decimal
 keycode  94 = less greater less greater bar brokenbar bar
 keycode  95 = F11 F11 F11 F11 F11 F11
 keycode  96 = F12 F12 F12 F12 F12 F12
-keycode  98 = Katakana NoSymbol Katakana
-keycode  99 = Hiragana NoSymbol Hiragana
-keycode 100 = Henkan_Mode NoSymbol Henkan_Mode
-keycode 101 = Hiragana_Katakana NoSymbol Hiragana_Katakana
-keycode 102 = Muhenkan NoSymbol Muhenkan
-keycode 104 = KP_Enter NoSymbol KP_Enter
-keycode 106 = KP_Divide KP_Divide KP_Divide KP_Divide KP_Divide KP_Divide XF86Ungrab
-keycode 107 = Print Sys_Req Print Sys_Req
 keycode 108 = Meta_R Meta_R Meta_R Meta_R
-keycode 109 = Linefeed NoSymbol Linefeed
-keycode 110 = Home Home Home
-keycode 111 = Up NoSymbol Up
-keycode 112 = slash backslash slash backslash
-keycode 113 = Left NoSymbol Left
-keycode 114 = Right NoSymbol Right
-keycode 115 = End End End End
-keycode 116 = Down NoSymbol Down
-keycode 117 = Return Return Return Return
-keycode 118 = Hyper_R Hyper_R Hyper_R Hyper_R
-keycode 119 = Insert Insert Insert Insert
-keycode 126 = plusminus NoSymbol plusminus
-keycode 127 = Menu Menu Menu Menu
-keycode 129 = KP_Decimal KP_Decimal KP_Decimal KP_Decimal
-keycode 133 = Super_L Super_L Super_L Super_L
-keycode 135 = Super_R Super_R Super_R
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+keycode 110 = Up Up
+keycode 111 = Up Up
+keycode 112 = Super_R Super_R
+keycode 113 = Left Left
+keycode 114 = Right Right
+keycode 115 = Down Down
+keycode 116 = Down Down
+keycode 116 = Right Right
+keycode 118 = Super_L Super_L
+keycode 119 = Left Left
+keycode 133 = Hyper_L Hyper_L
+keycode 135 = Hyper_R Hyper_R
+!xmodmap

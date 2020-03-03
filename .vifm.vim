@@ -1,3 +1,5 @@
+"vifm
+
 set vicmd=nvim
 set number relativenumber
 
@@ -61,3 +63,4 @@ filetype *.asc
 
 set vifminfo=dhistory,chistory,tui,shistory,
     \phistory,fhistory,dirstack,registers,bookmarks,bmarks
+"vifm
