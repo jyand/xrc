@@ -15,8 +15,8 @@ set numberwidth=2
 
 set background=dark
 set termguicolors
-set guicursor+=v-ve:ver50-lCursor
-set guicursor+=n-c:blockCursor-blinkwait100-blinkoff50-blinkon100
+set guicursor+=v-ve:blockCursor-blinkwait100-blinkoff50-blinkon100
+set guicursor+=n-c:ver50-lCursor
 set guicursor+=i-r:hor100-lCursor
 set cursorline
 

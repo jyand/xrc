@@ -1,10 +1,11 @@
 #!/usr/bin/i3
 
 for_window [class="^.*"] border pixel 4
-gaps inner 8
+gaps inner 10
 gaps outer 0
 set $t $TERMINAL
 set $m Mod4
+set $h Mod1
 
 # Set wallpaper
 exec feh --bg-fill ~/scripts/bkgnd.jpg
@@ -44,7 +45,7 @@ bar {
       			inactive_workspace $magenta $darkmagenta $black
         }
 	status_command i3blocks
-	position top
+	position bottom
 	mode dock
 	modifier None
 }
@@ -53,19 +54,22 @@ bindsym $m+q			kill
 
 bindsym $m+Return               exec $t $FILE
 bindsym $m+Escape 		exec st -e fish
-bindsym $m+plus                 gaps outer current minus 8
-bindsym $m+slash                gaps outer current plus 8
+bindsym $h+equal                gaps outer current minus 8
+bindsym $h+minus                gaps outer current plus 8
 bindsym $m+equal                gaps inner current minus 2
 bindsym $m+minus                gaps inner current plus 2
 bindsym $m+space		split toggle
-
-bindsym $m+y                    exec dispsel
-bindsym $m+t                    exec $t -e nmtui
+bindsym $m+f			fullscreen toggle
+bindsym $m+g                    bar mode toggle
+bindsym $m+a			floating toggle
 
 bindsym $m+u  		        exec winresize left
 bindsym $m+i		        exec winresize down
 bindsym $m+o 			exec winresize up
 bindsym $m+p			exec winresize right
+
+bindsym $m+y                    exec dispsel
+bindsym $m+t                    exec $t -e doas nmtui
 
 bindsym $m+r                    exec redshift -O 2500
 bindsym $m+e                    exec redshift -x
@@ -73,27 +77,23 @@ bindsym $m+e                    exec redshift -x
 bindsym $m+d			exec dmenu_run
 bindsym $m+s            	exec maim -s ~/img/screenshots/$(date +%s).png
 
-bindsym $m+f			fullscreen toggle
-bindsym $m+g                    bar mode toggle
-bindsym $m+a			floating toggle
-
 bindsym $m+h			focus left
-bindsym $m+period               move left 30
+bindsym $h+h                    move left 30
 bindsym $m+j			focus down
-bindsym $m+underscore           move down 30
+bindsym $h+j                    move down 30
 bindsym $m+k			focus up
-bindsym $m+asterisk		move up 30
+bindsym $h+k    		move up 30
 bindsym $m+l			focus right
-bindsym $m+semicolon	        move right 30
+bindsym $h+l    	        move right 30
 
-bindsym $m+v 		        exec torbrowser-launcher
 bindsym $m+b                    exec $BROWSER ~/.homepage
+bindsym $h+b                    exec firejail $BROWSER
 
-bindsym $m+c                    exec pamixer -i 5
-bindsym $m+x                    exec pamixer -d 5
-bindsym $m+z                    exec pamixer -t
+bindsym $m+period               exec pamixer -i 5
+bindsym $m+semicolon            exec pamixer -d 5
+bindsym $m+m                    exec pamixer -t
 
-bindsym $m+asciitilde           exec st -e gotop -c vice -pafs
+bindsym $m+slash                exec st -e gotop -c vice -pafs
 bindsym $m+Tab                  exec $t -e htop
 
 set $ws1 "1"
@@ -103,16 +103,16 @@ set $ws4 "4"
 
 # switch to workspace
 bindsym $m+w            workspace back_and_forth
-bindsym $m+n  	        workspace $ws1
-bindsym $m+m  	        workspace $ws2
-bindsym $m+comma  	workspace $ws3
-bindsym $m+colon  	workspace $ws4
+bindsym $m+1  	        workspace $ws1
+bindsym $m+2  	        workspace $ws2
+bindsym $m+3      	workspace $ws3
+bindsym $m+4      	workspace $ws4
 
 # move focused container to workspace
-bindsym $m+1            move container to workspace $ws1
-bindsym $m+2 	        move container to workspace $ws2
-bindsym $m+3            move container to workspace $ws3
-bindsym $m+4            move container to workspace $ws4
+bindsym $h+1            move container to workspace $ws1
+bindsym $h+2 	        move container to workspace $ws2
+bindsym $h+3            move container to workspace $ws3
+bindsym $h+4            move container to workspace $ws4
 
 for_window [class="Zathura"] floating enable
 for_window [class="mpv"] floating enable

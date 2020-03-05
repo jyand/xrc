@@ -1,7 +1,6 @@
 #!/bin/sh
 
-export PATH=$PATH:"/plan9/bin"
-
+export PATH=$PATH:"/plan9/bin":"/opt/bin"
 # Default Applications
 export WIN="i3"
 export TERMINAL="xterm"
@@ -9,9 +8,9 @@ export EDITOR="nvim"
 export FILE="vifm"
 export READER="zathura"
 export IMAGE="sxiv"
-export BROWSER="firefox"
+export BROWSER="/opt/librefox/firefox"
 
 # Auto-start desktop after logging in from tty
-[ "$(tty)" = "/dev/tty1" ] && ! pgrep -x $WIN > /dev/null && 
-        doas swapon /dev/sda1 && doas mount /dev/mmcblk0p1 /opt  > /dev/null ||
+[ "$(tty)" = "/dev/tty1" ] || [ "$(tty)" = "/dev/tty2" ] && ! pgrep -x $WIN > /dev/null && 
+        doas swapon /dev/sda1 && doas mount /dev/mmcblk0p1 /media > /dev/null ||
         exec startx

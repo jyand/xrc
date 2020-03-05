@@ -5,11 +5,10 @@ clear Mod2
 clear Mod3
 clear Mod4
 clear Mod5
-add Mod4 = Hyper_L
-add Mod4 = Hyper_R
+add Mod1 = Hyper_L
+add Mod1 = Hyper_R
 add Mod4 = Meta_L
 add Mod4 = Meta_R
-keycode  9 = Escape Escape
 keycode  10 = 1 exclam 1 exclam
 keycode  11 = 2 dollar 2 dollar
 keycode  12 = 3 numbersign 3 numbersign
@@ -20,8 +19,8 @@ keycode  16 = 7 ampersand 7 ampersand
 keycode  17 = 8 bar 8 bar
 keycode  18 = 9 greater 9 less
 keycode  19 = 0 less 0 greater
-keycode  20 = minus bracketright minus bracketright
-keycode  21 = equal bracketleft equal bracketleft 
+keycode  20 = equal bracketright equal bracketright
+keycode  21 = plus bracketleft plus bracketleft 
 keycode  22 = BackSpace BackSpace BackSpace
 keycode  23 = Tab ISO_Left_Tab Tab ISO_Left_Tab
 keycode  24 = q Q q Q
@@ -34,8 +33,8 @@ keycode  30 = u U u U
 keycode  31 = i I i I
 keycode  32 = o O o O
 keycode  33 = p P p P
-keycode  34 = asterisk apostrophe asterisk apostrophe
-keycode  35 = plus quotedbl plus quotedbl
+keycode  34 = minus apostrophe minus apostrophe
+keycode  35 = asterisk quotedbl asterisk quotedbl
 keycode  36 = Return NoSymbol Return
 keycode  37 = Control_L Control_L Control_L
 keycode  38 = a A a A
@@ -80,16 +79,10 @@ keycode  94 = less greater less greater bar brokenbar bar
 keycode  95 = F11 F11 F11 F11 F11 F11
 keycode  96 = F12 F12 F12 F12 F12 F12
 keycode 108 = Meta_R Meta_R Meta_R Meta_R
-keycode 110 = Up Up
 keycode 111 = Up Up
-keycode 112 = Super_R Super_R
 keycode 113 = Left Left
 keycode 114 = Right Right
-keycode 115 = Down Down
 keycode 116 = Down Down
-keycode 116 = Right Right
-keycode 118 = Super_L Super_L
-keycode 119 = Left Left
 keycode 133 = Hyper_L Hyper_L
 keycode 135 = Hyper_R Hyper_R
 !xmodmap

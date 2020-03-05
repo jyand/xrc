@@ -8,12 +8,12 @@ EDITOR=nvim
 FILE=vifm
 READER=zathura
 IMAGE=sxiv
-BROWSER=firefox
+BROWSER=icecat
 sh -c export export $PATH $WIN $TERMINAL $EDITOR $FILE $READER $IMAGE $BROWSER > /dev/null
 
 # Auto-start desktop after logging in from tty
 if (! pgrep -x $WIN > /dev/null) {
         doas swapon /dev/sda1
-        doas mount /dev/mmcblk0p1 /opt  > /dev/null
+        doas mount /dev/mmcblk0p1 /media > /dev/null
         exec startx
 }
