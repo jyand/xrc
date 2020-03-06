@@ -16,26 +16,26 @@ echo '' >> log.dat
 vgcreate matrix /dev/mapper/lvm
 vgdisplay >> log.dat
 
-lvcreate -L 16G matrix -n Root
-lvcreate -L 32G matrix -n Swap
-lvcreate -L 8G matrix -n Var
-lvcreate -L 8G matrix -n Tmp
-lvcreate -l +100%FREE matrix -n Home
+lvcreate -L 32G matrix -n swap
+lvcreate -L 16G matrix -n root
+lvcreate -L 8G matrix -n opt
+lvcreate -L 8G matrix -n srv
+lvcreate -l +100%FREE matrix -n home
 
-mkfs.ext4 -L root /dev/matrix/Root
-mkswap -L swap /dev/matrix/Swap
-swapon /dev/matrix/Swap
-mkfs.ext4 -L var /dev/matrix/Var
-mkfs.ext4 -L tmp /dev/matrix/Tmp
+mkfs.ext4 -L root /dev/matrix/root
+mkswap -L swap /dev/matrix/swap
+mkfs.ext4 -L opt /dev/matrix/opt
+mkfs.ext4 -L srv /dev/matrix/srv
 mkfs.ext4 -L home /dev/matrix/Home
 
-mount /dev/matrix/Root /mnt
-mkdir -p /mnt/var
-mount /dev/matrix/Var /mnt/var
-mkdir -p /mnt/tmp
-mount /dev/matrix/Tmp /mnt/tmp
+swapon /dev/matrix/swap
+mount /dev/matrix/root /mnt
+mkdir -p /mnt/opt
+mount /dev/matrix/opt /mnt/opt
+mkdir -p /mnt/srv
+mount /dev/matrix/srv /mnt/srv
 mkdir -p /mnt/home
-mount /dev/matrix/Home /mnt/home
+mount /dev/matrix/home /mnt/home
 mkdir -p /mnt/boot
 mount /dev/sda1 /mnt/boot
 

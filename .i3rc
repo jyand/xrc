@@ -93,7 +93,7 @@ bindsym $m+period               exec pamixer -i 5
 bindsym $m+semicolon            exec pamixer -d 5
 bindsym $m+m                    exec pamixer -t
 
-bindsym $m+slash                exec st -e gotop -c vice -pafs
+bindsym $m+slash                exec $t -e gotop -c vice -pafs
 bindsym $m+Tab                  exec $t -e htop
 
 set $ws1 "1"

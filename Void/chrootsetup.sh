@@ -15,7 +15,7 @@ echo '' >> log.dat
 # echo "en_US.UTF-8 UTF-8" >> /etc/default/libc-locales
 # xbps-reconfigure -f glibc-locales
 
-sed 's/page_poison=1/page_poison=1 rd.auto=1/g'  /etc/default/grub > /etc/default/grub
+sed 's/page_poison=1\/page_poison=1 rd.auto=1/g'  /etc/default/grub > /etc/default/grub
 
 # change if kernel version is different
 xbps-reconfigure -f linux5.4 >> log.dat
