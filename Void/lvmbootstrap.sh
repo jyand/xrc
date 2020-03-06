@@ -26,7 +26,7 @@ mkfs.ext4 -L root /dev/matrix/root
 mkswap -L swap /dev/matrix/swap
 mkfs.ext4 -L opt /dev/matrix/opt
 mkfs.ext4 -L srv /dev/matrix/srv
-mkfs.ext4 -L home /dev/matrix/Home
+mkfs.ext4 -L home /dev/matrix/home
 
 swapon /dev/matrix/swap
 mount /dev/matrix/root /mnt
