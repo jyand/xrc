@@ -75,7 +75,7 @@ bindsym $m+r                    exec redshift -O 2500
 bindsym $m+e                    exec redshift -x
 
 bindsym $m+d			exec dmenu_run
-bindsym $m+s            	exec maim -s ~/img/screenshots/$(date +%s).png
+bindsym $m+s            	exec maim ~/img/screenshots/$(date +%s).png
 
 bindsym $m+h			focus left
 bindsym $h+h                    move left 30

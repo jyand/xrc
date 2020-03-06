@@ -103,3 +103,5 @@ ttyplot
 vpm
 xev
 ccrypt
+transmission-remote-cli
+gdb
