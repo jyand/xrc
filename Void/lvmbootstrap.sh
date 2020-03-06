@@ -15,26 +15,31 @@ pvdisplay > log.dat
 echo '' >> log.dat
 vgcreate matrix /dev/mapper/lvm
 vgdisplay >> log.dat
-echo '' >> log.dat
 
-lvcreate -L 24G matrix -n swapfs
-lvcreate -L 24G matrix -n rootfs
-lvcreate -l +100%FREE matrix -n homefs
+lvcreate -L 16G matrix -n Root
+lvcreate -L 32G matrix -n Swap
+lvcreate -L 8G matrix -n Var
+lvcreate -L 8G matrix -n Tmp
+lvcreate -l +100%FREE matrix -n Home
 
-mkswap -L swapfs /dev/matrix/swapfs
-swapon /dev/matrix/swapfs
-mkfs.ext4 -L rootfs /dev/matrix/rootfs
-mkfs.ext4 -L homefs /dev/matrix/homefs
+mkfs.ext4 -L root /dev/matrix/Root
+mkswap -L swap /dev/matrix/Swap
+swapon /dev/matrix/Swap
+mkfs.ext4 -L var /dev/matrix/Var
+mkfs.ext4 -L tmp /dev/matrix/Tmp
+mkfs.ext4 -L home /dev/matrix/Home
 
-mount /dev/matrix/rootfs /mnt
+mount /dev/matrix/Root /mnt
+mkdir -p /mnt/var
+mount /dev/matrix/Var /mnt/var
+mkdir -p /mnt/tmp
+mount /dev/matrix/Tmp /mnt/tmp
 mkdir -p /mnt/home
-mount /dev/matrix/homefs /mnt/home
+mount /dev/matrix/Home /mnt/home
 mkdir -p /mnt/boot
 mount /dev/sda1 /mnt/boot
-lsblk >> log.dat
-echo '' >> log.dat
 
-cd / ; for d in dev proc sys; do
+cd / ; for d in dev proc sys ; do
         mkdir -p /mnt/$d
         mount --rbind /$d /mnt/$d
 done
@@ -42,8 +47,7 @@ done
 # for the musl-libc version
 export XBPS_ARCH=x86_64-musl
 # change .../current/musl ... to .../current ... for glibc instead
-xbps-install -Sy -R https://alpha.de.repo.voidlinux.org/current/musl -r /mnt base-system lvm2 cryptsetup grub git NetworkManager >> log.dat
-echo '' >> log.dat
+xbps-install -Sy -R https://alpha.de.repo.voidlinux.org/current/musl -r /mnt base-system linux-lts lvm2 cryptsetup grub git NetworkManager
 
 #cp fstab log.dat chrootsetup.sh /mnt
 # When this script finishes, chroot into /mnt, set the password, and execute chrootsetup.sh
