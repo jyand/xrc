@@ -11,6 +11,5 @@ export IMAGE="sxiv"
 export BROWSER="/opt/librefox/firefox"
 
 # Auto-start desktop after logging in from tty
-[ "$(tty)" = "/dev/tty1" ] || [ "$(tty)" = "/dev/tty2" ] && ! pgrep -x $WIN > /dev/null && 
-        doas swapon /dev/sda1 && doas mount /dev/mmcblk0p1 /media > /dev/null ||
-        exec startx
+! pgrep -x $WIN > /dev/null && 
+        doas swapon /dev/sda1 > /dev/null || exec startx

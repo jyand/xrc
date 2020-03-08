@@ -4,7 +4,7 @@ separator_block_width=20
 markup=pango
 
 [volume]
-command=pamixer --get-volume-human || pamixer --get-mute
+command=aucatctl | grep master | sed 's/master=//g'
 interval=1
 
 [clock-time]
