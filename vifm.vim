@@ -3,7 +3,7 @@
 set vicmd=nvim
 set number relativenumber
 
-nnoremap s :!sudo su<cr>
+nnoremap s :!doas su<cr>
 nnoremap f :!fish<cr>
 
 nnoremap I cw<c-a>
