@@ -20,6 +20,8 @@ set guicursor+=n-c:ver50-lCursor
 set guicursor+=i-r:hor100-lCursor
 set cursorline
 
+nnoremap F :Ntree
+
 set title
 set showmode
 set showcmd
