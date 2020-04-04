@@ -5,6 +5,7 @@ set number relativenumber
 
 nnoremap s :!doas su<cr>
 nnoremap f :!fish<cr>
+nnoremap v :!nvim<cr>
 
 nnoremap I cw<c-a>
 nnoremap S cw<c-u>
