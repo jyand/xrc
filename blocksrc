@@ -4,7 +4,7 @@ separator_block_width=20
 markup=pango
 
 [volume]
-command=aucatctl | grep master | sed 's/master=//g'
+command=pamixer --get-volume-human || --get-mute
 interval=1
 
 [clock-time]
@@ -27,6 +27,6 @@ interval=10
 command=echo $(acpi -tf | sed 's/Thermal//g' | sed 's/ok, //g' | sed 's/degrees //g')
 interval=30
 
-[battery]
-command=echo $(acpi -b | sed 's/Battery 0://g' | sed 's/Unknown, 99%/Full, 99.9%/g' | sed 's/ - will never fully charge.//g')
-interval=30
+# [battery]
+# command=echo $(acpi -b | sed 's/Battery 0://g' | sed 's/Unknown, 99%/Full, 99.9%/g' | sed 's/ - will never fully charge.//g')
+# interval=30

@@ -40,7 +40,8 @@ filetype plugin indent on
 set wildmenu
 set nocompatible
 
-call plug#begin('~/.local/share/nvim/plugged')
-"Plug 'JuliaEditorSupport/julia-vim'
+call plug#begin('~/.config/nvim/plugged')
+Plug 'iamcco/markdown-preview.nvim', { 'do' : 'cd app & yarn install' }
+Plug 'JuliaEditorSupport/julia-vim'
 call plug#end()
 "nvim

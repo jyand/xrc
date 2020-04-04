@@ -1,0 +1,18 @@
+#!/bin/kitty
+
+shell fish
+
+remember_window_size yes
+
+font_family Operator Mono Bold
+font_size 12.0
+
+cursor #fa0aca
+
+scrollback_lines 9999
+
+enabled_layouts *
+
+window_border_width 0.0
+
+window_padding_width 0.0
