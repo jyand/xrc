@@ -1,8 +1,9 @@
 #!/bin/sh
 
-export PATH="/bin":"/usr/bin":"/sbin":"/usr/sbin":"/plan9/bin":"/opt/bin"
+export PATH="/bin":"/usr/bin":"/usr/local/bin":"/sbin":"/usr/sbin":"/plan9/bin":"/opt/bin"
 export XAUTHORITY="$HOME/.local/.Xauthority"
 export PAGER="vimpager"
+export MANPAGER="vimpager"
 # Default Applications
 export WIN="i3"
 export TERMINAL="kitty"
