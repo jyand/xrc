@@ -1,10 +1,11 @@
 #!/bin/sh
 
-export PATH=$PATH:"/plan9/bin":"/opt/bin"
-export XDG_CONFIG_HOME="~/.config"
+export PATH="/bin":"/usr/bin":"/sbin":"/usr/sbin":"/plan9/bin":"/opt/bin"
+export XAUTHORITY="$HOME/.local/.Xauthority"
+export PAGER="vimpager"
 # Default Applications
 export WIN="i3"
-export TERMINAL="xterm"
+export TERMINAL="kitty"
 export EDITOR="nvim"
 export FILE="vifm"
 export READER="zathura"
