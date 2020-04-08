@@ -45,7 +45,7 @@ bar {
       			inactive_workspace $magenta $darkmagenta $black
         }
 	status_command i3blocks
-	position bottom
+	position top
 	mode dock
 	modifier None
 }
