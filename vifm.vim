@@ -14,6 +14,9 @@ nnoremap w za
 nnoremap e :view<CR>
 nnoremap J G
 nnoremap <Tab> :si<CR>
+nnoremap i :sp<CR>
+nnoremap o :o<CR>
+nnoremap O :vs<CR>
 
 map K :2<CR>
 map E :!$EDITOR %f<CR>
