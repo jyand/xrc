@@ -13,6 +13,7 @@ nnoremap A cw
 nnoremap w za
 nnoremap e :view<CR>
 nnoremap J G
+nnoremap <Tab> :si<CR>
 
 map K :2<CR>
 map E :!$EDITOR %f<CR>
