@@ -86,14 +86,14 @@ bindsym $h+k    		move up 30
 bindsym $m+l			focus right
 bindsym $h+l    	        move right 30
 
-bindsym $m+b                    exec $BROWSER https://lite.qwant.com
-bindsym $h+b                    exec firejail $BROWSER
+bindsym $m+b                    exec $BROWSER
+bindsym $h+b                    exec firejail $BROWSER --no-remote
 
 bindsym $m+period               exec pamixer -i 5
 bindsym $m+semicolon            exec pamixer -d 5
 bindsym $m+m                    exec pamixer -t
 
-bindsym $m+slash                exec $t -e gotop -pafs -r 2
+bindsym $m+slash                exec $t -e gotop -paf -r 2
 bindsym $m+Tab                  exec $t -e htop
 
 set $ws1 " 1 "

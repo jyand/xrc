@@ -13,35 +13,33 @@ augroup numbertoggle
 augroup end
 set numberwidth=2
 
-set background=dark
-set termguicolors
+" Different cursor types for different modes
 set guicursor+=v-ve:blockCursor-blinkwait100-blinkoff50-blinkon100
 set guicursor+=n-c:ver50-lCursor
 set guicursor+=i-r:hor100-lCursor
 set cursorline
 
-nnoremap F :Ntree
-
+set background=dark
+set termguicolors
 set title
 set showmode
 set showcmd
 set showmatch
 set laststatus=2
 set report=0
-
 set t_Co=256
 set spelllang=en_US
 set encoding=utf-8
 set incsearch
+set wildmenu
+set nocompatible
 
 filetype on
 filetype plugin indent on
 
-set wildmenu
-set nocompatible
+nnoremap F :Ntree
 
 call plug#begin('~/.config/nvim/plugged')
-Plug 'iamcco/markdown-preview.nvim', { 'do' : 'cd app & yarn install' }
 Plug 'JuliaEditorSupport/julia-vim'
 call plug#end()
 "nvim
