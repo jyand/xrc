@@ -69,8 +69,7 @@ bindsym $m+o 			exec winresize up
 bindsym $m+p			exec winresize right
 
 bindsym $m+y                    exec dispsel
-bindsym $m+t                    exec $t -e top | grep Cpu
-bindsym $h+t                    exec $t -e top | grep Mem
+bindsym $m+t                    exec restart
 
 bindsym $m+r                    exec redshift -O 2500
 bindsym $m+e                    exec redshift -x
