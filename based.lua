@@ -1,3 +1,5 @@
+#!/usr/bin/lua5.3
+
 -- 'based' color scheme by John DeSalvo
 local lexers = vis.lexers
 

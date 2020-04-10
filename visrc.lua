@@ -1,3 +1,5 @@
+#!/usr/bin/lua5.3
+
 require('vis')
 -- require('surround')
 -- require('vis-commentary')
