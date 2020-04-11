@@ -45,7 +45,7 @@ bar {
       			inactive_workspace $magenta $darkmagenta $black
         }
 	status_command i3blocks
-	position top
+	position bottom
 	mode dock
 	modifier None
 }
@@ -69,7 +69,7 @@ bindsym $m+o 			exec winresize up
 bindsym $m+p			exec winresize right
 
 bindsym $m+y                    exec dispsel
-bindsym $m+t                    exec restart
+bindsym $m+t                    restart
 
 bindsym $m+r                    exec redshift -O 2500
 bindsym $m+e                    exec redshift -x
