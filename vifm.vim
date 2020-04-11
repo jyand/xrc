@@ -14,7 +14,6 @@ nnoremap i :sp<CR>
 nnoremap o :o<CR>
 nnoremap s :vs<CR>
 nnoremap <Tab> :si<CR>
-nnoremap <Return> :!xterm -e vifm &<CR>
 
 map ~ :siblprev<CR>
 map K :2<CR>
