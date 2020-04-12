@@ -14,8 +14,8 @@ export FILE="vifm"
 export READER="zathura"
 export IMAGE="sxiv"
 export HTM="vimb"
-export BROWSER="redpanda"
-export B="icecat"
+export BROWSER="icecat"
+export B="redpanda"
 
 # Auto-start desktop after logging in from tty
 ! pgrep -x $WIN > /dev/null && exec startx

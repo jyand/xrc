@@ -4,6 +4,8 @@ set vicmd=nvim
 set number relativenumber
 only
 
+map ; :!$TERMINAL -e vifm > /dev/null &<CR>
+
 nnoremap f :!fish<cr>
 nnoremap v :!nvim<cr>
 

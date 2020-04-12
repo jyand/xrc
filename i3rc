@@ -1,14 +1,11 @@
 #!/usr/bin/i3
 
 for_window [class="^.*"] border pixel 4
-gaps inner 20
-gaps outer 2
+gaps inner 16
+gaps outer 8
 set $t $TERMINAL
 set $m Mod4
 set $h Mod1
-
-# Set wallpaper
-exec feh --bg-fill ~/.local/background
 
 # Set Xresources colors:
 set_from_resource $darkblack	color0  #000000
@@ -53,6 +50,7 @@ bar {
 bindsym $m+q			kill
 
 bindsym $m+Return               exec $t $FILE
+bindsym $h+Return               exec xterm $FILE
 bindsym $m+Escape 		exec st -f monospace-12 -e fish
 bindsym $h+equal                gaps outer current minus 8
 bindsym $h+minus                gaps outer current plus 8
