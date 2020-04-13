@@ -1,4 +1,4 @@
-"vifm
+"VIFM
 
 set vicmd=nvim
 set number relativenumber
@@ -7,8 +7,9 @@ only
 map ; :!$TERMINAL -e vifm > /dev/null &<CR>
 
 nnoremap f :!fish<cr>
-nnoremap v :!nvim<cr>
+nnoremap E :!nvim<cr>
 
+nnoremap m :mkdir
 nnoremap w za
 nnoremap e :view<CR>
 nnoremap J G
@@ -19,9 +20,8 @@ nnoremap <Tab> :si<CR>
 
 map ~ :siblprev<CR>
 map K :2<CR>
-map E :!$EDITOR %f<CR>
+map v :!$EDITOR %f<CR>
 map b :!$BROWSER %f<CR>
-map B :!vimb %f > /dev/null &<CR>
 map L :!busybox less %f<CR>
 map U :!unzip %c<CR>
 map F :!feh %c<CR>
@@ -38,6 +38,7 @@ set nohlsearch
 set incsearch
 set scrolloff=0
 
+filetype *.html,*.htm vimb %f > /dev/null &<CR>
 filetype *.pdf,*.ps,*.eps,*.ps.gz,*.djvu zathura %f 2>/dev/null & 
 filetype *.png,*.jpg,*.jpeg,*.gif,*.bmp,*.xpm sxiv %f 2>/dev/null &
 filetype *.csv,*.odt,*.xls,*.xlsx scim
@@ -65,5 +66,4 @@ filetype *.asc
        \ !!gpg --verify %c,
 
 set vifminfo=dhistory,chistory,tui,shistory,
-    \phistory,fhistory,dirstack,registers,bookmarks,bmarks
-"vifm
+    \phistory,fhistory,dirstack,registers,

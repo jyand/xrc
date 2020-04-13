@@ -1,8 +1,10 @@
 #!/usr/bin/fish
+
 fish_vi_key_bindings
 fish_vi_cursor
 
 ufetch
+echo '    ~~ (:==< ~~~ '
 
 abbr v 'nvim'
 abbr V 'doas nvim'

@@ -1,6 +1,7 @@
 #!/bin/sh
 
 export PATH="/bin":"/usr/bin":"/usr/local/bin":"/sbin":"/usr/sbin":"/plan9/bin":"/opt/bin"
+export MANPATH="/usr/share/man":"/usr/local/share/man":"/opt/man":"/plan9/man"
 export XAUTHORITY="$HOME/.local/.Xauthority"
 export PAGER="less"
 export MANPAGER="vimpager"
@@ -8,8 +9,8 @@ export MANPAGER="vimpager"
 export WIN="i3"
 export TERMINAL="kitty"
 export T="xterm"
-export EDITOR="nvim"
-export E="vis"
+export EDITOR="vis"
+export E="nvim"
 export FILE="vifm"
 export READER="zathura"
 export IMAGE="sxiv"

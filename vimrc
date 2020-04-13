@@ -37,9 +37,9 @@ set nocompatible
 filetype on
 filetype plugin indent on
 
-nnoremap F :Ntree
-
 call plug#begin('~/.config/nvim/plugged')
 Plug 'JuliaEditorSupport/julia-vim'
 call plug#end()
+
+nnoremap m :Man
 "nvim
