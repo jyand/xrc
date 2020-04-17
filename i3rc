@@ -7,6 +7,8 @@ set $t $TERMINAL
 set $m Mod4
 set $h Mod1
 
+exec xterm $FILE
+
 # Set Xresources colors:
 set_from_resource $darkblack	color0  #000000
 set_from_resource $black	color8  #000000
