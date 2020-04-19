@@ -19,4 +19,4 @@ export BROWSER="icecat"
 export B="redpanda"
 
 # Auto-start desktop after logging in from tty
-! pgrep -x $WIN > /dev/null && exec startx
+! pgrep -x $WIN > /dev/null && exec startx > /dev/null

@@ -1,0 +1,17 @@
+#!/bin/sh
+# Run as root. Replace GNU coreutils with busybox versions.
+# The list of busybox programs is not exhaustive but contains those over which
+# the GNU version has no advantage (most of them).
+# Requires busybox installed from package manager.
+# Building busybox from source does this automatically.
+
+for i in $(cat busy.csv) ; do
+        rm -v /bin/$i
+        ln -sv busybox /bin/$i
+done
+
+# To undo this and switch back to GNU coreutils:
+#for i in $(cat busy.csv) ; do
+#        rm -v /bin/$i
+#        ln -sv /usr/bin/$i /bin
+#done
