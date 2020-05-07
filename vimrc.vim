@@ -1,5 +1,7 @@
 "nvim
 syntax on
+filetype on
+filetype plugin indent on
 
 " Tabs are 8 space characters
 set tabstop=8 softtabstop=0 expandtab shiftwidth=8 smarttab
@@ -33,9 +35,6 @@ set encoding=utf-8
 set incsearch
 set wildmenu
 set nocompatible
-
-filetype on
-filetype plugin indent on
 
 call plug#begin('~/.config/nvim/plugged')
 Plug 'JuliaEditorSupport/julia-vim'

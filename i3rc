@@ -94,7 +94,7 @@ bindsym $m+semicolon            exec pamixer -d 5
 bindsym $m+m                    exec pamixer -t
 
 bindsym $m+slash                exec $t -e gotop -paf -r 2
-bindsym $m+Tab                  exec $t -e htop
+bindsym $m+Tab                  exec xterm -e htop
 
 set $ws1 " 1 "
 set $ws2 " 2 "
