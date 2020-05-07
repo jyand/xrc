@@ -1,5 +1,11 @@
-# xrc
-config files and misc. shell scripts
+## config files and misc. shell scripts
+
+---
+
+# Improved Qwerty Keymap
+![](Xmodmap.png)
+
+---
 
 For Unix-like operating systems with Xorg
 * vim-based environment/workflow: vifm, neovim, i3-gaps, scim, zathura, fish w/ vi-mode
