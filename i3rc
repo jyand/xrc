@@ -1,53 +1,20 @@
 #!/usr/bin/i3
 
-for_window [class="^.*"] border pixel 4
-gaps inner 16
-gaps outer 8
 set $t $TERMINAL
 set $m Mod4
 set $h Mod1
 
-exec xterm $FILE
-
-# Set Xresources colors:
-set_from_resource $darkblack	color0  #000000
-set_from_resource $black	color8  #000000
-set_from_resource $darkred	color1  #000000
-set_from_resource $red		color9  #000000
-set_from_resource $darkgreen	color2  #000000
-set_from_resource $green	color10 #000000
-set_from_resource $darkyellow	color3  #000000
-set_from_resource $yellow	color11 #000000
-set_from_resource $darkblue	color4  #000000
-set_from_resource $blue		color12 #000000
-set_from_resource $darkmagenta	color5  #000000
-set_from_resource $magenta	color13 #000000
-set_from_resource $darkcyan	color6  #000000
-set_from_resource $cyan		color14 #000000
-set_from_resource $darkwhite	color7  #000000
-set_from_resource $white	color15 #000000
-
-#                       BORDER		BACKGROUND	TEXT		INDICATOR   CHILD_BORDER
-client.focused		$red		$red		$magenta	$darkmagenta		$darkblue
-client.unfocused	$transparent	$blue		$white		$darkblue		$darkblack
-client.focused_inactive	$transparent	$blue		$white		$darkblue		$darkblack
-client.urgent		$darkred	$darkred	$black		$darkred		$darkred
-client.background $black
-
-bar {
-	font pango:mono 10
-	colors {
-			background $darkblack
-			statusline $white
-			separator $red
-			focused_workspace $cyan $darkwhite $darkmagenta
-      			inactive_workspace $magenta $darkmagenta $black
-        }
-	status_command i3blocks
-	position bottom
-	mode dock
-	modifier None
-}
+gaps inner 16
+gaps outer 8
+for_window [class="^.*"] border pixel 4
+for_window [class="mpv"] floating enable
+for_window [class="Sxiv"] floating enable
+for_window [class="feh"] floating enable
+for_window [class="png"] floating enable
+for_window [class="jpg"] floating enable
+for_window [class="bmp"] floating enable
+for_window [class="gif"] floating enable
+for_window [class="st"] floating enable
 
 bindsym $m+q			kill
 
@@ -96,6 +63,46 @@ bindsym $m+m                    exec pamixer -t
 bindsym $m+slash                exec $t -e gotop -paf -r 2
 bindsym $m+Tab                  exec xterm -e htop
 
+# Set Xresources colors:
+set_from_resource $darkblack	color0  #000000
+set_from_resource $black	color8  #000000
+set_from_resource $darkred	color1  #000000
+set_from_resource $red		color9  #000000
+set_from_resource $darkgreen	color2  #000000
+set_from_resource $green	color10 #000000
+set_from_resource $darkyellow	color3  #000000
+set_from_resource $yellow	color11 #000000
+set_from_resource $darkblue	color4  #000000
+set_from_resource $blue		color12 #000000
+set_from_resource $darkmagenta	color5  #000000
+set_from_resource $magenta	color13 #000000
+set_from_resource $darkcyan	color6  #000000
+set_from_resource $cyan		color14 #000000
+set_from_resource $darkwhite	color7  #000000
+set_from_resource $white	color15 #000000
+
+#                       BORDER          BACKGROUND      TEXT            INDICATOR               CHILD_BORDER
+client.focused		$red		$red		$magenta	$darkmagenta		$darkblue
+client.unfocused	$transparent	$blue		$white		$darkblue		$darkblack
+client.focused_inactive	$transparent	$blue		$white		$darkblue		$darkblack
+client.urgent		$darkred	$darkred	$black		$darkred		$darkred
+client.background $black
+
+bar {
+	font pango:mono 10
+	colors {
+			background $darkblack
+			statusline $white
+			separator $red
+			focused_workspace $cyan $darkwhite $darkmagenta
+      			inactive_workspace $magenta $darkmagenta $black
+        }
+	status_command i3blocks
+	position bottom
+	mode dock
+	modifier None
+}
+
 set $ws1 " 1 "
 set $ws2 " 2 "
 set $ws3 " 3 "
@@ -118,7 +125,7 @@ bindsym $m+7  	        workspace $ws7
 bindsym $m+8  	        workspace $ws8
 bindsym $m+9  	        workspace $ws9
 
-# move focused container to workspace
+# move focused container to workspace and switch to that workspace
 bindsym $h+1            move container to workspace $ws1 ;; workspace $ws1
 bindsym $h+2 	        move container to workspace $ws2 ;; workspace $ws2
 bindsym $h+3            move container to workspace $ws3 ;; workspace $ws3
@@ -128,13 +135,3 @@ bindsym $h+6            move container to workspace $ws6 ;; workspace $ws6
 bindsym $h+7            move container to workspace $ws7 ;; workspace $ws7
 bindsym $h+8            move container to workspace $ws8 ;; workspace $ws8
 bindsym $h+9            move container to workspace $ws9 ;; workspace $ws9
-
-#for_window [class="Zathura"] floating enable
-for_window [class="mpv"] floating enable
-for_window [class="Sxiv"] floating enable
-for_window [class="feh"] floating enable
-for_window [class="png"] floating enable
-for_window [class="jpg"] floating enable
-for_window [class="bmp"] floating enable
-for_window [class="gif"] floating enable
-for_window [class="st"] floating enable

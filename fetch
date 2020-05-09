@@ -1,0 +1,5 @@
+#!/bin/sh
+
+[ $TERM = "xterm" ] && neofetch
+[ $TERM = "xterm-kitty" ] && ufetch | sed 's/[W].*//g'
+[ $TERM = "st-256color" ] && ufetch | sed 's/[W].*//g'

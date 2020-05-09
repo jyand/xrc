@@ -1,10 +1,7 @@
-## config files and misc. shell scripts
-
+# xrc: config files and misc. shell scripts
 ---
-
-# Improved Qwerty Keymap
+## Improved Qwerty Keymap
 ![](Xmodmap.png)
-
 ---
 
 For Unix-like operating systems with Xorg

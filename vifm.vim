@@ -15,8 +15,9 @@ nnoremap <Tab> :si<CR>
 map ~ :siblprev<CR>
 map K :2<CR>
 map v :!$EDITOR %f<CR>
-map b :!$BROWSER %f<CR>
-map L :!busybox less %f<CR>
+map b :!vimb %f > /dev/null &<CR>
+map B :!$BROWSER %f &<CR>
+map L :!bat %f<CR>
 map U :!unzip %c<CR>
 map F :!feh %c<CR>
 map I :!sxiv *.png *.jpg *.gif *.jpeg *.bmp > /dev/null &<CR>
@@ -36,7 +37,7 @@ set undolevels=16
 set suggestoptions=normal,visual,view,otherpane,keys,marks,registers
 set vifminfo=dhistory,chistory,tui,shistory,uphistory,fhistory,dirstack,registers
 
-filetype *.html,*.htm vimb %f > /dev/null &<CR>
+"filetype *.html,*.htm vimb %f > /dev/null &
 filetype *.pdf,*.ps,*.eps,*.ps.gz,*.djvu zathura %f 2>/dev/null & 
 filetype *.png,*.jpg,*.jpeg,*.gif,*.bmp,*.xpm sxiv %f 2>/dev/null &
 filetype *.csv,*.odt,*.xls,*.xlsx scim
