@@ -1,8 +1,9 @@
 "VIFM
 only
+colorscheme based
 
-nnoremap f :!fish<cr>
-nnoremap E :!nvim<cr>
+nnoremap f :!fish<CR>
+nnoremap E :!nvim<CR>
 nnoremap m :mkdir
 nnoremap R :rename
 nnoremap w za
@@ -11,6 +12,7 @@ nnoremap J G
 nnoremap i :sp<CR>
 nnoremap o :o<CR>
 nnoremap s :vs<CR>
+nnoremap C :colorscheme<CR>
 nnoremap <Tab> :si<CR>
 map ~ :siblprev<CR>
 map K :2<CR>

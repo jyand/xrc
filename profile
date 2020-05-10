@@ -1,11 +1,13 @@
 #!/bin/sh
 
+# env
 export PATH="/bin":"/usr/bin":"/usr/local/bin":"/sbin":"/usr/sbin":"/plan9/bin":"/opt/bin"
 export MANPATH="/usr/share/man":"/usr/local/share/man":"/opt/man":"/plan9/man"
 export XAUTHORITY="$HOME/.local/.Xauthority"
 export PAGER="bat"
 export MANPAGER="vimpager"
-# Default Applications
+
+# Default Applications and Alternates
 export WIN="i3"
 export TERMINAL="kitty"
 export T="xterm"

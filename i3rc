@@ -1,9 +1,5 @@
 #!/usr/bin/i3
 
-set $t $TERMINAL
-set $m Mod4
-set $h Mod1
-
 gaps inner 16
 gaps outer 8
 for_window [class="^.*"] border pixel 4
@@ -16,6 +12,10 @@ for_window [class="bmp"] floating enable
 for_window [class="gif"] floating enable
 for_window [class="st"] floating enable
 
+set $t $TERMINAL
+set $m Mod4
+set $h Mod1
+
 bindsym $m+q			kill
 
 bindsym $m+Return               exec $t $FILE
@@ -25,9 +25,10 @@ bindsym $h+equal                gaps outer current minus 8
 bindsym $h+minus                gaps outer current plus 8
 bindsym $m+equal                gaps inner current minus 2
 bindsym $m+minus                gaps inner current plus 2
+
 bindsym $m+space		split toggle
-bindsym $m+f			fullscreen toggle
 bindsym $m+g                    bar mode toggle
+bindsym $m+f			fullscreen toggle
 bindsym $m+a			floating toggle
 
 bindsym $m+u  		        exec winresize left
@@ -36,13 +37,12 @@ bindsym $m+o 			exec winresize up
 bindsym $m+p			exec winresize right
 
 bindsym $m+y                    exec dispsel
-bindsym $m+t                    restart
-
-bindsym $m+r                    exec redshift -O 2500
-bindsym $m+e                    exec redshift -x
-
 bindsym $m+d			exec dmenu_run
 bindsym $m+s            	exec maim -s -m 10 ~/$(date +%s).png
+
+bindsym $m+t                    exec xterm -hold -e curl wttr.in
+bindsym $m+r                    exec redshift -O 2500
+bindsym $m+e                    exec redshift -x
 
 bindsym $m+h			focus left
 bindsym $h+h                    move left 30
@@ -55,10 +55,11 @@ bindsym $h+l    	        move right 30
 
 bindsym $m+b                    exec $BROWSER
 bindsym $h+b                    exec firejail $BROWSER --no-remote
+bindsym $m+v                    exec vimb -i -c ~/.config/vimb/vimbrc
 
-bindsym $m+period               exec pamixer -i 5
-bindsym $m+semicolon            exec pamixer -d 5
 bindsym $m+m                    exec pamixer -t
+bindsym $m+parenleft            exec pamixer -i 5
+bindsym $m+parenright           exec pamixer -d 5
 
 bindsym $m+slash                exec $t -e gotop -paf -r 2
 bindsym $m+Tab                  exec xterm -e htop
@@ -86,7 +87,7 @@ client.focused		$red		$red		$magenta	$darkmagenta		$darkblue
 client.unfocused	$transparent	$blue		$white		$darkblue		$darkblack
 client.focused_inactive	$transparent	$blue		$white		$darkblue		$darkblack
 client.urgent		$darkred	$darkred	$black		$darkred		$darkred
-client.background $black
+client.background       $black
 
 bar {
 	font pango:mono 10
