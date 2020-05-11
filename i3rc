@@ -10,7 +10,7 @@ for_window [class="png"] floating enable
 for_window [class="jpg"] floating enable
 for_window [class="bmp"] floating enable
 for_window [class="gif"] floating enable
-for_window [class="st"] floating enable
+for_window [class="xst"] floating enable
 
 set $t $TERMINAL
 set $m Mod4
@@ -20,7 +20,7 @@ bindsym $m+q			kill
 
 bindsym $m+Return               exec $t $FILE
 bindsym $h+Return               exec xterm $FILE
-bindsym $m+Escape 		exec st -f monospace-12 -e fish
+bindsym $m+Escape 		exec xst -f monospace-12 -e fish
 bindsym $h+equal                gaps outer current minus 8
 bindsym $h+minus                gaps outer current plus 8
 bindsym $m+equal                gaps inner current minus 2
@@ -61,7 +61,8 @@ bindsym $m+m                    exec pamixer -t
 bindsym $m+parenleft            exec pamixer -i 5
 bindsym $m+parenright           exec pamixer -d 5
 
-bindsym $m+slash                exec $t -e gotop -paf -r 2
+bindsym $m+slash                exec xterm -e ytop -fap -c vice -I 1/2
+#bindsym $m+slash                exec $t -e gotop -paf -r 2
 bindsym $m+Tab                  exec xterm -e htop
 
 # Set Xresources colors:
