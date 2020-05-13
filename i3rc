@@ -19,7 +19,7 @@ set $h Mod1
 bindsym $m+q			kill
 
 bindsym $m+Return               exec $t $FILE
-bindsym $h+Return               exec xterm $FILE
+bindsym $h+Return               exec xterm -e fish
 bindsym $m+Escape 		exec xst -f monospace-12 -e fish
 bindsym $h+equal                gaps outer current minus 8
 bindsym $h+minus                gaps outer current plus 8

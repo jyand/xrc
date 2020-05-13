@@ -10,15 +10,11 @@ export MANPAGER="vimpager"
 # Default Applications and Alternates
 export WIN="i3"
 export TERMINAL="kitty"
-export T="xterm"
 export EDITOR="vis"
-export E="nvim"
 export FILE="vifm"
 export READER="zathura"
 export IMAGE="sxiv"
-export HTM="vimb"
 export BROWSER="icecat"
-export B="redpanda"
 
 # Auto-start desktop after logging in from tty
 ! pgrep -x $WIN > /dev/null && exec startx > /dev/null
