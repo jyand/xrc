@@ -5,8 +5,8 @@ colorscheme based
 "Window Manager emulation
 nnoremap . :!$TERMINAL -e nvim %f > /dev/null &<CR>
 nnoremap C :!xterm -e scim %f 2> /dev/null &<CR>
-map ; :!$TERMINAL -e vifm > /dev/null &<CR>
-map L :!mdcat %f | bat<CR>
+map , :!$TERMINAL -e vifm > /dev/null &<CR>
+map L :!$PAGER %f<CR>
 map I :!sxiv *.png *.jpg *.gif *.jpeg *.bmp 2> /dev/null &<CR>
 map B :!firejail --net=none vimb %f 2> /dev/null &<CR>
 map b :!$BROWSER %f 2> /dev/null &<CR>

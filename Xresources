@@ -29,5 +29,5 @@
 *cursorBlink: true
 *antialias: true
 
-XTerm.vt100.saveLines: 64
+XTerm.vt100.saveLines: 1024
 XTerm.vt100.scrollBar: false

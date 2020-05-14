@@ -7,4 +7,5 @@ xcompmgr -c &
 xbanish &
 feh --bg-fill ~/.local/background
 
+sxhkd &
 exec $WIN

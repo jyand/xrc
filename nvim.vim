@@ -49,5 +49,5 @@ call plug#end()
 nnoremap m :Man
 noremap <Tab> .
 nnoremap . }
-map ; {
+map , {
 "nvim

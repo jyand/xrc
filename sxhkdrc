@@ -1,0 +1,41 @@
+#!/bin/sxhkd
+
+# WM-Independent
+#
+mod4 + Return
+        $TERMINAL -e $FILE
+mod4 + d
+        dmenu_run
+# Audio
+mod4 + m
+        pamixer -t
+mod4 + comma
+        pamixer -i 5
+mod4 + colon
+        pamixer -d 5
+# System Monitor
+mod4 + slash
+        $TERMINAL -e ytop -fap -c vice -I 1/2
+mod4 + Tab
+        $TERMINAL -e htop
+# Utilities
+mod4 + s
+        maim -s -m 10 ~/$(date +%s).png
+mod4 + y
+        dispsel
+mod4 + r
+        redshift -O 2500
+mod4 + e
+        redshift -x
+mod4 + t
+        $TERMINAL -hold -e curl wttr.in
+#
+# Window size
+mod4 + u
+        winresize left
+mod4 + i
+        winresize down
+mod4 + o
+        winresize up
+mod4 + p
+        winresize right

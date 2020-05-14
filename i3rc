@@ -18,31 +18,15 @@ set $h Mod1
 
 bindsym $m+q			kill
 
-bindsym $m+Return               exec $t $FILE
-bindsym $h+Return               exec xterm -e fish
-bindsym $m+Escape 		exec xst -f monospace-12 -e fish
 bindsym $h+equal                gaps outer current minus 8
 bindsym $h+minus                gaps outer current plus 8
 bindsym $m+equal                gaps inner current minus 2
 bindsym $m+minus                gaps inner current plus 2
 
-bindsym $m+space		split toggle
+bindsym $m+Escape		split toggle
 bindsym $m+g                    bar mode toggle
 bindsym $m+f			fullscreen toggle
 bindsym $m+a			floating toggle
-
-bindsym $m+u  		        exec winresize left
-bindsym $m+i		        exec winresize down
-bindsym $m+o 			exec winresize up
-bindsym $m+p			exec winresize right
-
-bindsym $m+y                    exec dispsel
-bindsym $m+d			exec dmenu_run
-bindsym $m+s            	exec maim -s -m 10 ~/$(date +%s).png
-
-bindsym $m+t                    exec xterm -hold -e curl wttr.in
-bindsym $m+r                    exec redshift -O 2500
-bindsym $m+e                    exec redshift -x
 
 bindsym $m+h			focus left
 bindsym $h+h                    move left 30
@@ -52,18 +36,6 @@ bindsym $m+k			focus up
 bindsym $h+k    		move up 30
 bindsym $m+l			focus right
 bindsym $h+l    	        move right 30
-
-bindsym $m+b                    exec $BROWSER
-bindsym $h+b                    exec firejail $BROWSER --no-remote
-bindsym $m+v                    exec vimb -i -c ~/.config/vimb/vimbrc
-
-bindsym $m+m                    exec pamixer -t
-bindsym $m+parenleft            exec pamixer -i 5
-bindsym $m+parenright           exec pamixer -d 5
-
-bindsym $m+slash                exec xterm -e ytop -fap -c vice -I 1/2
-#bindsym $m+slash                exec $t -e gotop -paf -r 2
-bindsym $m+Tab                  exec xterm -e htop
 
 # Set Xresources colors:
 set_from_resource $darkblack	color0  #000000
@@ -100,7 +72,7 @@ bar {
       			inactive_workspace $magenta $darkmagenta $black
         }
 	status_command i3blocks
-	position bottom
+	position top
 	mode dock
 	modifier None
 }

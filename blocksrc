@@ -1,32 +1,24 @@
 #!/usr/bin/i3blocks
 
-separator_block_width=20
+separator_block_width=32
 markup=pango
 
 [volume]
 command=pamixer --get-volume-human || --get-mute
 interval=1
+color=#33ff00
 
 [clock-time]
-command=echo '  ' $(date +%R:%S) '  '
+command=echo $(date +%R:%S)
 interval=1
+color=#ffff00
 
 [clock-date]
 command=echo $(date +%A%t%d%t%B%t%Y%t)
 interval=3600
-
-[OS/Kernel]
-command=echo $(uname -o && uname -r)
-interval=36000
+color=#ff8800
 
 [clk frequency]
 command=echo $(cpupower -c all frequency-info | grep asserted | sed 's/current CPU frequency: //g' | sed 's/ (asserted by call to kernel)//g')
-interval=10
-
-#[temperature]
-#command=echo $(acpi -tf | sed 's/Thermal//g' | sed 's/ok, //g' | sed 's/degrees //g')
-#interval=30
-
-# [battery]
-# command=echo $(acpi -b | sed 's/Battery 0://g' | sed 's/Unknown, 99%/Full, 99.9%/g' | sed 's/ - will never fully charge.//g')
-# interval=30
+interval=1
+color=#ff0000
