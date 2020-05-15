@@ -1,4 +1,4 @@
-#!/usr/bin/i3
+# nvim:set ft=sh
 
 gaps inner 16
 gaps outer 8
@@ -10,20 +10,19 @@ for_window [class="png"] floating enable
 for_window [class="jpg"] floating enable
 for_window [class="bmp"] floating enable
 for_window [class="gif"] floating enable
-for_window [class="xst"] floating enable
+for_window [class="Xterm"] floating enable
 
 set $t $TERMINAL
 set $m Mod4
 set $h Mod1
 
-bindsym $m+q			kill
+bindsym $h+q			kill
 
 bindsym $h+equal                gaps outer current minus 8
 bindsym $h+minus                gaps outer current plus 8
 bindsym $m+equal                gaps inner current minus 2
 bindsym $m+minus                gaps inner current plus 2
 
-bindsym $m+Escape		split toggle
 bindsym $m+g                    bar mode toggle
 bindsym $m+f			fullscreen toggle
 bindsym $m+a			floating toggle
@@ -72,7 +71,7 @@ bar {
       			inactive_workspace $magenta $darkmagenta $black
         }
 	status_command i3blocks
-	position top
+	position bottom
 	mode dock
 	modifier None
 }
@@ -100,12 +99,12 @@ bindsym $m+8  	        workspace $ws8
 bindsym $m+9  	        workspace $ws9
 
 # move focused container to workspace and switch to that workspace
-bindsym $h+1            move container to workspace $ws1 ;; workspace $ws1
-bindsym $h+2 	        move container to workspace $ws2 ;; workspace $ws2
-bindsym $h+3            move container to workspace $ws3 ;; workspace $ws3
-bindsym $h+4            move container to workspace $ws4 ;; workspace $ws4
-bindsym $h+5            move container to workspace $ws5 ;; workspace $ws5
-bindsym $h+6            move container to workspace $ws6 ;; workspace $ws6
-bindsym $h+7            move container to workspace $ws7 ;; workspace $ws7
-bindsym $h+8            move container to workspace $ws8 ;; workspace $ws8
-bindsym $h+9            move container to workspace $ws9 ;; workspace $ws9
+#bindsym $h+1            move container to workspace $ws1 ;; workspace $ws1
+#bindsym $h+2 	        move container to workspace $ws2 ;; workspace $ws2
+#bindsym $h+3            move container to workspace $ws3 ;; workspace $ws3
+#bindsym $h+4            move container to workspace $ws4 ;; workspace $ws4
+#bindsym $h+5            move container to workspace $ws5 ;; workspace $ws5
+#bindsym $h+6            move container to workspace $ws6 ;; workspace $ws6
+#bindsym $h+7            move container to workspace $ws7 ;; workspace $ws7
+#bindsym $h+8            move container to workspace $ws8 ;; workspace $ws8
+#bindsym $h+9            move container to workspace $ws9 ;; workspace $ws9

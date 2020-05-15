@@ -1,4 +1,4 @@
-#!/usr/bin/i3blocks
+# nvim:set ft=sh
 
 separator_block_width=32
 markup=pango
@@ -22,3 +22,8 @@ color=#ff8800
 command=echo $(cpupower -c all frequency-info | grep asserted | sed 's/current CPU frequency: //g' | sed 's/ (asserted by call to kernel)//g')
 interval=1
 color=#ff0000
+
+[window pid]
+command=xdo pid
+interval=1
+color=#9900ff

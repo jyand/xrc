@@ -1,18 +1,26 @@
-#!/bin/sxhkd
+# nvim:set ft=sh
 
 # WM-Independent
 #
+mod4 + q
+        xdo kill
+mod4 + x
+        xdo close
 mod4 + Return
         $TERMINAL -e $FILE
 mod4 + d
         dmenu_run
+mod4 + Escape
+        xterm -e fish
 # Audio
 mod4 + m
         pamixer -t
-mod4 + comma
-        pamixer -i 5
-mod4 + colon
+mod4 + rightparen
         pamixer -d 5
+mod4 + leftparen
+        pamixer -i 5
+mod4 + n
+        deadbeef
 # System Monitor
 mod4 + slash
         $TERMINAL -e ytop -fap -c vice -I 1/2
@@ -28,14 +36,19 @@ mod4 + r
 mod4 + e
         redshift -x
 mod4 + t
-        $TERMINAL -hold -e curl wttr.in
+        xterm -hold -e curl wttr.in | sed 38q | $PAGER
+
+# BSPWM
 #
-# Window size
-mod4 + u
-        winresize left
-mod4 + i
-        winresize down
-mod4 + o
-        winresize up
-mod4 + p
-        winresize right
+mod4 + {h,j,k,l}
+        bspc node -f {west,south,north,east}
+hyper + {h,j,k,l}
+        bspc node -s {west,south,north,east}
+mod4 + w
+        bspc desktop last --focus
+mod4 + {minus,plus}
+        bspc desktop {prev,next} --focus
+mod4 + {1-9}
+        bspc {desktop -f,node -d} ^{1-9}
+mod4 + a
+        bspc node focused -t \~floating

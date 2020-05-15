@@ -29,8 +29,6 @@ set guicursor+=n-c:ver50-lCursor
 set guicursor+=i:hor100-lCursor
 set cursorline
 
-"set background=dark
-"set termguicolors
 set title
 set showmode
 set showcmd
@@ -50,4 +48,5 @@ nnoremap m :Man
 noremap <Tab> .
 nnoremap . }
 map , {
+map = ~
 "nvim

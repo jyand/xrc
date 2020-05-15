@@ -2,7 +2,7 @@
 
 xmodmap ~/.Xmodmap
 
-xset rate 200 50
+xset rate 400 50
 xcompmgr -c &
 xbanish &
 feh --bg-fill ~/.local/background

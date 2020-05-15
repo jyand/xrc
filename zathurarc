@@ -1,4 +1,4 @@
-#!/bin/zathura
+# nvim:set ft=sh
 set selection-clipboard clipboard
 set adjust-open "width"
 set recolor "true"

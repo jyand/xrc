@@ -1,5 +1,3 @@
-#!/bin/kitty
-
 term xterm-kitty
 shell fish
 

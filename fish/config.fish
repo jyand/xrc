@@ -25,6 +25,8 @@ abbr lb 'lsblk'
 abbr n 'wc -l'
 abbr w 'whereis'
 
+abbr y 'torsocks -i youtube-dl'
+
 abbr xi 'doas xbps-install -Su'
 abbr xr 'doas xbps-remove -R'
 abbr x 'xbps-query -Rs'
@@ -32,7 +34,7 @@ abbr xs 'xbps-query -S'
 abbr xl 'xbps-query -l'
 
 abbr g 'git'
-abbr gg 'git clone'
+abbr gg 'torsocks -i git clone'
 abbr G 'git pull'
 abbr ga 'git add --all'
 abbr gc 'git commit -m'

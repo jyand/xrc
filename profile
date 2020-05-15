@@ -7,7 +7,7 @@ export XAUTHORITY="$HOME/.local/.Xauthority"
 export PAGER="bat"
 export MANPAGER="vimpager"
 
-# Default Applications and Alternates
+# Default Applications
 export WIN="i3"
 export TERMINAL="kitty"
 export EDITOR="vis"
@@ -17,4 +17,4 @@ export IMAGE="sxiv"
 export BROWSER="icecat"
 
 # Auto-start desktop after logging in from tty
-! pgrep -x $WIN > /dev/null && exec startx > /dev/null
+! pgrep -x $WIN > /dev/null && exec startx 2> /dev/null
