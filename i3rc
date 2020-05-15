@@ -10,7 +10,6 @@ for_window [class="png"] floating enable
 for_window [class="jpg"] floating enable
 for_window [class="bmp"] floating enable
 for_window [class="gif"] floating enable
-for_window [class="Xterm"] floating enable
 
 set $t $TERMINAL
 set $m Mod4
