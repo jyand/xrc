@@ -5,17 +5,17 @@ colorscheme based
 "Window Manager emulation
 nnoremap . :!$TERMINAL -e nvim %f > /dev/null &<CR>
 nnoremap C :!xterm -e scim %f 2> /dev/null &<CR>
-map , :!$TERMINAL -e vifm > /dev/null &<CR>
-map L :!$PAGER %f<CR>
+nnoremap , :!$TERMINAL -e vifm > /dev/null &<CR>
+map L :!xterm -hold -e $PAGER %f & 2> /dev/null<CR>
 map I :!sxiv *.png *.jpg *.gif *.jpeg *.bmp 2> /dev/null &<CR>
 map B :!firejail --net=none vimb %f 2> /dev/null &<CR>
 map b :!$BROWSER %f 2> /dev/null &<CR>
-nnoremap H :!i3 split toggle > /dev/null<CR>
-map F :!i3 floating toggle > /dev/null<CR>
+nnoremap H :cd<CR>
+nnoremap O :cd /opt<CR>
 
 "mappings
 nnoremap f :!fish<CR>
-nnoremap E :!$EDITOR %f<CR>
+nnoremap v :!$EDITOR %f<CR>
 nnoremap a :touch
 nnoremap m :mkdir
 nnoremap r :rename

@@ -7,11 +7,9 @@ mod4 + q
 mod4 + x
         xdo close
 mod4 + Return
-        $TERMINAL -e $FILE
+        {$TERMINAL -e $FILE, xterm -e fish}
 mod4 + d
         dmenu_run
-mod4 + Escape
-        xterm -e fish
 # Audio
 mod4 + m
         pamixer -t
@@ -22,14 +20,12 @@ mod4 + leftparen
 mod4 + n
         deadbeef
 # System Monitor
-mod4 + slash
-        $TERMINAL -e ytop -fap -c vice -I 1/2
-mod4 + Tab
-        $TERMINAL -e htop
+{mod4, hyper} + p
+        {$TERMINAL -e ytop -fap -c vice -I 1/2, $TERMINAL -e htop}
 # Utilities
 mod4 + s
         maim -s -m 10 ~/$(date +%s).png
-mod4 + y
+hyper + slash
         dispsel
 mod4 + r
         redshift -O 2500
@@ -40,10 +36,12 @@ mod4 + t
 
 # BSPWM
 #
-mod4 + {h,j,k,l}
-        bspc node -f {west,south,north,east}
-hyper + {h,j,k,l}
-        bspc node -s {west,south,north,east}
+{mod4, hyper} + {h,j,k,l}
+        bspc node {-f, -s} {west,south,north,east}
+mod4 + {y,u,i,o}
+        bspc node -s {left,down,up,right}
+mod4 + Tab
+        bspc node -f prev.local
 mod4 + w
         bspc desktop last --focus
 mod4 + {minus,plus}
@@ -52,3 +50,7 @@ mod4 + {minus,plus}
         bspc {desktop -f,node -d} ^{1-9}
 mod4 + a
         bspc node focused -t \~floating
+mod4 + f
+        bspc window -t fullscreen
+mod4 + g
+        bspc config split_ratio  {0.45,0.55}

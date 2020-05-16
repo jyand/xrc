@@ -4,10 +4,11 @@
 export PATH="/bin":"/usr/bin":"/usr/local/bin":"/sbin":"/usr/sbin":"/plan9/bin":"/opt/bin"
 export MANPATH="/usr/share/man":"/usr/local/share/man":"/opt/man":"/plan9/man"
 export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_DATA_HOME="$HOME/.local/share"
 export VIFM="$XDG_CONFIG_HOME/vifm"
 export XAUTHORITY="$HOME/.local/.Xauthority"
-export PAGER="bat"
+export PAGER="vimpager"
 export MANPAGER="vimpager"
 
 # Default Applications

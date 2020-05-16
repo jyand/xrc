@@ -44,7 +44,7 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'JuliaEditorSupport/julia-vim'
 call plug#end()
 
-nnoremap m :Man
+nnoremap m :
 noremap <Tab> .
 nnoremap . }
 map , {
