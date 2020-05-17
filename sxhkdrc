@@ -6,7 +6,7 @@ mod4 + q
         xdo kill
 mod4 + x
         xdo close
-mod4 + Return
+{mod4, hyper} + Return
         {$TERMINAL -e $FILE, xterm -e fish}
 mod4 + d
         dmenu_run
@@ -21,7 +21,7 @@ mod4 + n
         deadbeef
 # System Monitor
 {mod4, hyper} + p
-        {$TERMINAL -e ytop -fap -c vice -I 1/2, $TERMINAL -e htop}
+        {$TERMINAL -e ytop -fap -c vice -I 1/2, xterm -e htop}
 # Utilities
 mod4 + s
         maim -s -m 10 ~/$(date +%s).png
@@ -33,15 +33,17 @@ mod4 + e
         redshift -x
 mod4 + t
         xterm -hold -e curl wttr.in | sed 38q | $PAGER
+mod4 + f
+        date | dmenu
 
 # BSPWM
 #
-{mod4, hyper} + {h,j,k,l}
-        bspc node {-f, -s} {west,south,north,east}
-mod4 + {y,u,i,o}
-        bspc node -s {left,down,up,right}
-mod4 + Tab
-        bspc node -f prev.local
+hyper + {h,j,k,l}
+        bspc node -s {west,south,north,east}
+mod4 + {h,j,k,l}
+        bspc node -f {west,south,north,east}
+{mod4, hyper} + Tab
+        bspc node -f {prev.local,next.local}
 mod4 + w
         bspc desktop last --focus
 mod4 + {minus,plus}
@@ -50,7 +52,5 @@ mod4 + {minus,plus}
         bspc {desktop -f,node -d} ^{1-9}
 mod4 + a
         bspc node focused -t \~floating
-mod4 + f
-        bspc window -t fullscreen
-mod4 + g
+mod4 + Escape
         bspc config split_ratio  {0.45,0.55}

@@ -12,7 +12,7 @@ hi CursorColumn cterm=NONE ctermbg=235
 hi ErrorMsg ctermfg=0 ctermbg=1 
 hi WarningMsg ctermfg=0 ctermbg=1
 hi ModeMsg cterm=bold ctermfg=15 ctermbg=88
-hi MatchParen ctermbg=13
+hi MatchParen ctermbg=48
 hi Comment ctermfg=55 ctermbg=225
 hi Constant ctermfg=14
 hi Number ctermfg=202

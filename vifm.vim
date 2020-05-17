@@ -3,28 +3,27 @@ only
 colorscheme based
 
 "Window Manager emulation
-nnoremap . :!$TERMINAL -e nvim %f > /dev/null &<CR>
+nnoremap . :!$TERMINAL -e nvim %f 2> /dev/null &<CR>
 nnoremap C :!xterm -e scim %f 2> /dev/null &<CR>
-nnoremap , :!$TERMINAL -e vifm > /dev/null &<CR>
+nnoremap , :!$TERMINAL -e vifm 2> /dev/null &<CR>
 map L :!xterm -hold -e $PAGER %f & 2> /dev/null<CR>
 map I :!sxiv *.png *.jpg *.gif *.jpeg *.bmp 2> /dev/null &<CR>
 map B :!firejail --net=none vimb %f 2> /dev/null &<CR>
 map b :!$BROWSER %f 2> /dev/null &<CR>
-nnoremap H :cd<CR>
-nnoremap O :cd /opt<CR>
 
 "mappings
 nnoremap f :!fish<CR>
 nnoremap v :!$EDITOR %f<CR>
-nnoremap a :touch
-nnoremap m :mkdir
+nnoremap i :touch
+nnoremap a :mkdir
 nnoremap r :rename
 nnoremap w za
 nnoremap e :view<CR>
-nnoremap J G
-nnoremap i :sp<CR>
-nnoremap o :o<CR>
-nnoremap s :vs<CR>
+noremap J G
+nnoremap H :cd<CR>
+nnoremap O :cd /opt<CR>
+nnoremap o :sp!<CR>
+nnoremap s :vs!<CR>
 nnoremap <Tab> :si<CR>
 map ~ :siblprev<CR>
 map K :2<CR>
