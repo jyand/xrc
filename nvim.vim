@@ -43,10 +43,15 @@ set wildmenu
 call plug#begin('~/.config/nvim/plugged')
 Plug 'JuliaEditorSupport/julia-vim'
 call plug#end()
+execute pathogen#infect()
 
 nnoremap m :
 noremap <Tab> .
 nnoremap . }
 map , {
-map = ~
+map t :set spell!<CR>
+map = "*p
+nnoremap u "*y
+nnoremap U :undo<CR>
+map R :redo<CR>
 "nvim

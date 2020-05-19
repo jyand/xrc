@@ -1,8 +1,8 @@
 #!/bin/sh
 
 # env
-export PATH="/bin":"/usr/bin":"/usr/local/bin":"/sbin":"/usr/sbin":"/plan9/bin":"/opt/bin"
-export MANPATH="/usr/share/man":"/usr/local/share/man":"/opt/man":"/plan9/man"
+export PATH="/bin":"/usr/bin":"/sbin":"/usr/sbin":"/opt/bin"
+export MANPATH="/usr/share/man":"/opt/man"
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_DATA_HOME="$HOME/.local/share"

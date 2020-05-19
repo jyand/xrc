@@ -28,6 +28,7 @@ irqbalance
 maim
 make
 htop
+ytop
 redshift
 setxbmap
 xkbcomp
@@ -57,10 +58,8 @@ xcompmgr
 autoconf
 automake
 pkg-config
-cpupower
-cpufrequtils
-djvulibre
 bat
+gperf
 dropbear
 go
 make

@@ -1,0 +1,5 @@
+#!/bin/sh
+for i in rm cp mv pwd ls cat clear lsmod modinfo swapon swapoff touch vi yes top hostname find chroot chown chmod head ; do
+        busybox mv -v /usr/bin/$i /usr/local/bin
+        ln -sv busybox /usr/bin/$i
+done

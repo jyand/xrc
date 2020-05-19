@@ -32,6 +32,7 @@ map t :tree<CR>
 map T :tree!<CR>
 map * :select *.
 map _ :!
+map m :
 
 "settings
 set vicmd=nvim
@@ -50,7 +51,7 @@ set vifminfo=dhistory,chistory,tui,shistory,uphistory,fhistory,dirstack,register
 
 "Default file associations
 filetype *.md mdcat %f | bat
-filetype *.html,*.htm,*.xhtml firejail --net=none vimb %f 2> /dev/null &
+"filetype *.html,*.htm,*.xhtml firejail --net=none vimb %f 2> /dev/null &
 filetype *.pdf,*.ps,*.eps,*.ps.gz,*.djvu zathura %f 2> /dev/null & 
 filetype *.png,*.jpg,*.jpeg,*.gif,*.bmp,*.xpm sxiv %f 2> /dev/null &
 filetype *.csv,*.odt,*.xls,*.xlsx scim

@@ -1,5 +1,5 @@
 require('vis')
-require('cursors')
+-- require('cursors')
 
 vis.events.subscribe(vis.events.INIT, function()
         vis:command('set autoindent on')

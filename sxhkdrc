@@ -10,6 +10,8 @@ mod4 + x
         {$TERMINAL -e $FILE, xterm -e fish}
 mod4 + d
         dmenu_run
+mod4 + b
+        $BROWSER
 # Audio
 mod4 + m
         pamixer -t
