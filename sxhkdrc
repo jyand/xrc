@@ -23,7 +23,7 @@ mod4 + n
         deadbeef
 # System Monitor
 {mod4, hyper} + p
-        {$TERMINAL -e ytop -fap -c vice -I 1/2, xterm -e htop}
+        {xterm -e ytop -fap -c vice -I 1/2, xterm -e htop}
 # Utilities
 mod4 + s
         maim -s -m 10 ~/$(date +%s).png
