@@ -1,4 +1,4 @@
 #!/bin/sh
 
-[ $TERM = "xterm-kitty" ] && ufetch | sed 's/[W].*//g'
+[ $TERM = "xterm-kitty" ] && pfetch | sed 's/[W].*//g'
 [ $TERM = "xterm" ] && neofetch

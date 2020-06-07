@@ -6,7 +6,7 @@ xset rate 200 50
 xset b off
 xcompmgr -c &
 xbanish &
-feh --bg-fill ~/.local/background.png
+feh --bg-fill --no-fehbg ~/.local/background.jpg
 
 sxhkd &
 exec $WIN

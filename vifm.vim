@@ -50,7 +50,7 @@ set suggestoptions=normal,visual,view,otherpane,keys,marks,registers
 set vifminfo=dhistory,chistory,tui,shistory,uphistory,fhistory,dirstack,registers
 
 "Default file associations
-filetype *.md mdcat %f | bat
+filetype *.md xterm -hold -e mdcat %f | $PAGER 2> /dev/null &
 "filetype *.html,*.htm,*.xhtml firejail --net=none vimb %f 2> /dev/null &
 filetype *.pdf,*.ps,*.eps,*.ps.gz,*.djvu zathura %f 2> /dev/null & 
 filetype *.png,*.jpg,*.jpeg,*.gif,*.bmp,*.xpm sxiv %f 2> /dev/null &

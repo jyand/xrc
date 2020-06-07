@@ -1,13 +1,11 @@
 function fish_prompt
     set -l last_pipestatus $pipestatus
-    set -l normal (set_color normal)
-
-    set -l color_cwd $fish_color_cwd
-    set -l prefix
-    set -l suffix '}'
+    set -l brite (set_color brwhite)
+    set -l prefix ''
+    set -l suffix '!'
 
     # Write pipestatus
-    set -l prompt_status (__fish_print_pipestatus " [" "]" "|" (set_color $fish_color_status) (set_color --bold $fish_color_status) $last_pipestatus)
+    set -l prompt_status (__fish_print_pipestatus " [" "]" "|" (set_color $fish_color_status) (set_color --bold brred) $last_pipestatus)
 
-    echo -n -s (set_color $color_cwd) (prompt_pwd) $normal (fish_vcs_prompt) $normal $prompt_status $suffix " "
+    echo -n (fish_git_prompt) $prompt_status $suffix
 end

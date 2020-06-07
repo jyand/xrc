@@ -1,5 +1,4 @@
 term xterm-kitty
-shell fish
 
 repaint_delay 1
 input_delay 1

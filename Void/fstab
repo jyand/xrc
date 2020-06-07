@@ -1,6 +1,7 @@
-# See fstab(5).
-#
 # <file system>	<dir>	<type>	<options>		<dump>	<pass>
 tmpfs		/tmp	tmpfs	defaults,nosuid,nodev   0       0
-/dev/sda1	/boot	ext2	defaults		0	0
-/dev/sda2	/       ext4	defaults		0	0
+/dev/sda1	none	swap	defaults		0	0
+/dev/sda2	/	ext4	defaults		0	0
+/dev/sda3	/opt	ext4	defaults		0	0
+/dev/sda4	/home	ext4	defaults		0	0
+#/dev/mmcblk0p1	/media	ext4	defaults		0	0

@@ -47,7 +47,6 @@ loksh
 lok
 subuser
 pdfgrep
-dmenu
 nodejs
 LuaJIT
 clisp
@@ -91,4 +90,4 @@ fcron
 lua51
 lua52
 deadbeef
-
+icecat

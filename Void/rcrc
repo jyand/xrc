@@ -1,6 +1,7 @@
 #!/bin/rc
+# use as .rcrc instead of .profile if rc is login shell 
 
-PATH=$PATH:/plan9/bin
+PATH=$PATH:/opt/bin
 # Default Applications
 WIN=i3
 TERMINAL=xterm
@@ -9,7 +10,7 @@ FILE=vifm
 READER=zathura
 IMAGE=sxiv
 BROWSER=icecat
-sh -c export export $PATH $WIN $TERMINAL $EDITOR $FILE $READER $IMAGE $BROWSER > /dev/null
+sh -c export
 
 # Auto-start desktop after logging in from tty
 if (! pgrep -x $WIN > /dev/null) {

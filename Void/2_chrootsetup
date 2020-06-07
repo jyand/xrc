@@ -7,8 +7,8 @@ echo 'v' > /etc/hostname
 
 mv -f fstab /etc
 
-grub-install /dev/sda >> log.dat
-echo '' >> log.dat
+grub-install /dev/sda
+echo ''
 
 # Uncomment if using glibc, musl does not support locales
 # echo "LANG=en_US.UTF-8" > /etc/locale.conf
@@ -19,9 +19,5 @@ sed 's/page_poison=1\/page_poison=1 rd.auto=1/g'  /etc/default/grub > /etc/defau
 
 # change if kernel version is different
 xbps-reconfigure -f linux5.4 >> log.dat
-
-for s in NetworkManager dbus; do
-        ln -s /etc/sv/$s /var/service
-done
 
 # exit the chroot then execute fin.sh

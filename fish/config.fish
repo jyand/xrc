@@ -3,8 +3,9 @@
 fish_vi_key_bindings
 fish_vi_cursor
 
-fetch
-echo '    ~~ (:==< ~~~ '
+pfetch
+# echo '    ~~ (:==< ~~~ '
+set_color blue && busybox pwd
 
 abbr q 'exit'
 abbr a 'exit'
@@ -18,6 +19,8 @@ abbr m 'doas busybox mount'
 abbr u 'doas busybox umount -r /mnt'
 abbr e 'echo'
 abbr c 'bat'
+abbr j '$PAGER'
+abbr b 'busybox less'
 abbr f 'grep'
 abbr s 'sed'
 abbr n 'wc -l'
@@ -35,7 +38,7 @@ abbr xl 'xbps-query -l'
 abbr x 'xbps-query -Rs'
 abbr y 'torsocks -i youtube-dl'
 abbr z 'torsocks -i wget -r'
-abbr g 'torsocks -i git clone'
+abbr g 'git clone'
 abbr p 'git pull'
 abbr ga 'git add --all'
 abbr gc 'git commit -m'
@@ -43,3 +46,6 @@ abbr gp 'git push -u origin master'
 abbr gb 'git branch'
 abbr gm 'git merge'
 abbr gs 'git status'
+
+abbr M 'make && doas make install && make clean'
+abbr i 'for i in ()'

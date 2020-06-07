@@ -40,10 +40,10 @@ set encoding=utf-8
 set incsearch
 set wildmenu
 
-call plug#begin('~/.config/nvim/plugged')
-Plug 'JuliaEditorSupport/julia-vim'
-call plug#end()
-execute pathogen#infect()
+"call plug#begin('~/.config/nvim/plugged')
+"Plug 'JuliaEditorSupport/julia-vim'
+"call plug#end()
+"execute pathogen#infect()
 
 nnoremap m :
 noremap <Tab> .
