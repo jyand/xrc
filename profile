@@ -6,10 +6,12 @@ export MANPATH="/usr/share/man":"/opt/man"
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_RUNTIME_DIR="/tmp/runtime-jyan"
 export VIFM="$XDG_CONFIG_HOME/vifm"
 export XAUTHORITY="$HOME/.local/.Xauthority"
+export MAIL=""
 export PAGER="vimpager"
-export MANPAGER="vimpager"
+export MANPAGER="$PAGER"
 
 # Default Applications
 export WIN="bspwm"

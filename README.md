@@ -5,7 +5,7 @@
 ---
 
 For Unix-like operating systems with Xorg
-* vim-based environment/workflow: vifm, neovim, i3-gaps, scim, zathura, fish w/ vi-mode
+* vim-based environment/workflow: vifm, neovim, scim, zathura, fish w/ vi-mode
 * ash as default shell, rc as login shell
 * custom color values for optimal contrast (Xresources)
 * keymap orientation to improve ergonomics and efficiency (Xmodmap)

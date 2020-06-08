@@ -20,6 +20,7 @@ nnoremap r :rename
 nnoremap w za
 nnoremap e :view<CR>
 noremap J G
+nnoremap F :cd /media<CR>
 nnoremap H :cd<CR>
 nnoremap O :cd /opt<CR>
 nnoremap o :sp!<CR>
