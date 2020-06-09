@@ -15,7 +15,7 @@ export MANPAGER="$PAGER"
 
 # Default Applications
 export WIN="bspwm"
-export TERMINAL="kitty"
+export TERMINAL="lxterminal"
 export EDITOR="vis"
 export FILE="vifm"
 export READER="zathura"

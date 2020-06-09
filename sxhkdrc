@@ -34,7 +34,7 @@ mod4 + r
 mod4 + e
         redshift -x
 mod4 + t
-        xterm -hold -e curl wttr.in | sed 38q | $PAGER
+        xterm -hold -e curl wttr.in | sed 38q | bat
 mod4 + f
         date | dmenu
 
