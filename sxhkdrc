@@ -2,12 +2,12 @@
 
 # WM-Independent
 #
-mod4 + q
-        xdo kill
-mod4 + x
-        xdo close
+{mod4, hyper} + q
+        xdo {close, kill}
+{mod4, hyper} + x
+        xdo {close, kill}
 {mod4, hyper} + Return
-        {$TERMINAL -e $FILE, xterm -e fish}
+        {$TERMINAL -e $FILE, $TERMINAL -e fish}
 mod4 + d
         dmenu_run
 mod4 + b
@@ -15,15 +15,19 @@ mod4 + b
 # Audio
 mod4 + m
         pamixer -t
-mod4 + rightparen
+mod4 + parenright
         pamixer -d 5
-mod4 + leftparen
+mod4 + parenleft
         pamixer -i 5
 mod4 + n
         deadbeef
 # System Monitor
 {mod4, hyper} + p
-        {xterm -e ytop -fap -c vice -I 1/2, xterm -e htop}
+        {$TERMINAL -e ytop -fap -c vice -I 1/2, $TERMINAL -e htop}
+# Calculator
+{mod4, hyper}
+        $TERMINAL -e {julia, R}
+
 # Utilities
 mod4 + s
         maim -s -m 10 ~/$(date +%s).png
@@ -34,9 +38,11 @@ mod4 + r
 mod4 + e
         redshift -x
 mod4 + t
-        xterm -hold -e curl wttr.in | sed 38q | bat
+        $TERMINAL -hold -e curl wttr.in | sed 38q | bat --wrap *auto*
 mod4 + f
         date | dmenu
+mod4 + g
+        acpi -b -tf | dmenu
 
 # BSPWM
 #
