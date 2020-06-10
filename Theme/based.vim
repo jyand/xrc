@@ -5,13 +5,13 @@ let g:colors_name="based"
 hi Search cterm=bold ctermfg=15 ctermbg=1
 hi Link cterm=bold ctermfg=215
 hi StatusLine cterm=bold ctermfg=0 ctermbg=13
-hi LineNr cterm=bold ctermfg=48 ctermbg=0
-hi CursorLineNr cterm=bold ctermfg=0 ctermbg=48
+hi LineNr cterm=bold ctermfg=13 ctermbg=0
+hi CursorLineNr cterm=bold ctermfg=0 ctermbg=13
 hi CursorLine cterm=NONE ctermbg=88
 hi CursorColumn cterm=NONE ctermbg=235
 hi ErrorMsg ctermfg=0 ctermbg=1 
 hi WarningMsg ctermfg=0 ctermbg=1
-hi ModeMsg cterm=bold ctermfg=15 ctermbg=88
+hi ModeMsg cterm=bold ctermfg=0 ctermbg=48
 hi MatchParen ctermbg=55
 hi Comment ctermfg=55 ctermbg=225
 hi Constant ctermfg=14

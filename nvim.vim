@@ -1,12 +1,28 @@
-"nvim
+" John DeSalvo
 syntax on
-colorscheme based
 filetype on
 filetype plugin indent on
+colorscheme based
+
+" the keys respectively to the right of y/p use the system clipboard instead of registers
+map = "*p
+noremap u "*y
+" consistent, symmetrical, avoids accidental undos, no need for Ctrl
+nnoremap U :undo<CR>
+map R :redo<CR>
+" avoid  accidental repetitions
+noremap <Tab> .
+" move around via sections without needing to hold Shift
+nnoremap . }
+nnoremap , {
+" making use of some keys with default mappings that are not so useful
+noremap ; $
+map f g`"
+map t :set spell!<CR>
+nnoremap m :
 
 " Tabs are 8 space characters
 set tabstop=8 softtabstop=0 expandtab shiftwidth=8 smarttab
-
 " Number lines are relative in normal mode and absolute in insert mode
 set number relativenumber
 set numberwidth=2
@@ -22,13 +38,12 @@ augroup columntoggle
         autocmd BufEnter,FocusGained,InsertLeave * set cursorcolumn
         autocmd BufLeave,FocusLost,InsertEnter * set nocursorcolumn
 augroup end
-
 " Different cursor types for different modes
 set guicursor+=v-r:blockCursor
 set guicursor+=n-c:ver50-lCursor
 set guicursor+=i:hor100-lCursor
 set cursorline
-
+" Basic settings
 set title
 set showmode
 set showcmd
@@ -39,19 +54,3 @@ set spelllang=en_US
 set encoding=utf-8
 set incsearch
 set wildmenu
-
-"call plug#begin('~/.config/nvim/plugged')
-"Plug 'JuliaEditorSupport/julia-vim'
-"call plug#end()
-"execute pathogen#infect()
-
-nnoremap m :
-noremap <Tab> .
-nnoremap . }
-map , {
-map t :set spell!<CR>
-map = "*p
-nnoremap u "*y
-nnoremap U :undo<CR>
-map R :redo<CR>
-"nvim

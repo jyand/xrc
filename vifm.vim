@@ -4,12 +4,13 @@ colorscheme based
 
 "Window Manager emulation
 nnoremap . :!$TERMINAL -e nvim %f 2> /dev/null &<CR>
-nnoremap C :!xterm -e scim %f 2> /dev/null &<CR>
+nnoremap C :!$TERMINAL -e scim %f 2> /dev/null &<CR>
 nnoremap , :!$TERMINAL -e vifm 2> /dev/null &<CR>
-map L :!xterm -hold -e $PAGER %f & 2> /dev/null<CR>
+map L :!$TERMINAL -e bat %f &
 map I :!sxiv *.png *.jpg *.gif *.jpeg *.bmp 2> /dev/null &<CR>
-map B :!firejail --net=none vimb %f 2> /dev/null &<CR>
+map B :!allurls %f 2> /dev/null &<CR>
 map b :!$BROWSER %f 2> /dev/null &<CR>
+"map B :!firejail --net=none vimb %f 2> /dev/null &<CR>
 
 "mappings
 nnoremap f :!fish<CR>
@@ -51,8 +52,6 @@ set suggestoptions=normal,visual,view,otherpane,keys,marks,registers
 set vifminfo=dhistory,chistory,tui,shistory,uphistory,fhistory,dirstack,registers
 
 "Default file associations
-filetype *.md xterm -hold -e mdcat %f | $PAGER 2> /dev/null &
-"filetype *.html,*.htm,*.xhtml firejail --net=none vimb %f 2> /dev/null &
 filetype *.pdf,*.ps,*.eps,*.ps.gz,*.djvu zathura %f 2> /dev/null & 
 filetype *.png,*.jpg,*.jpeg,*.gif,*.bmp,*.xpm sxiv %f 2> /dev/null &
 filetype *.csv,*.odt,*.xls,*.xlsx scim
@@ -75,3 +74,5 @@ filetype *.sha512
 filetype *.asc
        \ {Check signature}
        \ !!gpg --verify %c,
+"filetype *.md $TERMINAL -hold -e mdcat %f | $PAGER 2> /dev/null &
+"filetype *.html,*.htm,*.xhtml firejail --net=none vimb %f 2> /dev/null &

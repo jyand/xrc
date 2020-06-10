@@ -25,7 +25,7 @@ mod4 + n
 {mod4, hyper} + p
         {$TERMINAL -e ytop -fap -c vice -I 1/2, $TERMINAL -e htop}
 # Calculator
-{mod4, hyper}
+{mod4, hyper} + c
         $TERMINAL -e {julia, R}
 
 # Utilities
@@ -38,11 +38,13 @@ mod4 + r
 mod4 + e
         redshift -x
 mod4 + t
-        $TERMINAL -hold -e curl wttr.in | sed 38q | bat --wrap *auto*
+        $TERMINAL -hold -e curl wttr.in | sed 37q | bat --wrap auto
 mod4 + f
-        date | dmenu
+        date | dmenu +%T
 mod4 + g
         acpi -b -tf | dmenu
+mod4 + v
+        echo $(pamixer --get-mute || pamixer --get-volume-human) | dmenu
 
 # BSPWM
 #
@@ -52,10 +54,12 @@ mod4 + {h,j,k,l}
         bspc node -f {west,south,north,east}
 {mod4, hyper} + Tab
         bspc node -f {prev.local,next.local}
-mod4 + w
-        bspc desktop last --focus
 mod4 + {minus,plus}
         bspc desktop {prev,next} --focus
+mod4 + w
+        bspc desktop last --focus
+mod4 + 0
+        bspc desktop older.occupied --focus
 {mod4, hyper} + {1-9}
         bspc {desktop -f,node -d} ^{1-9}
 mod4 + a
