@@ -11,16 +11,16 @@
 mod4 + d
         dmenu_run
 mod4 + b
-        $BROWSER
+        firejail $BROWSER
 # Audio
+mod4 + n
+        deadbeef
 mod4 + m
         pamixer -t
 mod4 + parenright
         pamixer -d 5
 mod4 + parenleft
         pamixer -i 5
-mod4 + n
-        deadbeef
 # System Monitor
 {mod4, hyper} + p
         {$TERMINAL -e ytop -fap -c vice -I 1/2, $TERMINAL -e htop}
@@ -30,21 +30,19 @@ mod4 + n
 
 # Utilities
 mod4 + s
-        maim -s -m 10 ~/$(date +%s).png
-hyper + slash
-        dispsel
+        scrot -s ~/Desktop/$(date +%s).png
 mod4 + r
         redshift -O 2500
 mod4 + e
         redshift -x
 mod4 + t
-        $TERMINAL -hold -e curl wttr.in | sed 37q | bat --wrap auto
+        roxterm -hold -e curl wttr.in | sed 37q | bat --wrap auto
 mod4 + f
-        date | dmenu +%T
+        date +%T | dmenu
 mod4 + g
         acpi -b -tf | dmenu
 mod4 + v
-        echo $(pamixer --get-mute || pamixer --get-volume-human) | dmenu
+        echo $(pamixer --get-volume-human || pamixer --get-mute) | dmenu
 
 # BSPWM
 #

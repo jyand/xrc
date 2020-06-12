@@ -4,7 +4,7 @@ repaint_delay 1
 input_delay 1
 
 font_family sans
-font_size 8.5
+font_size 9.5
 adjust_column_width 1
 
 cursor #fa0aca

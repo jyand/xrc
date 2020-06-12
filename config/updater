@@ -1,0 +1,9 @@
+#!/bin/sh
+
+date >> log.dat
+for d in $(cat active.csv) ; do
+        echo $d >> log.dat
+        cd /opt/$d
+        [ (git pull | busybox wc -l) = 1 ]
+        || make && doas make install && make clean >> /opt/log.dat
+done
