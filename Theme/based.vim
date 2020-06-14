@@ -4,7 +4,7 @@ let g:colors_name="based"
 
 hi Search cterm=bold ctermfg=15 ctermbg=1
 hi Link cterm=bold ctermfg=215
-hi StatusLine cterm=bold ctermfg=0 ctermbg=13
+hi StatusLine cterm=bold ctermfg=15 ctermbg=17
 hi LineNr cterm=bold ctermfg=0 ctermbg=13
 hi CursorLineNr cterm=bold ctermfg=13 ctermbg=0
 hi CursorLine cterm=NONE ctermbg=88

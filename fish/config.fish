@@ -3,7 +3,7 @@
 fish_vi_key_bindings
 fish_vi_cursor
 
-pfetch
+ufetch
 # echo '    ~~ (:==< ~~~ '
 set_color blue && busybox pwd
 

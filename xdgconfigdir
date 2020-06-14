@@ -1,0 +1,18 @@
+#!/bin/sh
+
+ln -Pvf Xmodmap ~/.Xmodmap
+ln -Pvf Xresources ~/.Xdefaults
+ln -Pvf bspwmrc ~/.config/bspwm
+ln -Pvf kittyrc ~/.config/kitty/kitty.conf
+ln -Pvf nvim.vim ~/.config/nvim/init.vim
+ln -Pvf profile ~/.profile
+ln -Pvf sxhkdrc ~/.config/sxhkd
+ln -Pvf vifm.vim ~/.config/vifm/vifmrc
+ln -Pvf virsrc.lua ~/.config/vis
+ln -Pvf xinitrc ~/.xinitrc
+ln -Pvf zathurarc ~/.config/zathura
+ln -Pvf fish/config.fish ~/.config/fish
+
+doas cp -v Theme/based.lua /usr/share/vis/themes 
+doas cp -v Theme/based.vim /usr/share/nvim/runtime/colors 
+cp -v Theme/based.vifm ~/.config/vifm/colors 
