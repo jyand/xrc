@@ -1,6 +1,6 @@
 #!/bin/sh
 
-feh --bg-fill --no-fehbg ~/.local/background.jpg
+feh --bg-fill --no-fehbg ~/.local/background.png
 
 xmodmap ~/.Xmodmap
 xset rate 200 50
@@ -9,4 +9,5 @@ xcompmgr -c &
 xbanish &
 
 sxhkd &
+yabar &
 exec $WIN

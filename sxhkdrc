@@ -37,8 +37,6 @@ mod4 + e
         redshift -x
 mod4 + t
         roxterm -hold -e curl wttr.in | sed 37q | bat --wrap auto
-mod4 + f
-        date +%T | dmenu
 mod4 + g
         acpi -b -tf | dmenu
 mod4 + v
