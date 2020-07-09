@@ -23,14 +23,14 @@ mod4 + parenleft
         pamixer -i 5
 # System Monitor
 {mod4, hyper} + p
-        {$TERMINAL -e ytop -fap -c vice -I 1/2, $TERMINAL -e htop}
+        {$TERMINAL -e ytop -fap -c vice -I 1/2, roxterm -e htop}
 # Calculator
 {mod4, hyper} + c
         $TERMINAL -e {julia, R}
 
 # Utilities
 mod4 + s
-        scrot -s ~/Desktop/$(date +%s).png
+        scrot -s
 mod4 + r
         redshift -O 2500
 mod4 + e
@@ -51,7 +51,7 @@ mod4 + {h,j,k,l}
 {mod4, hyper} + Tab
         bspc node -f {prev.local,next.local}
 mod4 + {minus,plus}
-        bspc desktop {prev,next} --focus
+        bspc desktop {prev.occupied,next.occupied} --focus
 mod4 + w
         bspc desktop last --focus
 mod4 + 0
