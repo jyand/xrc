@@ -6,7 +6,7 @@ colorscheme based
 nnoremap . :!$TERMINAL -e nvim %f 2> /dev/null &<CR>
 nnoremap C :!$TERMINAL -e scim %f 2> /dev/null &<CR>
 nnoremap , :!$TERMINAL -e vifm 2> /dev/null &<CR>
-map L :!$TERMINAL -e bat %f &
+map L :!roxterm --hold -e bat %f &<CR>
 map I :!sxiv *.png *.jpg *.gif *.jpeg *.bmp 2> /dev/null &<CR>
 map B :!allurls %f 2> /dev/null &<CR>
 map b :!$BROWSER %f 2> /dev/null &<CR>

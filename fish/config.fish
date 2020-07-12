@@ -52,5 +52,4 @@ abbr gw 'git switch'
 abbr gh 'git checkout'
 
 abbr M 'make && doas make install && make clean'
-abbr ping 'busybox ping'
 abbr pgrep 'busybox pgrep'
