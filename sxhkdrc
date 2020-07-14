@@ -23,7 +23,7 @@ mod4 + parenleft
         pamixer -i 5
 # System Monitor
 {mod4, hyper} + p
-        {$TERMINAL -e ytop -fap -c vice -I 1/2, roxterm -e htop}
+        {$TERMINAL -e ytop -fap -c vice -I 1/2, $TERMINAL -e htop}
 # Calculator
 {mod4, hyper} + c
         $TERMINAL -e {julia, R}
@@ -58,7 +58,9 @@ mod4 + 0
         bspc desktop older.occupied --focus
 {mod4, hyper} + {1-9}
         bspc {desktop -f,node -d} ^{1-9}
+mod4 + f
+        bspc node -t \~fullscreen
 mod4 + a
         bspc node focused -t \~floating
 mod4 + Escape
-        bspc config split_ratio  {0.45,0.55}
+        bspc config split_ratio  {0.43,0.57}

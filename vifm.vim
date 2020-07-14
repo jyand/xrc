@@ -14,7 +14,7 @@ map b :!$BROWSER %f 2> /dev/null &<CR>
 
 "mappings
 nnoremap f :!fish<CR>
-nnoremap v :!$EDITOR %f<CR>
+nnoremap v :!oksh <CR>
 nnoremap i :touch
 nnoremap a :mkdir
 nnoremap r :rename
@@ -22,14 +22,14 @@ nnoremap w za
 nnoremap e :view<CR>
 noremap J G
 noremap K :2<CR>
-nnoremap F :cd /media<CR>
+nnoremap M :cd /media<CR>
 nnoremap H :cd<CR>
 nnoremap O :cd /opt<CR>
 nnoremap o :sp!<CR>
 nnoremap s :vs!<CR>
 nnoremap <Tab> :si<CR>
 map ~ :siblprev<CR>
-map U :!unzip %c<CR>
+map U :!busybox unzip %c<CR>
 map t :tree<CR>
 map T :tree!<CR>
 map * :select *.
