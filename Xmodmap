@@ -22,8 +22,7 @@ keycode  18 = 9 greater 9 less
 keycode  19 = 0 less 0 greater
 keycode  20 = minus bar minus bar
 keycode  21 = plus ampersand plus ampersand 
-! Backspace key is unmapped to discourage hand strain
-keycode  22 = NoSymbol NoSymbol NoSymbol
+keycode  22 = Control_R Control_R Control_R
 keycode  23 = Tab NoSymbol Tab
 keycode  24 = q Q q Q
 keycode  25 = w W w W
@@ -80,6 +79,7 @@ keycode  76 = F10 F10 F10 F10 F10 F10
 keycode  94 = less greater less greater bar brokenbar bar
 keycode  95 = F11 F11 F11 F11 F11 F11
 keycode  96 = F12 F12 F12 F12 F12 F12
+keycode 105 = Hyper_R Hyper_R
 keycode 108 = Meta_R Meta_R Meta_R Meta_R
 keycode 111 = Up Up
 keycode 113 = Left Left

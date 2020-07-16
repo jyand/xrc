@@ -2,7 +2,7 @@
 bar-list = ["topbar"];
 topbar:{
 	font: "IBM Plex Mono Bold 10";
-	block-list: ["ya_ws", "title", "date", "ya_cpu", "ya_mem"];
+	block-list: ["ya_ws", "title", "date", "pa_volume", "ya_cpu", "ya_mem"];
 	position: "bottom";
 	gap-horizontal: 0;
 	gap-vertical: 0;
@@ -79,12 +79,21 @@ topbar:{
 	}
 	# another example for an external block
 	date: {
-		exec: "date +'%d %A %B  %I:%M:%S'";
+		exec: "date +'%d %A %B  %H:%M:%S'";
 		align: "center";
 		fixed-size: 256;
 		type: "periodic";
 		interval: 1;
 		foreground-color-rgb:0x000000;
 		underline-color-rgb:0xc0b929;
+	}
+	pa_volume: {
+		exec: "pamixer --get-volume-human || pamixer --get-mute";
+		align: "center";
+		fixed-size: 64;
+		type: "persist";
+		foreground-color-rgb:0xE97F02;
+		background-color-rgb:0xc0b929;
+		underline-color-rgb:0x98D9B6;
 	}
 }

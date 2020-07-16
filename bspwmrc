@@ -13,5 +13,11 @@ bspc config honor_size hints false
 
 bspc rule -a Zathura state=tiled
 bspc rule -a Sxiv state=floating
+bspc rule -a DeaDBeeF desktop=^9
+bspc rule -a LMMS desktop=^8 follow=on
+bspc rule -a MuseScore desktop=^7 follow=on
+bspc rule -a Gimp desktop=^6 follow=on
+bspc rule -a Chromium desktop=^5 follow=on
+bspc rule -a ytop desktop=^4 follow=on
 
 bspc config split_ratio 0.43

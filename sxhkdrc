@@ -2,11 +2,13 @@
 
 # WM-Independent
 #
+hyper + z
+        doas zzz -H
 {mod4, hyper} + q
         xdo {close, kill}
 {mod4, hyper} + x
         xdo {close, kill}
-{mod4, hyper} + Return
+{mod4, hyper} + {Return, t}
         {$TERMINAL -e $FILE, $TERMINAL -e fish}
 mod4 + d
         dmenu_run
@@ -35,12 +37,6 @@ mod4 + r
         redshift -O 2500
 mod4 + e
         redshift -x
-mod4 + t
-        roxterm --hold -e curl wttr.in | sed 37q | bat --wrap auto
-mod4 + g
-        acpi -b -tf | dmenu
-mod4 + v
-        echo $(pamixer --get-volume-human || pamixer --get-mute) | dmenu
 
 # BSPWM
 #
@@ -62,5 +58,3 @@ mod4 + f
         bspc node -t \~fullscreen
 mod4 + a
         bspc node focused -t \~floating
-mod4 + Escape
-        bspc config split_ratio  {0.43,0.57}
