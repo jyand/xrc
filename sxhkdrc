@@ -8,12 +8,12 @@ hyper + z
         xdo {close, kill}
 {mod4, hyper} + x
         xdo {close, kill}
-{mod4, hyper} + {Return, t}
+{mod4, hyper} + Return
         {$TERMINAL -e $FILE, $TERMINAL -e fish}
-mod4 + d
-        dmenu_run
-mod4 + b
-        firejail $BROWSER
+{mod4, hyper} + d
+        {dmenu_run, dmenu_run -b}
+mod4 + {b, v}
+        {firejail $BROWSER, tabbed vimb -e -i}
 # Audio
 mod4 + n
         deadbeef
@@ -23,6 +23,14 @@ mod4 + parenright
         pamixer -d 5
 mod4 + parenleft
         pamixer -i 5
+mod4 + space
+        deadbeef --play-pause
+mod4 + colon
+        deadbeef --stop
+mod4 + period
+        deadbeef --prev
+mod4 + comma
+        deadbeef --next
 # System Monitor
 {mod4, hyper} + p
         {$TERMINAL -e ytop -fap -c vice -I 1/2, $TERMINAL -e htop}
@@ -48,6 +56,8 @@ mod4 + {h,j,k,l}
         bspc node -f {prev.local,next.local}
 mod4 + {minus,plus}
         bspc desktop {prev.occupied,next.occupied} --focus
+hyper + {minus,plus}
+        bspc desktop {prev,next} --focus
 mod4 + w
         bspc desktop last --focus
 mod4 + 0

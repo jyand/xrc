@@ -2,24 +2,48 @@
 bar-list = ["topbar"];
 topbar:{
 	font: "IBM Plex Mono Bold 10";
-	block-list: ["ya_ws", "title", "date", "pa_volume", "ya_cpu", "ya_mem"];
+	block-list: ["title", "ya_ws", "date", "pa_volume", "ya_cpu", "ya_mem"];
 	position: "bottom";
 	gap-horizontal: 0;
 	gap-vertical: 0;
 	height: 24;
-	#If you want transparency, use argb, not rgb
-	background-color-rgb: 0x000000;
+	background-color-argb: 0x000000;
 	underline-size: 2;
 	overline-size: 2;
-#	slack-size: 4;
-#	border-size: 2;
-	#monitor: "LVDS1 HDMI1"; # get names from `xrandr`
-
-	# various examples for internal blocks:
+	title: {
+		exec: "xtitle -s";
+		align: "left";
+		fixed-size: 768;
+		type: "persist";
+		foreground-color-rgb:0x000000;
+                underline-color-rgb:0x373b41;
+                overline-color-rgb:0x373b41;
+	}
+	date: {
+		exec: "date +'%d %A %B  %H:%M:%S'";
+		align: "center";
+		fixed-size: 256;
+		type: "periodic";
+		interval: 1;
+		foreground-color-rgb:0x000000;
+		underline-color-rgb:0xc0b929;
+                overline-color-rgb:0xc0b929;
+	}
+	pa_volume: {
+		exec: "pamixer --get-volume-human";
+		align: "right";
+		fixed-size: 64;
+		type: "periodic";
+		interval: 2;
+		foreground-color-rgb:0x000000;
+		background-color-rgb:0xE97F02;
+		underline-color-rgb:0x98D9B6;
+	}
 	ya_ws: {
 		exec: "YABAR_WORKSPACE";
 		align: "left";
-		fixed-size: 32;
+		fixed-size: 64;
+	        background-color-rgb: 0x000000;
 #		internal-option1: "        ";
 	}
 	ya_mem:{
@@ -31,30 +55,6 @@ topbar:{
 		background-color-rgb:0x45ADA8;
 		underline-color-rgb:0xFA6900;
 #		internal-prefix: " ";
-	}
-	ya_brightness: {
-		exec: "YABAR_BRIGHTNESS";
-		align: "right";
-#		fixed-size: 40;
-		interval: 1;
-		background-color-rgb:0x81A8B8;
-		underline-color-rgb:0xBD1550;
-		internal-prefix: " ";
-		internal-option1: "intel_backlight"; # one of /sys/class/backlight/intel_backlight/brightness
-		#internal-spacing: true;
-	}
-	ya_bw: {
-		exec: "YABAR_BANDWIDTH";
-		align: "right";
-#		fixed-size: 110;
-		interval: 1;
-		internal-prefix: " ";
-		internal-option1: "wlan0"; # "default" or network interface from `ifconfig` or `ip link`
-		internal-option2: " "; # characters to be placed before up/down data
-		#background-color-rgb:0x547980;
-		background-color-rgb:0x3EC9A7;
-		underline-color-rgb:0xD95B43;
-		#internal-spacing: true;
 	}
 	ya_cpu: {
 		exec: "YABAR_CPU";
@@ -68,32 +68,7 @@ topbar:{
 		underline-color-rgb:0xE97F02;
 		#internal-spacing: true;
 	}
-	title: {
-		exec: "xtitle -s";
-		align: "left";
-		fixed-size: 640;
-		type: "persist";
-		foreground-color-rgb:0x000000;
-		underline-color-rgb:0x373b41;
-		overline-color-rgb:0x373b41;
-	}
-	# another example for an external block
-	date: {
-		exec: "date +'%d %A %B  %H:%M:%S'";
-		align: "center";
-		fixed-size: 256;
-		type: "periodic";
-		interval: 1;
-		foreground-color-rgb:0x000000;
-		underline-color-rgb:0xc0b929;
-	}
-	pa_volume: {
-		exec: "pamixer --get-volume-human || pamixer --get-mute";
-		align: "center";
-		fixed-size: 64;
-		type: "persist";
-		foreground-color-rgb:0xE97F02;
-		background-color-rgb:0xc0b929;
-		underline-color-rgb:0x98D9B6;
-	}
+#	slack-size: 4;
+#	border-size: 2;
+#	monitor: "LVDS1 HDMI1"; # get names from `xrandr`
 }

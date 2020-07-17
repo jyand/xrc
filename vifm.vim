@@ -3,7 +3,7 @@ only
 colorscheme based
 
 "Window Manager emulation
-nnoremap . :!$TERMINAL -e fish %f 2> /dev/null &<CR>
+nnoremap . :!$TERMINAL -e fish 2> /dev/null &<CR>
 nnoremap , :!$TERMINAL -e vifm 2> /dev/null &<CR>
 nnoremap L :!$TERMINAL -e $EDITOR %f 2> /dev/null &<CR>
 nnoremap C :!$TERMINAL -e scim %f 2> /dev/null &<CR>
