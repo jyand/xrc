@@ -10,8 +10,8 @@ export XDG_RUNTIME_DIR="/tmp/runtime-jyan"
 export VIFM="$XDG_CONFIG_HOME/vifm"
 export XAUTHORITY="$HOME/.local/.Xauthority"
 export MAIL=""
-export PAGER="vimpager"
-export MANPAGER="$PAGER"
+export PAGER="less"
+export MANPAGER="vimpager"
 
 # Default Applications
 export WIN="bspwm"

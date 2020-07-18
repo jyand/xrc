@@ -3,18 +3,18 @@ only
 colorscheme based
 
 "Window Manager emulation
-nnoremap . :!$TERMINAL -e fish 2> /dev/null &<CR>
+nnoremap f :!$TERMINAL -e fish 2> /dev/null &<CR>
 nnoremap , :!$TERMINAL -e vifm 2> /dev/null &<CR>
 nnoremap L :!$TERMINAL -e $EDITOR %f 2> /dev/null &<CR>
+nnoremap . :!$TERMINAL -e $EDITOR %f 2> /dev/null &<CR>
 nnoremap C :!$TERMINAL -e scim %f 2> /dev/null &<CR>
 map I :!sxiv *.png *.jpg *.gif *.jpeg *.bmp 2> /dev/null &<CR>
 map b :!$BROWSER %f 2> /dev/null &<CR>
-"map B :!allurls %f 2> /dev/null &<CR>
-"map B :!firejail --net=none vimb %f 2> /dev/null &<CR>
+map B :!firejail --net=none vimb %f 2> /dev/null &<CR>
 
 "mappings
-nnoremap f :!fish<CR>
-nnoremap v :!oksh <CR>
+nnoremap F :!fish<CR>
+nnoremap o :!oksh <CR>
 nnoremap i :touch
 nnoremap a :mkdir
 nnoremap r :rename
@@ -25,8 +25,8 @@ noremap K :2<CR>
 nnoremap M :cd /media<CR>
 nnoremap H :cd<CR>
 nnoremap O :cd /opt<CR>
-nnoremap o :sp!<CR>
-nnoremap s :vs!<CR>
+nnoremap s :sp!<CR>
+nnoremap v :vs!<CR>
 nnoremap <Tab> :si<CR>
 map ~ :siblprev<CR>
 map U :!busybox unzip %c<CR>

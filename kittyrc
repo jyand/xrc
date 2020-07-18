@@ -14,7 +14,7 @@ cursor_beam_thickness 3.0
 cursor_stop_blinking_after 0
 
 inactive_text_alpha 0.85
-background_opacity 0.95
+background_opacity 0.91
 dim_opacity 0.5
 dynamic_background_opacity no
 

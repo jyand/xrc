@@ -10,8 +10,8 @@ bspc config focused_border_color "#33ff00"
 bspc config window_gap 16
 bspc config focus_follows_pointer true
 bspc config honor_size hints false
-bspc config initial_polarity first_child
-bspc config automatic_scheme alternate
+bspc config initial_polarity second_child
+bspc config automatic_scheme spiral
 
 bspc rule -a Zathura state=tiled
 bspc rule -a Sxiv state=floating

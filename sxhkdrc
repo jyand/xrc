@@ -8,29 +8,28 @@ hyper + z
         xdo {close, kill}
 {mod4, hyper} + x
         xdo {close, kill}
-{mod4, hyper} + Return
-        {$TERMINAL -e $FILE, $TERMINAL -e fish}
-{mod4, hyper} + d
+{mod4, hyper} + period
+        {$TERMINAL -e $FILE, lxterminal -e $FILE}
+{mod4, hyper} + comma
+        {$TERMINAL -e $FILE, lxterminal -e $FILE}
+mod4 + {d, e} 
         {dmenu_run, dmenu_run -b}
-mod4 + {b, v}
-        {firejail $BROWSER, tabbed vimb -e -i}
+# Browsers
+mod4 + {i, v}
+        firejail {$BROWSER, vimb -i}
+mod4 + b
+        chromium --incognito
 # Audio
-mod4 + n
-        deadbeef
 mod4 + m
         pamixer -t
 mod4 + parenright
-        pamixer -d 5
+        {pamixer -d 5, deadbeef --prev}
 mod4 + parenleft
-        pamixer -i 5
-mod4 + space
+        {pamixer -i 5, deadbeef --next}
+mod4 + Return
         deadbeef --play-pause
 mod4 + colon
         deadbeef --stop
-mod4 + period
-        deadbeef --prev
-mod4 + comma
-        deadbeef --next
 # System Monitor
 {mod4, hyper} + p
         {$TERMINAL -e ytop -fap -c vice -I 1/2, $TERMINAL -e htop}
@@ -43,23 +42,21 @@ mod4 + s
         maim -s ~/$(date +%F_%T).png
 mod4 + r
         redshift -O 2500
-mod4 + e
+mod4 + t
         redshift -x
 
 # BSPWM
 #
-hyper + {h,j,k,l}
-        bspc node -s {west,south,north,east}
-mod4 + {h,j,k,l}
-        bspc node -f {west,south,north,east}
+hyper + {h, j, k, l}
+        bspc node -s {west, south, north, east}
+mod4 + {h, j, k, l}
+        bspc node -f {west, south, north, east}
 {mod4, hyper} + Tab
-        bspc node -f {prev.local,next.local}
-mod4 + {minus,plus}
-        bspc desktop {prev.occupied,next.occupied} --focus
-hyper + {minus,plus}
-        bspc desktop {prev,next} --focus
-mod4 + w
-        bspc desktop last --focus
+        bspc node -f {prev.local, next.local}
+mod4 + {minus, plus}
+        bspc desktop {prev.occupied, next.occupied} --focus
+hyper + {minus, plus}
+        bspc desktop {prev, next} --focus
 mod4 + 0
         bspc desktop older.occupied --focus
 {mod4, hyper} + {1-9}
@@ -68,3 +65,5 @@ mod4 + f
         bspc node -t \~fullscreen
 mod4 + a
         bspc node focused -t \~floating
+mod4 + Escape
+        bspc config automatic_scheme {alternate, spiral}

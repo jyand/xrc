@@ -19,4 +19,5 @@ map R rotate
 map H zoom in
 map L zoom out
 map <Return> recolor
+map x quit
 unmap q

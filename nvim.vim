@@ -16,8 +16,8 @@ noremap <Tab> .
 nnoremap . }
 nnoremap , {
 " making use of some keys with default mappings that are not so useful
-noremap ; $
-map f g`"
+map f :!$TERMINAL -e fish &<CR>
+nnoremap J g`"
 map t :set spell!<CR>
 nnoremap m :
 
