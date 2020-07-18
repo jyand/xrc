@@ -40,7 +40,7 @@ mod4 + comma
 
 # Utilities
 mod4 + s
-        scrot -s
+        maim -s ~/$(date +%F_%T).png
 mod4 + r
         redshift -O 2500
 mod4 + e
