@@ -22,28 +22,26 @@ mod4 + b
 # Audio
 mod4 + m
         pamixer -t
-mod4 + parenright
+{mod4, hyper} + parenright
         {pamixer -d 5, deadbeef --prev}
-mod4 + parenleft
+{mod4, hyper} + parenleft
         {pamixer -i 5, deadbeef --next}
-mod4 + Return
+hyper + Return
         deadbeef --play-pause
 mod4 + colon
         deadbeef --stop
-# System Monitor
-{mod4, hyper} + p
-        {$TERMINAL -e ytop -fap -c vice -I 1/2, $TERMINAL -e htop}
 # Calculator
 {mod4, hyper} + c
         $TERMINAL -e {julia, R}
-
 # Utilities
 mod4 + s
-        maim -s ~/$(date +%F_%T).png
+        maim -s ~/Desktop/$(date +%F_%T).png
 mod4 + r
         redshift -O 2500
 mod4 + t
         redshift -x
+{mod4, hyper} + p
+        {$TERMINAL -e ytop -fap -c vice -I 1/2, $TERMINAL -e htop}
 
 # BSPWM
 #
@@ -65,5 +63,7 @@ mod4 + f
         bspc node -t \~fullscreen
 mod4 + a
         bspc node focused -t \~floating
+mod4 + g
+        bspc config initial_polarity {first_child, second_child}
 mod4 + Escape
         bspc config automatic_scheme {alternate, spiral}
