@@ -9,8 +9,7 @@ nnoremap L :!$TERMINAL -e $EDITOR %f 2> /dev/null &<CR>
 nnoremap . :!$TERMINAL -e $EDITOR %f 2> /dev/null &<CR>
 nnoremap C :!$TERMINAL -e scim %f 2> /dev/null &<CR>
 map I :!sxiv *.png *.jpg *.gif *.jpeg *.bmp 2> /dev/null &<CR>
-map b :!$BROWSER %f 2> /dev/null &<CR>
-map B :!firejail --net=none vimb %f 2> /dev/null &<CR>
+map b :!firejail $BROWSER -P reader %f 2> /dev/null &<CR>
 
 "mappings
 nnoremap F :!fish<CR>

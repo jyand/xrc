@@ -2,26 +2,27 @@
 bar-list = ["topbar"];
 topbar:{
 	font: "IBM Plex Mono Bold 10";
-	block-list: ["title", "ya_ws", "date", "pa_volume", "ya_cpu", "ya_mem"];
-	position: "bottom";
+	block-list: ["pa_volume", "ya_cpu", "ya_mem", "bsp_scheme", "date", "title", "ya_ws"];
+	position: "top";
 	gap-horizontal: 0;
 	gap-vertical: 0;
 	height: 24;
 	background-color-argb: 0x000000;
 	underline-size: 2;
-	overline-size: 2;
+	overline-size: 0;
 	title: {
 		exec: "xtitle -s";
-		align: "left";
-		fixed-size: 768;
+		align: "right";
+		fixed-size: 1032;
 		type: "persist";
-		foreground-color-rgb:0x000000;
+		foreground-color-rgb:0xffff00;
+		#background-color-rgb:0xffffff;
                 underline-color-rgb:0x373b41;
                 overline-color-rgb:0x373b41;
 	}
 	date: {
 		exec: "date +'%d %A %B  %H:%M:%S'";
-		align: "center";
+		align: "left";
 		fixed-size: 256;
 		type: "periodic";
 		interval: 1;
@@ -29,46 +30,52 @@ topbar:{
 		underline-color-rgb:0xc0b929;
                 overline-color-rgb:0xc0b929;
 	}
+	bsp_scheme: {
+		exec: "bspc config automatic_scheme";
+		align: "left";
+		fixed-size: 128 ;
+		type: "periodic";
+		interval: 2;
+		foreground-color-rgb:0x000000;
+		background-color-rgb:0x45ada8;
+		underline-color-rgb:0x98d9b6;
+		overline-color-rgb:0x45ada8;
+	}
 	pa_volume: {
 		exec: "pamixer --get-volume-human";
-		align: "right";
+		align: "left";
 		fixed-size: 64;
 		type: "periodic";
 		interval: 2;
 		foreground-color-rgb:0x000000;
-		background-color-rgb:0xE97F02;
-		underline-color-rgb:0x98D9B6;
+		background-color-rgb:0xe97f02;
+		underline-color-rgb:0x98d9b6;
+		overline-color-rgb:0x45ada8;
 	}
 	ya_ws: {
 		exec: "YABAR_WORKSPACE";
-		align: "left";
+		align: "right";
 		fixed-size: 64;
 	        background-color-rgb: 0x000000;
-#		internal-option1: "        ";
 	}
 	ya_mem:{
 		exec: "YABAR_MEMORY";
-		align: "right";
-#		fixed-size: 70;
+		align: "left";
 		interval: 1;
 		foreground-color-rgb:0x000000;
-		background-color-rgb:0x45ADA8;
 		underline-color-rgb:0xFA6900;
-#		internal-prefix: " ";
+		overline-color-rgb:0xFA6900;
 	}
 	ya_cpu: {
 		exec: "YABAR_CPU";
-		align: "right";
+		align: "left";
 #		fixed-size: 60;
 		interval: 1;
-#		internal-prefix: " ";
 		internal-suffix: "%";
 		foreground-color-rgb:0x000000;
-		background-color-rgb:0x98D9B6;
+		#background-color-rgb:0x98D9B6;
 		underline-color-rgb:0xE97F02;
+		overline-color-rgb:0xE97F02;
 		#internal-spacing: true;
 	}
-#	slack-size: 4;
-#	border-size: 2;
-#	monitor: "LVDS1 HDMI1"; # get names from `xrandr`
 }

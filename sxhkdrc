@@ -15,8 +15,10 @@ hyper + z
 mod4 + {d, e} 
         {dmenu_run, dmenu_run -b}
 # Browsers
-mod4 + {i, v}
-        firejail {$BROWSER, vimb -i}
+mod4 + i
+        firejail $BROWSER -P default
+mod4 + o
+        firejail --net=none $BROWSER -P reader
 mod4 + b
         chromium --incognito
 # Audio
@@ -64,6 +66,4 @@ mod4 + f
 mod4 + a
         bspc node focused -t \~floating
 mod4 + g
-        bspc config initial_polarity {first_child, second_child}
-mod4 + Escape
         bspc config automatic_scheme {alternate, spiral}
