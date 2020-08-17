@@ -1,11 +1,13 @@
-#!/usr/bin/fish
+#!/usr/bin/env fish
 
 fish_vi_key_bindings
 fish_vi_cursor
 
+
 ufetch
-# echo '    ~~ (:==< ~~~ '
-set_color blue && busybox pwd
+set_color brred && busybox echo (fish_git_prompt)
+
+kitty + complete setup fish | source
 
 abbr q 'exit'
 abbr a 'exit'
@@ -20,7 +22,7 @@ abbr hk 'apropos'
 abbr t 'tldr'
 abbr y 'cheat'
 abbr m 'doas mount'
-abbr u 'doas busybox umount -r /mnt'
+abbr u 'doas umount -R /mnt'
 abbr e 'busybox echo'
 abbr c 'mdcat'
 abbr b 'busybux tar -xvf'

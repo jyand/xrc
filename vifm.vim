@@ -1,5 +1,5 @@
 "VIFM
-only
+view
 colorscheme based
 
 "Window Manager emulation
@@ -24,8 +24,8 @@ noremap K :2<CR>
 nnoremap M :cd /media<CR>
 nnoremap H :cd<CR>
 nnoremap O :cd /opt<CR>
-nnoremap s :sp!<CR>
-nnoremap v :vs!<CR>
+nnoremap v :sp!<CR>
+nnoremap s :vs!<CR>
 nnoremap <Tab> :si<CR>
 map ~ :siblprev<CR>
 map U :!busybox unzip %c<CR>
@@ -49,12 +49,27 @@ set undolevels=16
 set suggestoptions=normal,visual,view,otherpane,keys,marks,registers
 set vifminfo=dhistory,chistory,tui,shistory,uphistory,fhistory,dirstack,registers
 
+"Image Previews
+fileviewer *.png,*.jpg,*.jpeg,*.gif,*.bmp,*.xpm
+                        \ kitty icat --transfer-mode=file --place=%pwx%ph@%pxx%py %c
+                        \ %pc
+                        \ kitty icat --transfer-mode=file --clear
+" Manual Previews
+fileviewer *.[1-9]
+                        \ man ./%c
+" MarkDown Previews
+fileviewer *.md
+                        \ mdcat %c
+" Web Page Previews
+fileviewer *.htm,*.html,*.php
+                        \ lynx -dump %c
+
 "Default file associations
 filetype *.pdf,*.ps,*.eps,*.ps.gz,*.djvu zathura %f 2> /dev/null & 
 filetype *.png,*.jpg,*.jpeg,*.gif,*.bmp,*.xpm sxiv %f 2> /dev/null &
 filetype *.csv,*.xls,*.xlsx scim
 filetype *.wav,*.mp3,*.flac,*.m4a,*.wma,*.ape firejail --net=none deadbeef --queue %f 2> /dev/null &
-filetype *.avi,*.mp4,*.wmv,*.3gp,*.ogv,*.mkv,*.mpg,*.mpeg,*.vob,*.fl[icv],*.m2v,*.mov,*.webm,*.ts,*.mts,*.m4v firejail --net=none mpv %f 2> /dev/null &
+filetype *.avi,*.mp4,*.wmv,*.3gp,*.ogv,*.mkv,*.mpg,*.mpeg,*.vob,*.fl[icv],*.m2v,*.mov,*.webm,*.mts,*.m4v firejail --net=none mpv %f 2> /dev/null &
 filetype *.o nm %f | $PAGER
 filetype *.[1-8] man ./%c
 filetype *.md5
@@ -72,5 +87,3 @@ filetype *.sha512
 filetype *.asc
        \ {Check signature}
        \ !!gpg --verify %c,
-"filetype *.md $TERMINAL -hold -e mdcat %f | $PAGER 2> /dev/null &
-"filetype *.html,*.htm,*.xhtml firejail --net=none vimb %f 2> /dev/null &
