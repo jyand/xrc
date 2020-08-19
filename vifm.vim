@@ -1,15 +1,16 @@
 "VIFM
 view
+vs
 colorscheme based
 
 "Window Manager emulation
-nnoremap f :!$TERMINAL -e fish 2> /dev/null &<CR>
-nnoremap , :!$TERMINAL -e vifm 2> /dev/null &<CR>
-nnoremap L :!$TERMINAL -e $EDITOR %f 2> /dev/null &<CR>
-nnoremap . :!$TERMINAL -e $EDITOR %f 2> /dev/null &<CR>
-nnoremap C :!$TERMINAL -e scim %f 2> /dev/null &<CR>
+nnoremap f :on | :!$TERMINAL -e fish 2> /dev/null &<CR>
+nnoremap , :on | :!$TERMINAL -e vifm 2> /dev/null &<CR>
+nnoremap L :on | :!$TERMINAL -e $EDITOR %f 2> /dev/null &<CR>
+nnoremap . :on | :!$TERMINAL -e $EDITOR %f 2> /dev/null &<CR>
+nnoremap C :on | :!$TERMINAL -e scim %f 2> /dev/null &<CR>
 map I :!sxiv *.png *.jpg *.gif *.jpeg *.bmp 2> /dev/null &<CR>
-map b :!firejail $BROWSER -P reader %f 2> /dev/null &<CR>
+map b :sp | :!firejail $BROWSER -P reader %f 2> /dev/null &<CR>
 
 "mappings
 nnoremap F :!fish<CR>
@@ -20,19 +21,21 @@ nnoremap r :rename
 nnoremap w za
 nnoremap e :view<CR>
 noremap J G
-noremap K :2<CR>
+nnoremap K :2<CR>
+vnoremap K gg
 nnoremap M :cd /media<CR>
 nnoremap H :cd<CR>
 nnoremap O :cd /opt<CR>
-nnoremap v :sp!<CR>
+nnoremap V :sp<CR>
 nnoremap s :vs!<CR>
-nnoremap <Tab> :si<CR>
-map ~ :siblprev<CR>
+nnoremap > :si<CR>
+map < :siblprev<CR>
 map U :!busybox unzip %c<CR>
 map t :tree!<CR>
 map * :select *.
 map _ :!
 map m :
+noremap <Tab> <c-w><c-l> 
 
 "settings
 set vicmd=nvim
@@ -44,16 +47,17 @@ set ignorecase
 set smartcase
 set nohlsearch
 set incsearch
-set scrolloff=0
+set scrolloff=1
 set undolevels=16
-set suggestoptions=normal,visual,view,otherpane,keys,marks,registers
-set vifminfo=dhistory,chistory,tui,shistory,uphistory,fhistory,dirstack,registers
+set suggestoptions=normal,visual,view,otherpane,keys,marks,registers,delay:5000
+set vifminfo=
+"set vifminfo=dhistory,chistory,tui,shistory,uphistory,fhistory,dirstack,registers
 
 "Image Previews
 fileviewer *.png,*.jpg,*.jpeg,*.gif,*.bmp,*.xpm
-                        \ kitty icat --transfer-mode=file --place=%pwx%ph@%pxx%py %c
+                        \ kitty icat --silent --transfer-mode=file --place=%pwx%ph@%pxx%py %c
                         \ %pc
-                        \ kitty icat --transfer-mode=file --clear
+                        \ kitty icat --silent --transfer-mode=file --clear
 " Manual Previews
 fileviewer *.[1-9]
                         \ man ./%c
@@ -87,3 +91,8 @@ filetype *.sha512
 filetype *.asc
        \ {Check signature}
        \ !!gpg --verify %c,
+
+"djvu/pdf Previews - this works but takes way too long to navigate
+"fileviewer *.djvu,*.pdf
+                        "\ convert %c[0] preview.png && kitty icat --silent --transfer-mode=file --place=%pwx%ph@%pxx%py preview.png
+                        "\ %pc
