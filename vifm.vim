@@ -4,6 +4,7 @@ vs
 colorscheme based
 
 "Window Manager emulation
+nnoremap o :on | :!$TERMINAL -e oksh 2> /dev/null &<CR>
 nnoremap f :on | :!$TERMINAL -e fish 2> /dev/null &<CR>
 nnoremap , :on | :!$TERMINAL -e vifm 2> /dev/null &<CR>
 nnoremap L :on | :!$TERMINAL -e $EDITOR %f 2> /dev/null &<CR>
@@ -14,7 +15,6 @@ map b :sp | :!firejail $BROWSER -P reader %f 2> /dev/null &<CR>
 
 "mappings
 nnoremap F :!fish<CR>
-nnoremap o :!oksh <CR>
 nnoremap i :touch
 nnoremap a :mkdir
 nnoremap r :rename
@@ -58,6 +58,10 @@ fileviewer *.png,*.jpg,*.jpeg,*.gif,*.bmp,*.xpm
                         \ kitty icat --silent --transfer-mode=file --place=%pwx%ph@%pxx%py %c
                         \ %pc
                         \ kitty icat --silent --transfer-mode=file --clear
+" DjVu Previews
+fileviewer *.djvu
+                        \ djvutxt %c
+
 " Manual Previews
 fileviewer *.[1-9]
                         \ man ./%c
@@ -67,6 +71,9 @@ fileviewer *.md
 " Web Page Previews
 fileviewer *.htm,*.html,*.php
                         \ lynx -dump %c
+" List Archive Contents
+fileviewer *tar.*
+                        \ tar -vtf %c
 
 "Default file associations
 filetype *.pdf,*.ps,*.eps,*.ps.gz,*.djvu zathura %f 2> /dev/null & 
