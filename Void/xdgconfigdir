@@ -4,6 +4,7 @@ ln -Pvf Xmodmap ~/.Xmodmap
 ln -Pvf Xresources ~/.Xdefaults
 ln -Pvf bspwmrc ~/.config/bspwm
 ln -Pvf kittyrc ~/.config/kitty/kitty.conf
+ln -Pvf kshrc ~/.kshrc
 ln -Pvf nvim.vim ~/.config/nvim/init.vim
 ln -Pvf profile ~/.profile
 ln -Pvf sxhkdrc ~/.config/sxhkd

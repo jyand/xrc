@@ -55,9 +55,9 @@ set vifminfo=
 
 "Image Previews
 fileviewer *.png,*.jpg,*.jpeg,*.gif,*.bmp,*.xpm
-                        \ kitty icat --silent --transfer-mode=file --place=%pwx%ph@%pxx%py %c
+                        \ kitty icat --transfer-mode=file --place=%pwx%ph@%pxx%py %c
                         \ %pc
-                        \ kitty icat --silent --transfer-mode=file --clear
+                        \ kitty icat --transfer-mode=file --clear
 " DjVu Previews
 fileviewer *.djvu
                         \ djvutxt %c

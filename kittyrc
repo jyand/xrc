@@ -8,7 +8,7 @@ font_size 10.5
 adjust_column_width 1
 
 cursor #fa0aca
-cursor_shape underline
+cursor_shape beam
 cursor_underline_thickness 3.0
 cursor_beam_thickness 3.0
 cursor_stop_blinking_after 0
