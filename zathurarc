@@ -1,6 +1,6 @@
 # nvim:set ft=sh
 set selection-clipboard clipboard
-set adjust-open "width"
+set adjust-open "best-fit"
 set recolor "true"
 set recolor-keephue "true"
 set scroll-page-aware "true"
@@ -16,8 +16,8 @@ map u scroll half-up
 map i scroll half-down
 map r reload
 map R rotate
-map H zoom in
-map L zoom out
+map j zoom in
+map k zoom out
 map <Return> recolor
 map x quit
 unmap q

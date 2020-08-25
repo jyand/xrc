@@ -20,6 +20,8 @@ map f :!$TERMINAL -e fish &<CR>
 nnoremap J g`"
 map t :set spell!<CR>
 nnoremap m :
+nnoremap Q q
+nnoremap q q:
 " switch uppercase and lowercase for commands in which the default uppercase is more useful
 nnoremap v V
 nnoremap V v
@@ -63,3 +65,6 @@ set spelllang=en_US
 set encoding=utf-8
 set incsearch
 set wildmenu
+
+let g:user_emmet_leader_key='z'
+autocmd BufRead,BufNewFile *.tsx,*.jsx,*.js setlocal filetype=typescript

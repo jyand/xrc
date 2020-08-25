@@ -4,14 +4,15 @@ vs
 colorscheme based
 
 "Window Manager emulation
-nnoremap o :on | :!$TERMINAL -e oksh 2> /dev/null &<CR>
+nnoremap o :on | :!$TERMINAL 2> /dev/null &<CR>
+nnoremap O :shell<CR>
 nnoremap f :on | :!$TERMINAL -e fish 2> /dev/null &<CR>
 nnoremap , :on | :!$TERMINAL -e vifm 2> /dev/null &<CR>
-nnoremap L :on | :!$TERMINAL -e $EDITOR %f 2> /dev/null &<CR>
 nnoremap . :on | :!$TERMINAL -e $EDITOR %f 2> /dev/null &<CR>
 nnoremap C :on | :!$TERMINAL -e scim %f 2> /dev/null &<CR>
 map I :!sxiv *.png *.jpg *.gif *.jpeg *.bmp 2> /dev/null &<CR>
 map b :sp | :!firejail $BROWSER -P reader %f 2> /dev/null &<CR>
+map B :sp | :!chromium %f 2> /dev/null &<CR>
 
 "mappings
 nnoremap F :!fish<CR>
@@ -24,8 +25,14 @@ noremap J G
 nnoremap K :2<CR>
 vnoremap K gg
 nnoremap M :cd /media<CR>
-nnoremap H :cd<CR>
-nnoremap O :cd /opt<CR>
+nnoremap gm :cd ~/Documents/Manual<CR>
+nnoremap gd :cd ~/Documents/Djvu<CR>
+nnoremap gh :cd ~/Documents/HTMLdocs<CR>
+nnoremap gt :cd ~/Documents/Templates<CR>
+nnoremap gi :cd ~/Documents/Images<CR>
+nnoremap ga :cd ~/Documents/Audio<CR>
+nnoremap gg :cd<CR>
+nnoremap go :cd /opt<CR>
 nnoremap V :sp<CR>
 nnoremap s :vs!<CR>
 nnoremap > :si<CR>
@@ -61,7 +68,6 @@ fileviewer *.png,*.jpg,*.jpeg,*.gif,*.bmp,*.xpm
 " DjVu Previews
 fileviewer *.djvu
                         \ djvutxt %c
-
 " Manual Previews
 fileviewer *.[1-9]
                         \ man ./%c
@@ -74,6 +80,8 @@ fileviewer *.htm,*.html,*.php
 " List Archive Contents
 fileviewer *tar.*
                         \ tar -vtf %c
+fileviewer *.zip
+                        \ busybox unzip -l %c
 
 "Default file associations
 filetype *.pdf,*.ps,*.eps,*.ps.gz,*.djvu zathura %f 2> /dev/null & 
