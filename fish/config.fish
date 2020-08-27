@@ -3,10 +3,6 @@
 fish_vi_key_bindings
 fish_vi_cursor
 
-
-ufetch
-set_color brred && busybox echo (fish_git_prompt)
-
 kitty + complete setup fish | source
 
 abbr q 'exit'

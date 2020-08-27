@@ -1,6 +1,8 @@
 #!/usr/bin/env ksh
 # ksh is usually a symlink to oksh, loksh, mksh, or ksh93
 
+ufetch
+
 # Prompt
 export PS1="\e[0;31m{\e[0;33m\w\e[1;31m}\e[0;32m\s\e[0;37m[\e[1;34m\#\e[0;37m]\n \e[0;35m\$(printf '\U000003bc')\e[0;36m "
 export PS4="\e[1;32m[\e[1;34m\u\e[1;35m@\e[1;31m\$(printf '\U000003bc')\e[1;32m] \e[0;33m\$(printf '\U000003bb')\e[0;36m "

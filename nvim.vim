@@ -25,12 +25,12 @@ nnoremap q q:
 " switch uppercase and lowercase for commands in which the default uppercase is more useful
 nnoremap v V
 nnoremap V v
-noremap b B
-noremap B b
-noremap e E
-noremap E e
-noremap w W
-noremap W w
+"noremap b B
+"noremap B b
+"noremap e E
+"noremap E e
+"noremap w W
+"noremap W w
 
 " Tabs are 8 space characters
 set tabstop=8 softtabstop=0 expandtab shiftwidth=8 smarttab

@@ -44,6 +44,11 @@ mod4 + t
         redshift -x
 {mod4, hyper} + p
         {$TERMINAL -e ytop -fap -c vice -I 1/2, $TERMINAL -e htop}
+# Bar
+mod4 + y
+        {kill $(busybox pgrep yabar), yabar &}
+mod4 + u
+        bspc config top-padding 0
 
 # BSPWM
 #
