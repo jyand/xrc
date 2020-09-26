@@ -2,7 +2,7 @@
 bar-list = ["topbar"];
 topbar:{
 	font: "IBM Plex Mono Bold 10";
-	block-list: ["pa_volume", "ya_cpu", "ya_mem", "bsp_scheme", "date", "title", "ya_ws"];
+	block-list: ["pa_volume", "ya_cpu", "ya_mem", "bsp_scheme", "title", "blank", "date", "ya_ws"];
 	position: "top";
 	gap-horizontal: 0;
 	gap-vertical: 0;
@@ -12,20 +12,21 @@ topbar:{
 	overline-size: 0;
 	title: {
 		exec: "xtitle -s";
-		align: "right";
+		align: "left";
 		fixed-size: 1032;
 		type: "persist";
 		foreground-color-rgb:0xffff00;
-		#background-color-rgb:0xffffff;
-                underline-color-rgb:0x373b41;
+		background-color-rgb:0x000000;
+                underline-color-rgb:0x45ada8;
                 overline-color-rgb:0x373b41;
 	}
 	date: {
 		exec: "date +'%d %A %B  %H:%M:%S'";
-		align: "left";
-		fixed-size: 256;
+		align: "right";
+		fixed-size: 320;
 		type: "periodic";
 		interval: 1;
+		background-color-rgb:0x45ada8;
 		foreground-color-rgb:0x000000;
 		underline-color-rgb:0xc0b929;
                 overline-color-rgb:0xc0b929;
@@ -33,11 +34,10 @@ topbar:{
 	bsp_scheme: {
 		exec: "bspc config automatic_scheme";
 		align: "left";
-		fixed-size: 128 ;
+		fixed-size: 100 ;
 		type: "periodic";
 		interval: 2;
 		foreground-color-rgb:0x000000;
-		background-color-rgb:0x45ada8;
 		underline-color-rgb:0x98d9b6;
 		overline-color-rgb:0x45ada8;
 	}
@@ -63,6 +63,7 @@ topbar:{
 		align: "left";
 		interval: 1;
 		foreground-color-rgb:0x000000;
+		background-color-rgb:0x98d9b6;
 		underline-color-rgb:0xFA6900;
 		overline-color-rgb:0xFA6900;
 	}
@@ -73,9 +74,19 @@ topbar:{
 		interval: 1;
 		internal-suffix: "%";
 		foreground-color-rgb:0x000000;
-		#background-color-rgb:0x98D9B6;
+		background-color-rgb:0xffff00;
 		underline-color-rgb:0xE97F02;
 		overline-color-rgb:0xE97F02;
 		#internal-spacing: true;
 	}
+        blank: {
+                exec: "echo " ;
+                align: "left" ;
+                fixed-size: 192 ;
+                type: "periodic" ;
+                interval: 3600 ;
+		foreground-color-rgb:0x000000;
+		underline-color-rgb:0x98d9b6;
+		overline-color-rgb:0x45ada8;
+        }
 }

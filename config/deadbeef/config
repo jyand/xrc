@@ -1,0 +1,156 @@
+alsa_soundcard default:CARD=PCH
+artwork.filemask *cover*.jpg;*front*.jpg;*folder*.jpg;*cover*.png;*front*.png;*folder*.png
+chip.voices 255
+cli_add_playlist_name Default
+deadbeef_version 1.8.3
+ffmpeg.enable_all_exts 0
+ffmpeg.extensions aa3;oma;ac3;vqf;amr;tak;dsf;dff;wma;3gp;mp4;m4a
+filechooser.lastdir file:///home/jyan/Documents/Audio
+flac.ignore_bad_header_errors 0
+flac.ignore_unparsable_stream_errors 0
+gme.coleco_rom 
+gme.fadeout 10
+gme.loopcount 2
+gme.songlength 3
+gtkui.action_separators 1
+gtkui.autoresize_columns 1
+gtkui.color.bar_background 0 0 0
+gtkui.color.listview_column_text 52171 19275 5654
+gtkui.color.listview_cursor 54227 13878 33409
+gtkui.color.listview_even_row 1799 13877 16962
+gtkui.color.listview_odd_row 1799 13877 16962
+gtkui.color.listview_playing_text 49601 32125 4369
+gtkui.color.listview_selected_text 0 0 0
+gtkui.color.listview_selection 64764 59881 20303
+gtkui.color.listview_text 65535 65535 65535
+gtkui.columns.playlist [{"title":"Bitrate","id":"-1","format":"%bitrate%","sort_format":"","size":"69","align":"0","color_override":"0","color":"#ff2e3436"},{"title":"Codec","id":"-1","format":"%codec%","sort_format":"","size":"87","align":"0","color_override":"0","color":"#ff2e3436"},{"title":"Year","id":"-1","format":"%year%","sort_format":"","size":"59","align":"0","color_override":"0","color":"#ff2e3436"},{"title":"Artist / Album","id":"-1","format":"$if(%artist%,%artist%,Unknown Artist)[ - %album%]","sort_format":"","size":"506","align":"0","color_override":"0","color":"#ff000000"},{"title":"Title","id":"-1","format":"%title%","sort_format":"","size":"645","align":"0","color_override":"0","color":"#ff2e3436"},{"title":"Duration","id":"-1","format":"%length%","sort_format":"","size":"67","align":"0","color_override":"0","color":"#ff000000"}]
+gtkui.custom_tray_icon deadbeef_tray_icon
+gtkui.delete_files_ask 1
+gtkui.disable_seekbar_overlay 0
+gtkui.embolden_current_track 1
+gtkui.embolden_selected_tracks 0
+gtkui.eq.visible 1
+gtkui.hide_remove_from_disk 1
+gtkui.hide_tray_icon 0
+gtkui.italic_selected_tracks 1
+gtkui.layout.0.6.2 vbox expand="0 1" fill="0 1" homogeneous=0 {hbox expand="0 1 0" fill="1 1 1" homogeneous=0 {spectrum {} scope {} coverart {} } vsplitter locked=0 ratio=0.618750 pos=0 size2=0 {hsplitter locked=0 ratio=0.775532 pos=0 size2=0 {playlist hideheaders=0 width=1459 {} coverart {} } waveform_seekbar {} } } 
+gtkui.mmb_delete_playlist 0
+gtkui.override_bar_colors 1
+gtkui.override_listview_colors 1
+gtkui.override_tabstrip_colors 0
+gtkui.playlist.group_by_tf ""
+gtkui.pltbrowser.highlight_curr_plt 0
+gtkui.pltbrowser.mmb_delete_playlist 0
+gtkui.pltbrowser.play_on_double_click 1
+gtkui.refresh_rate 5
+gtkui.skip_deleted_songs 1
+gtkui.start_hidden 0
+gtkui.statusbar.visible 1
+gtkui.statusbar_seltime 1
+gtkui.tabscroll 0
+gtkui.titlebar_playing_tf %artist% - %title% - DeaDBeeF-%_deadbeef_version%
+gtkui.titlebar_stopped_tf DeaDBeeF-%_deadbeef_version%
+gtkui.tray_volume_sensitivity 1
+gtkui.unicode_playstate 1
+gui_plugin GTK3
+hotkey.key01 "slash" 0 0 find
+hotkey.key02 "o" 0 0 open_files
+hotkey.key03 "Escape" 0 0 deselect_all
+hotkey.key04 "d" 0 0 toggle_stop_after_current
+hotkey.key05 "Ctrl j" 0 0 jump_to_current_track
+hotkey.key06 "F1" 0 0 help
+hotkey.key07 "q" 1 0 remove_from_playlist
+hotkey.key08 "i" 1 0 track_properties
+hotkey.key09 "a" 0 0 add_files
+hotkey.key10 "h" 0 0 prev
+hotkey.key11 "space" 0 0 toggle_pause
+hotkey.key12 "x" 0 0 stop
+hotkey.key13 "l" 0 0 next
+hotkey.key14 "n" 0 0 playback_random
+hotkey.key15 "Ctrl k" 0 0 toggle_stop_after_album
+hotkey.key16 "j" 1 0 move_tracks_down
+hotkey.key17 "b" 0 0 seek_5p_back
+hotkey.key18 "e" 0 0 seek_5p_fwd
+hotkey.key19 "k" 1 0 move_tracks_up
+hotkey.key20 "Return" 0 0 play
+hotkeys_created 1
+ignore_archives 0
+junk.enable_cp1251_detection 0
+logwindow.geometry.h 200
+logwindow.geometry.w 400
+logwindow.geometry.x 40
+logwindow.geometry.y 40
+mainwin.geometry.h 1016
+mainwin.geometry.w 1880
+mainwin.geometry.x 16
+mainwin.geometry.y 40
+mp3.backend 0
+mp3.force16bit 0
+network.proxy 0
+network.proxy.address localhost
+network.proxy.port 9050
+network.proxy.type SOCKS5
+output_plugin pulseaudio
+playback.loop 0
+playback.volume 0.0000000
+playlist.current 0
+playlist.cursor.0 54
+playlist.groups.spacing 4
+playlist.scroll.0 841
+playlist.scroll.cursorfollowplayback 1
+playlist.tab.00000 Default
+prefwin.geometry.h 1016
+prefwin.geometry.w 1081
+prefwin.geometry.x 415
+prefwin.geometry.y 28
+replaygain.preamp_with_rg 0.0000000
+replaygain.preamp_without_rg 0.0000000
+replaygain.processing_flags 3
+resume.paused 0
+resume.playlist -1
+resume.position -1.000000
+resume.track -1
+resume_last_session 1
+streamer.16_to_24 0
+streamer.8_to_16 1
+streamer.override_samplerate 0
+streamer.samplerate 192000
+streamer.samplerate_mult_44 192000
+streamer.samplerate_mult_48 16000
+streamer.use_dependent_samplerate 1
+trkproperties.geometry.h 400
+trkproperties.geometry.w 400
+trkproperties.geometry.x 1075
+trkproperties.geometry.y 599
+waveform.bg_alpha 65535
+waveform.bg_color_b 50000
+waveform.bg_color_g 50000
+waveform.bg_color_r 50000
+waveform.border_width 0
+waveform.cache_enabled 1
+waveform.cursor_width 3
+waveform.display_rms 1
+waveform.display_ruler 1
+waveform.fg_alpha 65535
+waveform.fg_color_b 20000
+waveform.fg_color_g 20000
+waveform.fg_color_r 20000
+waveform.fg_rms_alpha 65535
+waveform.fg_rms_color_b 5000
+waveform.fg_rms_color_g 5000
+waveform.fg_rms_color_r 5000
+waveform.fill_waveform 1
+waveform.font_size 20
+waveform.log_enabled 1
+waveform.max_file_length 180
+waveform.mix_to_mono 0
+waveform.num_samples 4092
+waveform.pb_alpha 20000
+waveform.pb_color_b 0
+waveform.pb_color_g 65535
+waveform.pb_color_r 0
+waveform.refresh_interval 100
+waveform.render_method 2
+waveform.scroll_enabled 1
+waveform.shade_waveform 1
+waveform.soundcloud_style 0

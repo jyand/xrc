@@ -9,7 +9,7 @@ nnoremap O :shell<CR>
 nnoremap f :on | :!$TERMINAL -e fish 2> /dev/null &<CR>
 nnoremap , :on | :!$TERMINAL -e vifm 2> /dev/null &<CR>
 nnoremap . :on | :!$TERMINAL -e $EDITOR %f 2> /dev/null &<CR>
-nnoremap C :on | :!$TERMINAL -e scim %f 2> /dev/null &<CR>
+nnoremap C :on | :!$TERMINAL -e vd %f 2> /dev/null &<CR>
 map I :!sxiv *.png *.jpg *.gif *.jpeg *.bmp 2> /dev/null &<CR>
 map b :sp | :!firejail $BROWSER -P reader %f 2> /dev/null &<CR>
 map B :sp | :!chromium %f 2> /dev/null &<CR>
@@ -38,6 +38,7 @@ nnoremap s :vs!<CR>
 nnoremap > :si<CR>
 map < :siblprev<CR>
 map U :!busybox unzip %c<CR>
+map E :!vis %f<CR>
 map t :tree!<CR>
 map * :select *.
 map _ :!

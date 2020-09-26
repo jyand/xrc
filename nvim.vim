@@ -66,5 +66,6 @@ set encoding=utf-8
 set incsearch
 set wildmenu
 
-let g:user_emmet_leader_key='z'
 autocmd BufRead,BufNewFile *.tsx,*.jsx,*.js setlocal filetype=typescript
+"should only be in normal mode
+"let g:user_emmet_leader_key='z'
