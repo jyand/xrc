@@ -14,9 +14,9 @@ cursor_beam_thickness 3.0
 cursor_stop_blinking_after 0
 
 inactive_text_alpha 0.85
-background_opacity 0.91
+background_opacity 0.9
 dim_opacity 0.5
-dynamic_background_opacity no
+dynamic_background_opacity yes
 
 enabled_layouts *
 scrollback_lines 8192

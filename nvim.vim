@@ -15,22 +15,18 @@ noremap <Tab> .
 " move around via sections without needing to hold Shift
 noremap . }
 noremap , {
+" switch uppercase and lowercase for commands in which the default uppercase is more useful
+nnoremap v V
+nnoremap V v
 " making use of some keys with default mappings that are not so useful
-map f :!$TERMINAL -e fish &<CR>
 nnoremap J g`"
 map t :set spell!<CR>
 nnoremap m :
 nnoremap Q q
 nnoremap q q:
-" switch uppercase and lowercase for commands in which the default uppercase is more useful
-nnoremap v V
-nnoremap V v
-"noremap b B
-"noremap B b
-"noremap e E
-"noremap E e
-"noremap w W
-"noremap W w
+nnoremap _ :!
+nnoremap f /
+nnoremap F ?
 
 " Tabs are 8 space characters
 set tabstop=8 softtabstop=0 expandtab shiftwidth=8 smarttab

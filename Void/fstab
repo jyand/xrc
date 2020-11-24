@@ -5,3 +5,13 @@ tmpfs		/tmp	tmpfs	defaults,nosuid,nodev   0       0
 /dev/sda3	/opt	ext4	defaults		0	0
 /dev/sda4	/home	ext4	defaults		0	0
 #/dev/mmcblk0p1	/media	ext4	defaults		0	0
+
+#                    <file system>          <dir>     <type>	   <options>        <dump> <pass>
+tmpfs		                             /tmp	tmpfs	defaults,nosuid,nodev   0       0
+UUID=d002b78a-ce02-445c-9056-ae3142703565    /boot	ext2	defaults		0	0
+UUID=f6d72fe5-3831-4700-8a88-4374fdb92c06    /  	ext4	defaults		0	0
+UUID=3a0d47ce-46df-4ded-bf4d-6e39e4626779    /opt	ext4	defaults		0	0
+UUID=78e83ee2-d2ec-4b1a-bcf7-19f8651c412a    /home	ext4	defaults		0	0
+UUID=bbe73fad-e3fd-4247-949f-736c6a31eec8    none	swap	defaults		0	0
+UUID=6fd6d085-6bff-4b4a-974a-b43fec5d74fa    /media	ext4	defaults		0	0
+#                    <file system>          <dir>     <type>	   <options>        <dump> <pass>

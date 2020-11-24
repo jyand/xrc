@@ -21,7 +21,7 @@ export EDITOR="nvim"
 export FILE="vifm"
 export READER="zathura"
 export IMAGE="sxiv"
-export BROWSER="icecat"
+export BROWSER="/opt/ungoogled-chromium/chrome"
 
 # Auto-start desktop after logging in from tty
 ! busybox pgrep -x $WIN > /dev/null && exec startx 2> /dev/null

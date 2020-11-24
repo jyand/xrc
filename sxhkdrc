@@ -16,11 +16,11 @@ mod4 + {d, e}
         {dmenu_run, dmenu_run -b}
 # Browsers
 mod4 + i
-        firejail $BROWSER -P default
+        firejail icecat -P default
 mod4 + o
-        firejail --net=none $BROWSER -P reader
+        firejail --net=none icecat -P reader
 mod4 + b
-        chromium --incognito
+        $BROWSER --incognito
 # Audio
 mod4 + m
         pamixer -t
