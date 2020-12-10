@@ -20,7 +20,7 @@ mod4 + i
 mod4 + o
         firejail --net=none icecat -P reader
 mod4 + b
-        $BROWSER --incognito
+        /opt/ungoogled-chromium/chrome --incognito
 # Audio
 mod4 + m
         pamixer -t

@@ -88,8 +88,8 @@ fileviewer *.zip
 filetype *.pdf,*.ps,*.eps,*.ps.gz,*.djvu zathura %f 2> /dev/null & 
 filetype *.png,*.jpg,*.jpeg,*.gif,*.bmp,*.xpm sxiv %f 2> /dev/null &
 filetype *.csv,*.xls,*.xlsx scim
-filetype *.wav,*.mp3,*.flac,*.m4a,*.wma,*.ape firejail --net=none deadbeef --queue %f 2> /dev/null &
-filetype *.avi,*.mp4,*.wmv,*.3gp,*.ogv,*.mkv,*.mpg,*.mpeg,*.vob,*.fl[icv],*.m2v,*.mov,*.webm,*.mts,*.m4v firejail --net=none mpv %f 2> /dev/null &
+filetype *.wav,*.mp3,*.flac,*.m4a,*.wma,*.ape deadbeef --queue %f 2> /dev/null &
+filetype *.avi,*.mp4,*.wmv,*.3gp,*.ogv,*.mkv,*.mpg,*.mpeg,*.vob,*.fl[icv],*.m2v,*.mov,*.webm,*.mts,*.m4v mpv %f 2> /dev/null &
 filetype *.o nm %f | $PAGER
 filetype *.[1-8] man ./%c
 filetype *.md5
