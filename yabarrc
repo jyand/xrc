@@ -2,7 +2,7 @@
 bar-list = ["topbar"];
 topbar:{
 	font: "IBM Plex Mono Bold 10";
-	block-list: ["pa_volume", "ya_cpu", "ya_mem", "bsp_scheme", "title", "blank", "date", "ya_ws"];
+	block-list: ["pa_volume", "cpu_freq", "ya_cpu", "ya_mem", "title", "blank", "date", "ya_ws"];
 	position: "top";
 	gap-horizontal: 0;
 	gap-vertical: 0;
@@ -13,49 +13,50 @@ topbar:{
 	title: {
 		exec: "xtitle -s";
 		align: "left";
-		fixed-size: 1032;
+		fixed-size: 1024 ;
 		type: "persist";
 		foreground-color-rgb:0xffff00;
 		background-color-rgb:0x000000;
-                underline-color-rgb:0x45ada8;
+                underline-color-rgb:0x98d9b6;
                 overline-color-rgb:0x373b41;
 	}
 	date: {
 		exec: "date +'%d %A %B  %H:%M:%S'";
 		align: "right";
-		fixed-size: 320;
+		fixed-size: 300;
 		type: "periodic";
 		interval: 1;
 		background-color-rgb:0x45ada8;
 		foreground-color-rgb:0x000000;
-		underline-color-rgb:0xc0b929;
+		underline-color-rgb:0x000000;
                 overline-color-rgb:0xc0b929;
 	}
-	bsp_scheme: {
-		exec: "bspc config automatic_scheme";
+	cpu_freq: {
+		exec: "cpupower frequency-info | busybox grep asserted | sed 's/current CPU frequency: //g' | sed 's/ \(asserted by call to kernel\)//g'";
 		align: "left";
 		fixed-size: 100 ;
 		type: "periodic";
 		interval: 2;
 		foreground-color-rgb:0x000000;
-		underline-color-rgb:0x98d9b6;
+		background-color-rgb:0xe97f02;
+                underline-color-rgb:0xa00000;
 		overline-color-rgb:0x45ada8;
 	}
 	pa_volume: {
 		exec: "pamixer --get-volume-human";
 		align: "left";
-		fixed-size: 64;
+		fixed-size: 72;
 		type: "periodic";
 		interval: 2;
-		foreground-color-rgb:0x000000;
-		background-color-rgb:0xe97f02;
-		underline-color-rgb:0x98d9b6;
+		background-color-rgb:0xa00000;
+		foreground-color-rgb:0xffffff;
+		underline-color-rgb:0x45ada8;
 		overline-color-rgb:0x45ada8;
 	}
 	ya_ws: {
 		exec: "YABAR_WORKSPACE";
 		align: "right";
-		fixed-size: 64;
+		fixed-size: 80;
 	        background-color-rgb: 0x000000;
 	}
 	ya_mem:{
@@ -64,7 +65,7 @@ topbar:{
 		interval: 1;
 		foreground-color-rgb:0x000000;
 		background-color-rgb:0x98d9b6;
-		underline-color-rgb:0xFA6900;
+		underline-color-rgb:0xc0b929;
 		overline-color-rgb:0xFA6900;
 	}
 	ya_cpu: {
@@ -74,7 +75,7 @@ topbar:{
 		interval: 1;
 		internal-suffix: "%";
 		foreground-color-rgb:0x000000;
-		background-color-rgb:0xffff00;
+		background-color-rgb:0xc0b929;
 		underline-color-rgb:0xE97F02;
 		overline-color-rgb:0xE97F02;
 		#internal-spacing: true;
@@ -86,7 +87,7 @@ topbar:{
                 type: "periodic" ;
                 interval: 3600 ;
 		foreground-color-rgb:0x000000;
-		underline-color-rgb:0x98d9b6;
+		underline-color-rgb:0x000000;
 		overline-color-rgb:0x45ada8;
         }
 }

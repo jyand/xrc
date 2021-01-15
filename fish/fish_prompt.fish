@@ -1,3 +1,5 @@
+#!/usr/bin/env fish
+
 function fish_prompt
     set -l last_pipestatus $pipestatus
     set -l prefix ''
