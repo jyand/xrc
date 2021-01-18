@@ -27,6 +27,9 @@ nnoremap q q:
 nnoremap _ :!
 nnoremap f /
 nnoremap F ?
+nnoremap Z zb
+nnoremap z zz
+nnoremap \ :%s/I<Left>
 
 " Tabs are 8 space characters
 set tabstop=8 softtabstop=0 expandtab shiftwidth=8 smarttab
@@ -55,13 +58,16 @@ set title
 set showmode
 set showcmd
 set showmatch
+set ignorecase
+set smartcase
 set laststatus=2
 set report=0
-set spelllang=en_US
+set spelllang=en_us
 set encoding=utf-8
 set incsearch
 set wildmenu
+set nopaste
 
+autocmd BufRead,BufNewFile *.fish setlocal filetype=zsh
 autocmd BufRead,BufNewFile *.tsx,*.jsx,*.js setlocal filetype=typescript
-"should only be in normal mode
-"let g:user_emmet_leader_key='z'
+let g:user_emmet_leader_key='CTRL'

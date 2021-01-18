@@ -16,8 +16,8 @@ map u scroll half-up
 map i scroll half-down
 map r reload
 map R rotate
-map k zoom in
-map j zoom out
+map ) zoom in
+map ( zoom out
 map x quit
 unmap q
 map <Return> recolor

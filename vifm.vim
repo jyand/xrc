@@ -12,7 +12,7 @@ nnoremap . :on | :!$TERMINAL -e $EDITOR %f 2> /dev/null &<CR>
 nnoremap C :on | :!$TERMINAL -e vd %f 2> /dev/null &<CR>
 map I :!sxiv *.png *.jpg *.gif *.jpeg *.bmp 2> /dev/null &<CR>
 map b :sp | :!firejail icecat -P reader %f 2> /dev/null &<CR>
-map B :sp | :!chromium %f 2> /dev/null &<CR>
+map B :sp | :!$BROWSER %f 2> /dev/null &<CR>
 
 "mappings
 nnoremap F :!fish<CR>
