@@ -20,4 +20,4 @@ hi Statement cterm=bold ctermfg=226
 hi PreProc cterm=bold ctermfg=199
 hi Identifier cterm=bold ctermfg=10
 hi Type cterm=bold ctermfg=202
-hi Special cterm=bold ctermfg=196
+hi Special cterm=bold ctermfg=27

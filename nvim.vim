@@ -29,7 +29,7 @@ nnoremap f /
 nnoremap F ?
 nnoremap Z zb
 nnoremap z zz
-nnoremap \ :%s/I<Left>
+nnoremap \ :%s/gI<Left><Left>
 
 " Tabs are 8 space characters
 set tabstop=8 softtabstop=0 expandtab shiftwidth=8 smarttab
@@ -68,6 +68,6 @@ set incsearch
 set wildmenu
 set nopaste
 
-autocmd BufRead,BufNewFile *.fish setlocal filetype=zsh
+autocmd BufRead,BufNewFile shXX*,*.fish setlocal filetype=zsh
 autocmd BufRead,BufNewFile *.tsx,*.jsx,*.js setlocal filetype=typescript
 let g:user_emmet_leader_key='CTRL'

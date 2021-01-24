@@ -1,7 +1,7 @@
 #!/usr/bin/env ksh
 # ksh is usually a symlink to oksh, loksh, mksh, or ksh93
 
-export PS1="\e[0;31m{\e[0;33m\w\e[1;31m}\e[0;32m$(echo $TERM)\e[1;34m[\e[0;36m\#\e[1;34m]\n \e[0;35m\$(printf '\U000003bc')\e[0;37m "
+export PS1="\e[0;31m{\e[0;33m\w\e[1;31m}\e[0;32m$(busybox echo $TERM)\e[1;34m[\e[0;36m\#\e[1;34m]\n \e[0;35m\$(printf '\U000003bc')\e[0;37m\$(printf '\e[4 q') "
 
 ufetch
 
@@ -11,7 +11,7 @@ alias a="exit"
 alias z="exit"
 alias d="doas"
 alias r="busybox clear"
-alias k="busybox killall"
+alias k="busybox kill"
 alias j="busybox pgrep"
 alias l="exa -alhHF"
 alias h="man"
