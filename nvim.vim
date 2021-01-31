@@ -68,6 +68,7 @@ set incsearch
 set wildmenu
 set nopaste
 
+autocmd BufRead,BufNewFile *.elm setlocal filetype=elm
 autocmd BufRead,BufNewFile shXX*,*.fish setlocal filetype=zsh
 autocmd BufRead,BufNewFile *.tsx,*.jsx,*.js setlocal filetype=typescript
 let g:user_emmet_leader_key='CTRL'

@@ -12,8 +12,10 @@ hyper + z
         {$TERMINAL -e $FILE, lxterminal -e $FILE}
 {mod4, hyper} + comma
         {$TERMINAL -e $FILE, lxterminal -e $FILE}
-mod4 + {d, e} 
-        {dmenu_run, dmenu_run -b}
+{mod4, hyper} + e
+        {$TERMINAL -e $FILE, lxterminal -e $FILE}
+mod4 + d 
+        dmenu_run
 # Browsers
 mod4 + i
         firejail icecat -P default
