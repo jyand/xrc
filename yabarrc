@@ -2,7 +2,7 @@
 bar-list = ["topbar"];
 topbar:{
 	font: "IBM Plex Mono Bold 10";
-	block-list: ["pa_volume", "cpu_freq", "ya_cpu", "ya_mem", "title", "blank", "date", "ya_ws"];
+	block-list: ["core_temp", "cpu_freq", "ya_cpu", "ya_mem", "title", "blank", "date", "ya_ws"];
 	position: "top";
 	gap-horizontal: 0;
 	gap-vertical: 0;
@@ -31,10 +31,21 @@ topbar:{
 		underline-color-rgb:0x000000;
                 overline-color-rgb:0xc0b929;
 	}
-	cpu_freq: {
-		exec: "cpupower frequency-info | busybox grep asserted | sed 's/current CPU frequency: //g' | sed 's/ \(asserted by call to kernel\)//g'";
+        core_temp: {
+                exec: "sensors -f | /opt/plan9/bin/grep Package | busybox cut -d '+' -f 2 | busybox cut -d ' ' -f 1" ;
 		align: "left";
-		fixed-size: 100 ;
+		fixed-size: 80 ;
+		type: "periodic";
+		interval: 2;
+		background-color-rgb:0xa00000;
+		foreground-color-rgb:0xffffff;
+		underline-color-rgb:0x45ada8;
+		overline-color-rgb:0x45ada8;
+        }
+	cpu_freq: {
+		exec: "cpupower frequency-info | busybox grep asserted | sed 's/current CPU frequency: //g' | sed 's/ \(asserted by call to kernel\)/ /g'";
+		align: "left";
+		fixed-size: 92 ;
 		type: "periodic";
 		interval: 2;
 		foreground-color-rgb:0x000000;

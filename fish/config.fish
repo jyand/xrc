@@ -7,7 +7,7 @@ kitty + complete setup fish | source
 
 abbr q 'exit'
 abbr a 'exit'
-abbr z 'exit'
+abbr z 'math'
 abbr d 'doas'
 abbr r 'busybox clear'
 abbr k 'busybox kill'
