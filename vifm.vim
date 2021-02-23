@@ -9,7 +9,7 @@ nnoremap O :shell<CR>
 nnoremap f :on | :!$TERMINAL -e fish 2> /dev/null &<CR>
 nnoremap , :on | :!$TERMINAL -e vifm 2> /dev/null &<CR>
 nnoremap . :on | :!$TERMINAL -e $EDITOR %f 2> /dev/null &<CR>
-nnoremap C :on | :!$TERMINAL -e vd %f 2> /dev/null &<CR>
+nnoremap C :on | :!$TERMINAL -e scim %f 2> /dev/null &<CR>
 map I :!sxiv *.png *.jpg *.gif *.jpeg *.bmp 2> /dev/null &<CR>
 map b :sp | :!firejail icecat -P reader %f 2> /dev/null &<CR>
 map B :sp | :!$BROWSER %f 2> /dev/null &<CR>
@@ -23,7 +23,7 @@ nnoremap w za
 nnoremap e :view<CR>
 noremap J G
 nnoremap K :2<CR>
-vnoremap K gg
+vnoremap K gg 
 nnoremap M :cd /media<CR>
 nnoremap gm :cd ~/Documents/Manual<CR>
 nnoremap gd :cd ~/Documents/Djvu<CR>
@@ -35,13 +35,19 @@ nnoremap gg :cd<CR>
 nnoremap go :cd /opt<CR>
 nnoremap V :sp<CR>
 nnoremap s :vs!<CR>
-nnoremap > :si<CR>
-map < :siblprev<CR>
-map U :!busybox unzip %c<CR>
+nnoremap S :sor<CR>
+map - :set sort=-dir,name<CR>
+map + :set sort=+dir,name<CR>
+nnoremap < :si<CR>
+map > :siblprev<CR>
+nnoremap U u
+nnoremap u :!busybox unzip %c<CR>
+map x :!busybox tar -xf %c<CR>
 map E :!vis %f<CR>
 map t :tree!<CR>
 map * :select *.
-map _ :!
+nnoremap _ q:
+map ; :!
 map m :
 noremap <Tab> <c-w><c-l> 
 
