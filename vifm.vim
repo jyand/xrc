@@ -24,8 +24,7 @@ nnoremap e :view<CR>
 noremap J G
 nnoremap K :2<CR>
 vnoremap K gg 
-nnoremap M :cd /media<CR>
-nnoremap gm :cd ~/Documents/Manual<CR>
+nnoremap gm :cd /media<CR>
 nnoremap gd :cd ~/Documents/Djvu<CR>
 nnoremap gh :cd ~/Documents/HTMLdocs<CR>
 nnoremap gt :cd ~/Documents/Templates<CR>

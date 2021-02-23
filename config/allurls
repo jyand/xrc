@@ -1,5 +1,0 @@
-#!/bin/sh
-
-for url in $(xurls) ; do
-        $BROWSER $url
-done
