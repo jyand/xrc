@@ -1,4 +1,4 @@
-# nvim:set ft=sh
+ nvim:set ft=sh
 
 # WM-Independent
 #
@@ -22,20 +22,22 @@ mod4 + i
 mod4 + o
         firejail --net=none icecat -P reader
 mod4 + b
-        $BROWSER
+        $BROWSER --js-flags=--noexpose_wasm
 mod4 + v
-        $BROWSER --incognito
+        $BROWSER --js-flags=--noexpose_wasm --incognito
 # Audio
 mod4 + m
         pamixer -t
-{mod4, hyper} + parenright
+{hyper, mod4} + parenright
         {pamixer -d 5, deadbeef --prev}
-{mod4, hyper} + parenleft
+{hyper, mod4} + parenleft
         {pamixer -i 5, deadbeef --next}
-hyper + Return
-        deadbeef --play-pause
-mod4 + colon
+{hyper, mod4} + colon
         deadbeef --stop
+{hyper, mod4} + Return
+        deadbeef --play-pause
+{hyper, mod4} + space
+        deadbeef --play-pause
 # Calculator
 {mod4, hyper} + c
         $TERMINAL -e {julia, R}

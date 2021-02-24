@@ -54,7 +54,7 @@ topbar:{
 		overline-color-rgb:0x45ada8;
 	}
         audio_playing: {
-                exec: "deadbeef --nowplaying '%e/%l' 2> /dev/null" ;
+                exec: "deadbeef --nowplaying '%e/%l' 2> /dev/null | /opt/plan9/bin/sed 's/nothing//g'" ;
                 align: "right" ;
                 fixed-size: 128 ;
                 type: "periodic" ;
