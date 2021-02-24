@@ -2,7 +2,7 @@
 bar-list = ["topbar"];
 topbar:{
 	font: "IBM Plex Mono Bold 10";
-	block-list: ["core_temp", "cpu_freq", "ya_cpu", "ya_mem", "title", "blank", "date", "ya_ws"];
+	block-list: ["core_temp", "cpu_freq", "ya_cpu", "ya_mem", "title", "blank", "audio_playing", "date", "ya_ws"];
 	position: "top";
 	gap-horizontal: 0;
 	gap-vertical: 0;
@@ -53,6 +53,16 @@ topbar:{
                 underline-color-rgb:0xa00000;
 		overline-color-rgb:0x45ada8;
 	}
+        audio_playing: {
+                exec: "deadbeef --nowplaying '%e/%l' 2> /dev/null" ;
+                align: "right" ;
+                fixed-size: 128 ;
+                type: "periodic" ;
+                interval: 1 ;
+		foreground-color-rgb:0xffff00 ;
+		underline-color-rgb:0x000000;
+		overline-color-rgb:0x45ada8;
+        }
 	pa_volume: {
 		exec: "pamixer --get-volume-human";
 		align: "left";
@@ -94,7 +104,7 @@ topbar:{
         blank: {
                 exec: "echo " ;
                 align: "left" ;
-                fixed-size: 192 ;
+                fixed-size: 64 ;
                 type: "periodic" ;
                 interval: 3600 ;
 		foreground-color-rgb:0x000000;
