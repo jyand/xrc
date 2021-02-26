@@ -6,6 +6,8 @@ xmodmap ~/.Xmodmap
 xcompmgr -c &
 xbanish &
 
+pulseaudio --check && pulseaudio --start
+
 sxhkd &
 yabar &
 exec $WIN
