@@ -71,18 +71,21 @@ fileviewer *.png,*.jpg,*.jpeg,*.gif,*.bmp,*.xpm
                         \ kitty icat --transfer-mode=file --place=%pwx%ph@%pxx%py %c
                         \ %pc
                         \ kitty icat --transfer-mode=file --clear
+" Web Page Previews
+fileviewer *.htm,*.html,*.php
+                        \ lynx -dump %c
 " DjVu Previews
 fileviewer *.djvu
                         \ djvutxt %c
+" PDF Info
+fileviewer *.pdf
+                        \ pdfinfo %c
 " Manual Previews
 fileviewer *.[1-9]
                         \ man ./%c
 " MarkDown Previews
 fileviewer *.md
                         \ mdcat %c
-" Web Page Previews
-fileviewer *.htm,*.html,*.php
-                        \ lynx -dump %c
 " List Archive Contents
 fileviewer *tar.*
                         \ tar -vtf %c
