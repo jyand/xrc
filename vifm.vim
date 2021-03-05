@@ -30,8 +30,8 @@ nnoremap gh :cd ~/Documents/HTMLdocs<CR>
 nnoremap gt :cd ~/Documents/Templates<CR>
 nnoremap gi :cd ~/Documents/Images<CR>
 nnoremap ga :cd ~/Documents/Audio<CR>
-nnoremap gg :cd<CR>
 nnoremap go :cd /opt<CR>
+nnoremap cd :cd<CR>
 nnoremap V :sp<CR>
 nnoremap s :vs!<CR>
 nnoremap S :sor<CR>
@@ -94,7 +94,7 @@ filetype *.pdf,*.ps,*.eps,*.ps.gz,*.djvu zathura %f 2> /dev/null &
 filetype *.png,*.jpg,*.jpeg,*.gif,*.bmp,*.xpm sxiv %f 2> /dev/null &
 filetype *.csv,*.xls,*.xlsx scim
 filetype *.wav,*.mp3,*.flac,*.m4a,*.wma,*.ape deadbeef --queue %f 2> /dev/null &
-filetype *.avi,*.mp4,*.wmv,*.3gp,*.ogv,*.mkv,*.mpg,*.mpeg,*.vob,*.fl[icv],*.m2v,*.mov,*.webm,*.mts,*.m4v mpv %f 2> /dev/null &
+filetype *.avi,*.mp4,*.wmv,*.3gp,*.ogv,*.mkv,*.mpg,*.mpeg,*.vob,*.fl[icv],*.m2v,*.mov,*.webm,*.mts,*.m4v :on | mpv %f 2> /dev/null &
 filetype *.o nm %f | $PAGER
 filetype *.[1-8] man ./%c
 filetype *.md5
