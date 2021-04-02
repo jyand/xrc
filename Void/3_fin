@@ -7,5 +7,5 @@ for f in swapfs rootfs homefs; do
         lvchange -an /dev/matrix/$f
 done
 
-cryptsetup luksCloselvm
+cryptsetup luksClose lvm
 shutdown -hf now

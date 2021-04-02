@@ -1,0 +1,48 @@
+#!/bin/sh
+
+# auto-installer for Void Linux with a Logical Volume Manager partition
+# requires a DOS table with one part for boot and a second for the LVM
+
+# For the LVM partition to be encrypted (LUKS), run:
+#       cryptsetup --use-urandom luksFormat /dev/sda2
+#       cryptsetup luksOpen /dev/sda2 lvm
+# before executing this script
+
+mkfs.ext2 -L boot /dev/sdh1
+
+pvcreate /dev/mapper/lvm
+pvdisplay > log.txt
+vgcreate grid /dev/mapper/lvm
+vgdisplay >> log.txt
+
+lvcreate -L 32G grid -n root
+lvcreate -L 4G grid -n opt
+lvcreate -L 64G grid -n home
+lvcreate -l +100%FREE grid -n swap
+
+mkfs.ext4 -L root /dev/grid/root
+mkswap -L swap /dev/grid/swap
+mkfs.ext4 -L opt /dev/grid/opt
+mkfs.ext4 -L home /dev/grid/home
+
+swapon /dev/grid/swap
+mount /dev/grid/root /mnt
+mkdir -p /mnt/opt
+mount /dev/grid/opt /mnt/opt
+mkdir -p /mnt/home
+mount /dev/grid/home /mnt/home
+mkdir -p /mnt/boot
+mount /dev/sdh1 /mnt/boot
+
+cd / ; for d in dev proc sys ; do
+        doas mkdir -p /mnt/$d
+        doas mount --rbind /$d /mnt/$d
+done
+
+# for the glibc version
+export XBPS_ARCH=x86_64
+# change .../current/musl ... to .../current ... for glibc instead
+xbps-install -Sy -R https://alpha.de.repo.voidlinux.org/current/ -r /mnt base-minimal linux-lts lvm2 cryptsetup grub git NetworkManager
+
+#cp fstab chrootsetup.sh /mnt
+# When this script finishes, chroot into /mnt, set the password, and execute chrootsetup.sh

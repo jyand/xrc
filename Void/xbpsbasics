@@ -1,5 +1,5 @@
 #!/bin/sh
 
-for i in $(cat voidbasics.csv); do
+for i in $(cat pkgs.dat); do
         xbps-install -S -y $i
 done

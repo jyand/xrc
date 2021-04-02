@@ -1,0 +1,65 @@
+  --- Physical volume ---
+  PV Name               /dev/mapper/luks-f6d72fe5-3831-4700-8a88-4374fdb92c06
+  VG Name               crypt
+  PV Size               <237.96 GiB / not usable <1.34 MiB
+  Allocatable           yes (but full)
+  PE Size               4.00 MiB
+  Total PE              60917
+  Free PE               0
+  Allocated PE          60917
+  PV UUID               YwrP1L-le5F-TZIF-qzjd-aAok-0Iq9-NmLoWd
+   
+  "/dev/mapper/lvm" is a new physical volume of "111.52 GiB"
+  --- NEW Physical volume ---
+  PV Name               /dev/mapper/lvm
+  VG Name               
+  PV Size               111.52 GiB
+  Allocatable           NO
+  PE Size               0   
+  Total PE              0
+  Free PE               0
+  Allocated PE          0
+  PV UUID               s3E2hZ-vmOA-ghDV-6wkk-BhmS-FqU9-I1dwg1
+   
+  --- Volume group ---
+  VG Name               grid
+  System ID             
+  Format                lvm2
+  Metadata Areas        1
+  Metadata Sequence No  1
+  VG Access             read/write
+  VG Status             resizable
+  MAX LV                0
+  Cur LV                0
+  Open LV               0
+  Max PV                0
+  Cur PV                1
+  Act PV                1
+  VG Size               <111.52 GiB
+  PE Size               4.00 MiB
+  Total PE              28549
+  Alloc PE / Size       0 / 0   
+  Free  PE / Size       28549 / <111.52 GiB
+  VG UUID               t7UpIL-0k1S-nzst-ezO3-ENjG-p9VP-OP3bNa
+   
+  --- Volume group ---
+  VG Name               crypt
+  System ID             
+  Format                lvm2
+  Metadata Areas        1
+  Metadata Sequence No  5
+  VG Access             read/write
+  VG Status             resizable
+  MAX LV                0
+  Cur LV                4
+  Open LV               4
+  Max PV                0
+  Cur PV                1
+  Act PV                1
+  VG Size               <237.96 GiB
+  PE Size               4.00 MiB
+  Total PE              60917
+  Alloc PE / Size       60917 / <237.96 GiB
+  Free  PE / Size       0 / 0   
+  VG UUID               Z1TFwU-0xH3-fgK3-svDv-z0cT-wGmN-ZIy8ju
+   

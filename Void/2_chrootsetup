@@ -7,8 +7,7 @@ echo 'v' > /etc/hostname
 
 mv -f fstab /etc
 
-grub-install /dev/sda
-echo ''
+grub-install /dev/sdh --no-bootsector
 
 # Uncomment if using glibc, musl does not support locales
 # echo "LANG=en_US.UTF-8" > /etc/locale.conf
