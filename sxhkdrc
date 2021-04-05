@@ -71,7 +71,7 @@ mod4 + 0
 {mod4, hyper} + {1-9}
         bspc {desktop -f,node -d} ^{1-9}
 mod4 + u
-        bspc node -t {~,}psuedo_tiled
+        bspc node -t {~,}pseudo_tiled
 mod4 + f
         bspc node -t {~,}fullscreen
 mod4 + a
