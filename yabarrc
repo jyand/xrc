@@ -1,38 +1,51 @@
 # nvim:set ft=sh
 bar-list = ["topbar"];
 topbar:{
-	font: "IBM Plex Mono Bold 10";
-	block-list: ["core_temp", "cpu_freq", "ya_cpu", "ya_mem", "title", "blank", "audio_playing", "date", "ya_ws"];
-	position: "top";
+	font: "IBM Plex Mono Bold 8.5";
+	block-list: ["ya_ws", "pa_volume", "bat", "ya_cpu", "ya_mem", "title", "date"];
+	position: "bottom";
 	gap-horizontal: 0;
 	gap-vertical: 0;
-	height: 24;
+	height: 20 ;
 	background-color-argb: 0x000000;
-	underline-size: 2;
-	overline-size: 0;
+	underline-size: 0;
+	overline-size: 2;
 	title: {
 		exec: "xtitle -s";
-		align: "left";
-		fixed-size: 1024 ;
+		align: "right";
+                fixed-size: 894 ;
 		type: "persist";
 		foreground-color-rgb:0xffff00;
 		background-color-rgb:0x000000;
                 underline-color-rgb:0x98d9b6;
-                overline-color-rgb:0x373b41;
+                overline-color-rgb:0x98d9b6;
 	}
 	date: {
 		exec: "date +'%d %A %B  %H:%M:%S'";
 		align: "right";
-		fixed-size: 300;
+		fixed-size: 200 ;
 		type: "periodic";
 		interval: 1;
 		background-color-rgb:0x45ada8;
 		foreground-color-rgb:0x000000;
 		underline-color-rgb:0x000000;
-                overline-color-rgb:0xc0b929;
+                overline-color-rgb:0x000000;
+                #overline-color-rgb:0xc0b929;
 	}
+        bat: {
+                exec: "acpi -b | cut -d ' ' -f 4,5 | sed 's/,//g'" ;
+		align: "left";
+		fixed-size: 120 ;
+		type: "periodic";
+		interval: 1;
+		foreground-color-rgb:0x000000;
+		background-color-rgb:0xe97f02;
+                underline-color-rgb:0xa00000;
+                overline-color-rgb:0xa00000;
+		#overline-color-rgb:0x45ada8;
+        }
         core_temp: {
-                exec: "sensors -f | /opt/plan9/bin/grep Package | busybox cut -d '+' -f 2 | busybox cut -d ' ' -f 1" ;
+                exec: "sensors -f | grep Package | cut -d '+' -f 2 | cut -d ' ' -f 1" ;
 		align: "left";
 		fixed-size: 80 ;
 		type: "periodic";
@@ -43,9 +56,9 @@ topbar:{
 		overline-color-rgb:0x45ada8;
         }
 	cpu_freq: {
-		exec: "cpupower frequency-info | busybox grep asserted | sed 's/current CPU frequency: //g' | sed 's/ \(asserted by call to kernel\)/ /g'";
+		exec: "cpupower frequency-info | grep asserted | sed 's/current CPU frequency: //g' | sed 's/ \(asserted by call to kernel\)/ /g'";
 		align: "left";
-		fixed-size: 92 ;
+		fixed-size: 88 ;
 		type: "periodic";
 		interval: 2;
 		foreground-color-rgb:0x000000;
@@ -66,33 +79,35 @@ topbar:{
 	pa_volume: {
 		exec: "pamixer --get-volume-human";
 		align: "left";
-		fixed-size: 72;
+		fixed-size: 48 ;
 		type: "periodic";
 		interval: 2;
 		background-color-rgb:0xa00000;
 		foreground-color-rgb:0xffffff;
 		underline-color-rgb:0x45ada8;
-		overline-color-rgb:0x45ada8;
+                overline-color-rgb:0x000000;
+		#overline-color-rgb:0x45ada8;
 	}
 	ya_ws: {
 		exec: "YABAR_WORKSPACE";
-		align: "right";
-		fixed-size: 80;
+		align: "left";
+		fixed-size: 50;
 	        background-color-rgb: 0x000000;
 	}
 	ya_mem:{
 		exec: "YABAR_MEMORY";
 		align: "left";
+		fixed-size: 64 ;
 		interval: 1;
 		foreground-color-rgb:0x000000;
 		background-color-rgb:0x98d9b6;
 		underline-color-rgb:0xc0b929;
-		overline-color-rgb:0xFA6900;
+		overline-color-rgb:0xc0b929;
 	}
 	ya_cpu: {
 		exec: "YABAR_CPU";
 		align: "left";
-#		fixed-size: 60;
+		fixed-size: 64 ;
 		interval: 1;
 		internal-suffix: "%";
 		foreground-color-rgb:0x000000;
