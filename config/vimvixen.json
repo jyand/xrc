@@ -1,0 +1,159 @@
+{
+  "keymaps": {
+    "0": {
+      "type": "scroll.home"
+    },
+    ":": {
+      "type": "command.show"
+    },
+    "o": {
+      "type": "command.show.open",
+      "alter": false
+    },
+    "o": {
+      "type": "command.show.open",
+      "alter": true
+    },
+    "t": {
+      "type": "command.show.tabopen",
+      "alter": false
+    },
+    "t": {
+      "type": "command.show.tabopen",
+      "alter": true
+    },
+    "w": {
+      "type": "command.show.winopen",
+      "alter": false
+    },
+    "w": {
+      "type": "command.show.winopen",
+      "alter": true
+    },
+    "b": {
+      "type": "command.show.buffer"
+    },
+    "a": {
+      "type": "command.show.addbookmark",
+      "alter": true
+    },
+    "k": {
+      "type": "scroll.vertically",
+      "count": -1
+    },
+    "j": {
+      "type": "scroll.vertically",
+      "count": 1
+    },
+    "h": {
+      "type": "scroll.horizonally",
+      "count": -1
+    },
+    "l": {
+      "type": "scroll.horizonally",
+      "count": 1
+    },
+    "u": {
+      "type": "scroll.pages",
+      "count": -0.5
+    },
+    "i": {
+      "type": "scroll.pages",
+      "count": 0.5
+    },
+    "": {
+      "type": "page.home",
+      "newtab": true
+    },
+    "gg": {
+      "type": "scroll.top"
+    },
+    "g": {
+      "type": "scroll.bottom"
+    },
+    "$": {
+      "type": "scroll.end"
+    },
+    "x": {
+      "type": "tabs.close",
+      "select": "right"
+    },
+    "u": {
+      "type": "tabs.reopen"
+    },
+    "j": {
+      "type": "tabs.prev"
+    },
+    "k": {
+      "type": "tabs.next"
+    },
+    "r": {
+      "type": "tabs.reload",
+      "cache": false
+    },
+    "r": {
+      "type": "tabs.reload",
+      "cache": true
+    },
+    "+": {
+      "type": "zoom.in"
+    },
+    "-": {
+      "type": "zoom.out"
+    },
+    "f": {
+      "type": "follow.start",
+      "newtab": false,
+      "background": false
+    },
+    "f": {
+      "type": "follow.start",
+      "newtab": true,
+      "background": false
+    },
+    "h": {
+      "type": "navigate.history.prev"
+    },
+    "l": {
+      "type": "navigate.history.next"
+    },
+    "y": {
+      "type": "urls.yank"
+    },
+    "p": {
+      "type": "urls.paste",
+      "newtab": false
+    },
+    "p": {
+      "type": "urls.paste",
+      "newtab": true
+    },
+    "/": {
+      "type": "find.start"
+    },
+    "n": {
+      "type": "find.next"
+    },
+    "n": {
+      "type": "find.prev"
+    },
+    ".": {
+      "type": "repeat.last"
+    },
+    "<s-esc>": {
+      "type": "addon.toggle.enabled"
+    }
+  },
+  "search": {
+    "default": "ddg",
+    "engines": {
+      "ddg": "https://duckduckgo.com/lite/?q={}"
+    }
+  },
+  "properties": {
+    "hintchars": "abcdefghijklmnopqrstuvwxyz",
+    "smoothscroll": false,
+    "complete": "sbh"
+  },
+  "blacklist": []
+}

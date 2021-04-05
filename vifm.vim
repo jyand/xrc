@@ -6,7 +6,7 @@ colorscheme based
 "Window Manager emulation
 nnoremap o :on | :!$TERMINAL 2> /dev/null &<CR>
 nnoremap O :shell<CR>
-nnoremap f :on | :!$TERMINAL -e fish 2> /dev/null &<CR>
+nnoremap f :on | :!$TERMINAL -e zsh 2> /dev/null &<CR>
 nnoremap , :on | :!$TERMINAL -e vifm 2> /dev/null &<CR>
 nnoremap . :on | :!$TERMINAL -e $EDITOR %f 2> /dev/null &<CR>
 nnoremap C :on | :!$TERMINAL -e scim %f 2> /dev/null &<CR>
@@ -15,7 +15,7 @@ map B :sp | :!firejail icecat -P reader %f 2> /dev/null &<CR>
 map b :sp | :!$BROWSER %f 2> /dev/null &<CR>
 
 "mappings
-nnoremap F :!fish<CR>
+nnoremap F :!zsh<CR>
 nnoremap i :touch
 nnoremap a :mkdir
 nnoremap r :rename
