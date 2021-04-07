@@ -87,7 +87,7 @@ fileviewer *.[1-9]
                         \ man ./%c
 " MarkDown Previews
 fileviewer *.md
-                        \ mdcat %c
+                        \ mdcat -p %c
 " List Archive Contents
 fileviewer *tar.*
                         \ tar -vtf %c
