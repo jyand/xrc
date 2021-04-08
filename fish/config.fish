@@ -3,7 +3,12 @@
 fish_vi_key_bindings
 fish_vi_cursor
 
-kitty + complete setup fish | source
+[ $TERM = "kitty-xterm" ] && kitty + complete setup fish | source
+
+set fish_cursor_default line
+set fish_cursor_insert underscore
+set fish_cursor_visual block
+set fish_cursor_replace block
 
 abbr q 'exit'
 abbr a 'exit'
