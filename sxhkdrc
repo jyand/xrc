@@ -49,10 +49,12 @@ mod4 + r
 mod4 + t
         redshift -x
 {mod4, hyper} + p
-        {$TERMINAL -e ytop -fapb -c vice -I 1/2, $TERMINAL -e htop}
+        {$TERMINAL -e ytop -fap -c vice -I 1/2, $TERMINAL -e htop}
 # Bar
 mod4 + y
-        {kill $(pgrep yabar), yabar &}
+        {kill $(busybox pgrep yabar), yabar &}
+mod4 + u
+        bspc config top-padding 0
 
 # BSPWM
 #
@@ -70,9 +72,9 @@ mod4 + 0
         bspc desktop older.occupied --focus
 {mod4, hyper} + {1-9}
         bspc {desktop -f,node -d} ^{1-9}
-mod4 + u
-        bspc node -t {~,}pseudo_tiled
 mod4 + f
         bspc node -t {~,}fullscreen
 mod4 + a
-        bspc node -t {~,}floating
+        bspc node focused -t {~,}floating
+mod4 + g
+        bspc config automatic_scheme {alternate, spiral}

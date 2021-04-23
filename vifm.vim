@@ -6,16 +6,16 @@ colorscheme based
 "Window Manager emulation
 nnoremap o :on | :!$TERMINAL 2> /dev/null &<CR>
 nnoremap O :shell<CR>
-nnoremap f :on | :!$TERMINAL -e zsh 2> /dev/null &<CR>
+nnoremap f :on | :!$TERMINAL -e fish 2> /dev/null &<CR>
 nnoremap , :on | :!$TERMINAL -e vifm 2> /dev/null &<CR>
 nnoremap . :on | :!$TERMINAL -e $EDITOR %f 2> /dev/null &<CR>
 nnoremap C :on | :!$TERMINAL -e scim %f 2> /dev/null &<CR>
 map I :!sxiv *.png *.jpg *.gif *.jpeg *.bmp *.webp 2> /dev/null &<CR>
-map B :sp | :!firejail icecat -P reader %f 2> /dev/null &<CR>
-map b :sp | :!$BROWSER %f 2> /dev/null &<CR>
+map b :sp | :!firejail icecat -P reader %f 2> /dev/null &<CR>
+map B :sp | :!$BROWSER %f 2> /dev/null &<CR>
 
 "mappings
-nnoremap F :!zsh<CR>
+nnoremap F :!fish<CR>
 nnoremap i :touch
 nnoremap a :mkdir
 nnoremap r :rename
@@ -67,12 +67,10 @@ set vifminfo=
 "set vifminfo=dhistory,chistory,tui,shistory,uphistory,fhistory,dirstack,registers
 
 "Image Previews
-"
-"fileviewer *.png,*.jpg,*.jpeg,*.gif,*.bmp,*.xpm,*.webp
-                        "\ kitty icat --transfer-mode=file --place=%pwx%ph@%pxx%py %c
-                        " %pc
-                        " kitty icat --transfer-mode=file --clear
-
+fileviewer *.png,*.jpg,*.jpeg,*.gif,*.bmp,*.xpm
+                        \ kitty icat --transfer-mode=file --place=%pwx%ph@%pxx%py %c
+                        \ %pc
+                        \ kitty icat --transfer-mode=file --clear
 " Web Page Previews
 fileviewer *.htm,*.html,*.php
                         \ lynx -dump %c
@@ -93,15 +91,12 @@ fileviewer *tar.*
                         \ tar -vtf %c
 fileviewer *.zip
                         \ busybox unzip -l %c
-" Media File Info
-fileviewer *.avi,*.mp4,*.wmv,*.3gp,*.ogv,*.mkv,*.mpg,*.mpeg,*.vob,*.fl[icv],*.m2v,*.mov,*.webm,*.mts,*.m4v,*.wav,*.mp3,*.flac,*.m4a,*.wma,*.ape,*.ogg,*.opus,*.png,*.jpg,*.jpeg,*.gif,*.bmp,*.xpm,*.webp
-                        \ mediainfo %c
 
 "Default file associations
 filetype *.pdf,*.ps,*.eps,*.ps.gz,*.djvu zathura %f 2> /dev/null & 
 filetype *.png,*.jpg,*.jpeg,*.gif,*.bmp,*.xpm,*.webp sxiv %f 2> /dev/null &
 filetype *.csv,*.xls,*.xlsx scim
-filetype *.wav,*.mp3,*.flac,*.m4a,*.wma,*.ape,*.ogg,*.opus deadbeef --queue %f 2> /dev/null &
+filetype *.wav,*.mp3,*.flac,*.m4a,*.wma,*.ape deadbeef --queue %f 2> /dev/null &
 filetype *.avi,*.mp4,*.wmv,*.3gp,*.ogv,*.mkv,*.mpg,*.mpeg,*.vob,*.fl[icv],*.m2v,*.mov,*.webm,*.mts,*.m4v mpv %f 2> /dev/null &
 filetype *.o nm %f | $PAGER
 filetype *.[1-8] man ./%c
@@ -121,7 +116,7 @@ filetype *.asc
        \ {Check signature}
        \ !!gpg --verify %c,
 
-"djvu/pdf Previews - this works but REALLY slows down navigating
+"djvu/pdf Previews - this works but takes way too long to navigate
 "fileviewer *.djvu,*.pdf
                         "\ convert %c[0] preview.png && kitty icat --silent --transfer-mode=file --place=%pwx%ph@%pxx%py preview.png
                         "\ %pc

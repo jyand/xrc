@@ -1,5 +1,8 @@
 term xterm-kitty
 
+repaint_delay 1
+input_delay 1
+
 font_family sans
 font_size 10.5
 adjust_column_width 1
