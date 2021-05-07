@@ -11,14 +11,12 @@ bspc config window_gap 16
 bspc config focus_follows_pointer true
 bspc config honor_size hints false
 bspc config initial_polarity second_child
-bspc config automatic_scheme spiral
+bspc config automatic_scheme alternate
 
-bspc rule -a Zathura state=tiled
+bspc rule -a mpv state=pseudo_tiled
 bspc rule -a Sxiv state=floating
+bspc rule -a Zathura state=tiled
 bspc rule -a Deadbeef desktop=^9
-bspc rule -a lmms desktop=^8 follow=on
-bspc rule -a musescore desktop=^7 follow=on
 bspc rule -a Gimp desktop=^6 follow=on
-bspc rule -a Chromium desktop=^5 follow=on
 
 bspc config split_ratio 0.42

@@ -11,11 +11,11 @@ nnoremap , :on | :!$TERMINAL -e vifm 2> /dev/null &<CR>
 nnoremap . :on | :!$TERMINAL -e $EDITOR %f 2> /dev/null &<CR>
 nnoremap C :on | :!$TERMINAL -e scim %f 2> /dev/null &<CR>
 map I :!sxiv *.png *.jpg *.gif *.jpeg *.bmp *.webp 2> /dev/null &<CR>
-map b :sp | :!firejail icecat -P reader %f 2> /dev/null &<CR>
-map B :sp | :!$BROWSER %f 2> /dev/null &<CR>
+map B :sp | :!firejail icecat -P reader %f 2> /dev/null &<CR>
+map b :sp | :!$BROWSER %f 2> /dev/null &<CR>
 
 "mappings
-nnoremap F :!fish<CR>
+nnoremap F :!zsh<CR>
 nnoremap i :touch
 nnoremap a :mkdir
 nnoremap r :rename
@@ -49,6 +49,7 @@ nnoremap _ q:
 map ; :!
 map m :
 noremap <Tab> <c-w><c-l> 
+nnoremap z :select<CR>
 
 "settings
 set vicmd=nvim

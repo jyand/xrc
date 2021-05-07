@@ -43,7 +43,7 @@ mod4 + m
         $TERMINAL -e {julia, R}
 # Utilities
 mod4 + s
-        maim -s ~/Desktop/$(date +%F_%T).png
+        maim -s ~/Pictures/$(date +%F_%T).png
 mod4 + r
         redshift -O 2500
 mod4 + t
@@ -52,7 +52,7 @@ mod4 + t
         {$TERMINAL -e ytop -fap -c vice -I 1/2, $TERMINAL -e htop}
 # Bar
 mod4 + y
-        {kill $(busybox pgrep yabar), yabar &}
+        pgrep yabar && kill $(pgrep yabar) || yabar &
 mod4 + u
         bspc config top-padding 0
 
@@ -72,9 +72,11 @@ mod4 + 0
         bspc desktop older.occupied --focus
 {mod4, hyper} + {1-9}
         bspc {desktop -f,node -d} ^{1-9}
+mod4 + u
+        bspc node -t {~,}pseudo_tiled
 mod4 + f
         bspc node -t {~,}fullscreen
 mod4 + a
         bspc node focused -t {~,}floating
 mod4 + g
-        bspc config automatic_scheme {alternate, spiral}
+        bspc config automatic_scheme {spiral, alternate}

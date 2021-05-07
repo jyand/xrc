@@ -1,5 +1,5 @@
 HISTFILE=~/.local/share/zsh/histfile
-HISTSIZE=32
+HISTSIZE=4294967296
 SAVEHIST=4294967296
 setopt autocd extendedglob
 function zle-keymap-select () {

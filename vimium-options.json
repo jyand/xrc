@@ -4,7 +4,7 @@
   "filterLinkHints": false,
   "waitForEnterForFilteredHints": false,
   "hideHud": false,
-  "keyMappings": "map a Vomnibar.activateInNewTab\nmap A createTab\nmap s toggleViewSource\nmap S LinkHints.activateModeToDownloadLink\nmap ) moveTabLeft\nmap ( moveTabRight\nmap 0 firstTab\nmap $ lastTab\nmap w duplicateTab\nmap U restoreTab\nmap v LinkHints.activateModeToOpenInNewForegroundTab\nmap i scrollPageDown\nmap g scrollToTop\nmap . scrollFullPageDown\nmap , scrollFullPageUp\nmap b Vomnibar.activateBookmarksInNewTab\nmap B Vomnibar.activateBookmarks\nmap m toggleMuteTab\nunmap <a-f>\nunmap <a-m>\nunmap <a-p>\nunmap ^",
+  "keyMappings": "map a Vomnibar.activateInNewTab\nmap A createTab\nunmap <a-f>\nmap s toggleViewSource\nmap S LinkHints.activateModeToDownloadLink\nmap ) nextTab\nmap ( previousTab\nmap } moveTabLeft\nmap } moveTabRight\nmap 0 firstTab\nmap $ lastTab\nmap w duplicateTab\nmap U restoreTab\nmap i scrollPageDown\nmap h goBack\nmap l goForward\nmap H scrollLeft\nmap L scrollRight",
   "linkHintCharacters": "0123456789",
   "linkHintNumbers": "0123456789",
   "newTabUrl": "about:newtab",

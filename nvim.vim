@@ -29,6 +29,8 @@ nnoremap f /
 nnoremap F ?
 nnoremap Z zb
 nnoremap z zz
+nnoremap ce c$
+nnoremap de d$
 nnoremap \ :%s/gI<Left><Left>
 
 " Tabs are 8 space characters
