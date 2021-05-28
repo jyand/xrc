@@ -17,7 +17,8 @@ export MANPAGER="vimpager"
 
 # Default Applications
 export WIN="bspwm"
-export TERMINAL="kitty"
+#export TERMINAL="kitty"
+export TERMINAL="st"
 export EDITOR="nvim"
 export FILE="vifm"
 export READER="zathura"

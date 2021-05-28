@@ -4,10 +4,16 @@ ln -Pvf bspwmrc ~/.config/bspwm
 ln -Pvf kittyrc ~/.config/kitty/kitty.conf
 ln -Pvf mpv.conf ~/.config/mpv
 ln -Pvf nvim.vim ~/.config/nvim/init.vim
-ln -Pvf yabarrc ~/.config/yabar
+#ln -Pvf yabarrc ~/.config/yabar
 ln -Pvf sxhkdrc ~/.config/sxhkd
 ln -Pvf visrc.lua ~/.config/vis
 ln -Pvf zathurarc ~/.config/zathura
 
-doas cp -v Theme/based.lua /usr/share/vis/themes 
-doas cp -v Theme/based.vim /usr/share/nvim/runtime/colors 
+ln -Pvf Xmodmap ~/.Xmodmap
+ln -Pvf xinitrc ~/.xinitrc
+ln -Pvf profile ~/.profile
+ln -Pvf kshrc ~/.kshrc
+ln -Pvf zshrc ~/.zshrc
+
+#doas cp -v Theme/based.lua /usr/share/vis/themes 
+#doas cp -v Theme/based.vim /usr/share/nvim/runtime/colors 
