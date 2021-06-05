@@ -1,6 +1,6 @@
 #!/bin/sh
 
-#feh --bg-fill --no-fehbg ~/.local/background.png
+feh --bg-fill --no-fehbg ~/.local/bgnd.webp
 
 xmodmap ~/.Xmodmap
 xcompmgr -c &

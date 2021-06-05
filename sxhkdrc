@@ -5,15 +5,15 @@
 hyper + z
         doas zzz -H
 {mod4, hyper} + q
-        xdo {close, kill}
+        xdo kill
 {mod4, hyper} + x
-        xdo {close, kill}
+        xdo close
 {mod4, hyper} + period
-        {$TERMINAL -e $FILE, lxterminal -e $FILE}
+        {$TERMINAL -e $FILE, kitty -e $FILE}
 {mod4, hyper} + comma
-        {$TERMINAL -e $FILE, lxterminal -e $FILE}
+        {$TERMINAL -e $FILE, kitty -e $FILE}
 {mod4, hyper} + e
-        {$TERMINAL -e $FILE, lxterminal -e $FILE}
+        {$TERMINAL -e $FILE, kitty -e $FILE}
 mod4 + d 
         dmenu_run
 # Browsers
@@ -22,7 +22,7 @@ mod4 + i
 mod4 + o
         firejail --net=none icecat -P reader
 mod4 + b
-        $BROWSER --js-flags=--noexpose_wasm
+        $BROWSER
 mod4 + v
         $BROWSER --js-flags=--noexpose_wasm --incognito
 # Audio
@@ -43,18 +43,16 @@ mod4 + m
         $TERMINAL -e {julia, R}
 # Utilities
 mod4 + s
-        maim -s ~/Pictures/$(date +%F_%T).png
+        maim -s ~/Document/Images/shots/$(date +%F_%T).png
 mod4 + r
         redshift -O 2500
 mod4 + t
         redshift -x
 {mod4, hyper} + p
-        {$TERMINAL -e ytop -fap -c vice -I 1/2, $TERMINAL -e htop}
+        {kitty -e ytop -fap -c vice, $TERMINAL -e htop}
 # Bar
 mod4 + y
         pgrep yabar && kill $(pgrep yabar) || yabar &
-mod4 + u
-        bspc config top-padding 0
 
 # BSPWM
 #
@@ -73,7 +71,7 @@ mod4 + 0
 {mod4, hyper} + {1-9}
         bspc {desktop -f,node -d} ^{1-9}
 mod4 + u
-        bspc node -t {~,}pseudo_tiled
+        bspc node -t {\~,}pseudo_tiled
 mod4 + f
         bspc node -t {~,}fullscreen
 mod4 + a

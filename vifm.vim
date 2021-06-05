@@ -11,8 +11,8 @@ nnoremap , :on | :!$TERMINAL -e vifm 2> /dev/null &<CR>
 nnoremap . :on | :!$TERMINAL -e $EDITOR %f 2> /dev/null &<CR>
 nnoremap C :on | :!$TERMINAL -e scim %f 2> /dev/null &<CR>
 map I :!sxiv *.png *.jpg *.gif *.jpeg *.bmp *.webp 2> /dev/null &<CR>
-map B :sp | :!firejail icecat -P reader %f 2> /dev/null &<CR>
-map b :sp | :!$BROWSER %f 2> /dev/null &<CR>
+map b :sp | :!chromium %f 2> /dev/null &<CR>
+"map B :sp | :!firejail icecat -P reader %f 2> /dev/null &<CR>
 
 "mappings
 nnoremap F :!zsh<CR>
