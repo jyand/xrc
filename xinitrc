@@ -10,5 +10,5 @@ unclutter &
 pulseaudio --check && pulseaudio --start
 
 sxhkd &
-#yabar &
+slstatusbar
 exec $WIN

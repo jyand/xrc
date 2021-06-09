@@ -52,7 +52,7 @@ mod4 + t
         {kitty -e ytop -fap -c vice, $TERMINAL -e htop}
 # Bar
 mod4 + y
-        pgrep yabar && kill $(pgrep yabar) || yabar &
+        pgrep slstatusbar && kill $(pgrep slstatusbar) || yabar &
 
 # BSPWM
 #
