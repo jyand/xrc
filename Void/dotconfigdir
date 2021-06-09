@@ -3,6 +3,7 @@
 ln -Pvf bspwmrc ~/.config/bspwm
 ln -Pvf kittyrc ~/.config/kitty/kitty.conf
 ln -Pvf mpv.conf ~/.config/mpv
+ln -Pvf mpvkeys.conf ~/.config/mpv/input.conf
 ln -Pvf nvim.vim ~/.config/nvim/init.vim
 #ln -Pvf yabarrc ~/.config/yabar
 ln -Pvf sxhkdrc ~/.config/sxhkd

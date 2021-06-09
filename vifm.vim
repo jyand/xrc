@@ -49,13 +49,13 @@ nnoremap _ q:
 map ; :!
 map m :
 noremap <Tab> <c-w><c-l> 
-nnoremap z :select<CR>
+noremap z :select<CR>
 vnoremap ) }
 vnoremap ( {
 
 "settings
 set vicmd=nvim
-set number relativenumber
+set number "relativenumber = brainless
 set syscalls
 set nofollowlinks
 set sortnumbers
@@ -66,14 +66,18 @@ set incsearch
 set scrolloff=1
 set undolevels=16
 set suggestoptions=normal,visual,view,otherpane,keys,marks,registers,delay:5000
-set vifminfo=
-"set vifminfo=dhistory,chistory,tui,shistory,uphistory,fhistory,dirstack,registers
+set vifminfo=registers
+"set vifminfo=dhistory,chistory,tui,shistory,uphistory,fhistory,dirstack
 
 "Image Previews
-fileviewer *.png,*.jpg,*.jpeg,*.gif,*.bmp,*.xpm
-                        \ kitty icat --transfer-mode=file --place=%pwx%ph@%pxx%py %c
-                        \ %pc
-                        \ kitty icat --transfer-mode=file --clear
+fileviewer *.png,*.jpg,*.jpeg,*.gif,*.bmp,*.xpm,*.webp,*.ff
+                        \ mediainfo %c
+                        "\ kitty icat --transfer-mode=file --place=%pwx%ph@%pxx%py %c
+                        "\ %pc
+                        "\ kitty icat --transfer-mode=file --clear
+fileviewer *.wav,*.mp3,*.flac,*.m4a,*.wma,*.amr,*.opus,*.ogg,*.mpeg,*.mpg,*.avi,*.mp4,*.wmv,*.mkv,*.mpg,*.mpeg,*.vob,*.mov,*.webm
+                        \ mediainfo %c
+
 " Web Page Previews
 fileviewer *.htm,*.html,*.php
                         \ lynx -dump %c
@@ -99,7 +103,8 @@ fileviewer *.zip
 filetype *.pdf,*.ps,*.eps,*.ps.gz,*.djvu zathura %f 2> /dev/null & 
 filetype *.png,*.jpg,*.jpeg,*.gif,*.bmp,*.xpm,*.webp sxiv %f 2> /dev/null &
 filetype *.csv,*.xls,*.xlsx scim
-filetype *.wav,*.mp3,*.flac,*.m4a,*.wma,*.ape deadbeef --queue %f 2> /dev/null &
+"filetype *.wav,*.mp3,*.flac,*.m4a,*.wma,*.ape deadbeef --queue %f 2> /dev/null &
+filetype *.wav,*.mp3,*.flac,*.m4a,*.wma,*.ape,*.ogg,*.opus mpv --window-scale=0.5 %f 2> /dev/null &
 filetype *.avi,*.mp4,*.wmv,*.3gp,*.ogv,*.mkv,*.mpg,*.mpeg,*.vob,*.fl[icv],*.m2v,*.mov,*.webm,*.mts,*.m4v mpv %f 2> /dev/null &
 filetype *.o nm %f | $PAGER
 filetype *.[1-8] man ./%c
