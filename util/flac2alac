@@ -1,0 +1,4 @@
+#!/usr/bin/env zsh
+for i in *.flac ; do
+        ffmpeg -y -i "$i" -c:a alac "$(basename $i | sed 's/flac/m4a/g' | sed 's/ //g')"
+done

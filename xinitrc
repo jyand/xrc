@@ -1,6 +1,7 @@
 #!/bin/sh
 
-feh --bg-fill --no-fehbg ~/.local/bgnd.webp
+#feh --bg-fill --no-fehbg ~/.local/bgnd.webp
+bgcycle &
 
 xmodmap ~/.Xmodmap
 xcompmgr -c &

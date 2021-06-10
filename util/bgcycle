@@ -1,0 +1,7 @@
+#!/bin/sh
+
+while true ; do
+        for i in $HOME/.local/backgrounds/*.webp ; do
+                feh --bg-fill --no-fehbg "$i" && sleep 15m
+        done
+done
