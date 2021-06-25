@@ -43,7 +43,7 @@ mod4 + m
         $TERMINAL -e {julia, R}
 # Utilities
 mod4 + s
-        maim -s ~/Document/Images/shots/$(date +%F_%T).png
+        maim -s ~/Documents/Images/shots/$(date +%F_%T).png
 mod4 + r
         redshift -O 2500
 mod4 + t
