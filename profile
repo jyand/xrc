@@ -19,8 +19,8 @@ export MANPAGER="vimpager"
 
 # Default Applications
 export WIN="bspwm"
-#export TERMINAL="kitty"
-export TERMINAL="st"
+export TERMINAL="kitty"
+#export TERMINAL="st"
 export EDITOR="nvim"
 export FILE="vifm"
 export READER="zathura"
@@ -28,4 +28,4 @@ export IMAGE="sxiv"
 export BROWSER="ungoogled-chromium"
 
 # Auto-start desktop after logging in from tty
-! busybox pgrep -x $WIN > /dev/null && exec startx 2> /dev/null
+! busybox pgrep -x $WIN > /dev/null && exec sx ~/.xinitrc 2> /dev/null

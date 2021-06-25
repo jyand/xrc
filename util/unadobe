@@ -1,0 +1,4 @@
+#!/bin/sh
+for i in $(ls *pdf | sed 's/pdf//g') ; do
+        pdf2djvu -o ${i}djvu -d 1200 --crop-text --verbatim-metadata -j0 ${i}pdf
+done

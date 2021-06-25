@@ -50,8 +50,8 @@ map ; :!
 map m :
 noremap <Tab> <c-w><c-l> 
 noremap z :select<CR>
-vnoremap ) }
-vnoremap ( {
+noremap ) }
+noremap ( {
 
 "settings
 set vicmd=nvim
