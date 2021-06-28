@@ -1,4 +1,0 @@
-#!/usr/bin/env zsh
-for i in *.mp3 ; do
-        ffmpeg -i "$i" "$(basename $i | sed 's/mp3/wav/g' | sed 's/ //g')"
-done

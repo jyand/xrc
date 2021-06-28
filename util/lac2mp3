@@ -1,0 +1,4 @@
+#!/usr/bin/env zsh
+for i in *.m4a *.flac ; do
+        ffmpeg -i "$i" -c:v copy -ab 320k "$(basename $i | sed -e 's/m4a/mp3/' -e 's/flac/mp3/' | sed 's/ //g')"
+done

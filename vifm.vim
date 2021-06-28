@@ -39,6 +39,7 @@ map - :set sort=-dir,name<CR>
 map + :set sort=+dir,name<CR>
 nnoremap < :si<CR>
 map > :siblprev<CR>
+noremap R :undolist<CR>
 nnoremap U u
 nnoremap u :!busybox unzip %c<CR>
 map x :!busybox tar -xf %c<CR>

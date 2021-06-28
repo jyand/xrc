@@ -1,0 +1,7 @@
+#!/usr/bin/env zsh
+for i in *.m4a ; do
+        ffmpeg -i "$i" "$(basename $i | sed 's/m4a/aiff/g' | sed 's/ //g')"
+done
+for i in *.flac *.mp3 *.opus *.amr ; do
+        ffmpeg -i "$i" "$(basename $i | sed -e 's/flac/wav/' -e 's/mp3/wav/' -e 's/opus/wav/' -e 's/amr/wav/ | sed 's/ //g'')"
+done

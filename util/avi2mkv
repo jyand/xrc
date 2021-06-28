@@ -1,0 +1,4 @@
+#!/usr/bin/env zsh
+for i in *.avi ; do
+        ffmpeg -fflags +genpts -i "$i" -c:v copy -c:a copy "$(basename $i | sed 's/avi/mkv/g' | sed 's/ //g')"
+done

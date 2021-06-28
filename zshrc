@@ -21,7 +21,6 @@ source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
 PS1='%F{cyan}%/ %F{white}'
 alias q="exit"
-alias a="exit"
 alias z="exit"
 alias d="doas"
 alias r="busybox clear"
@@ -37,7 +36,8 @@ alias m="doas mount"
 alias u="doas umount -R /mnt"
 alias e="busybox echo"
 alias c="busybox cat"
-alias L="$PAGER"
+alias a="$PAGER"
+alias F="ffmpeg"
 alias f="grep --color"
 alias n="busybox wc -l"
 alias i="openbsd-file"

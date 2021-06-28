@@ -1,4 +1,0 @@
-#!/usr/bin/env zsh
-for i in *.flac ; do
-        ffmpeg -i "$i" "$(basename $i | sed 's/flac/wav/g' | sed 's/ //g')"
-done
