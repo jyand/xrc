@@ -2,6 +2,11 @@
 for i in *.m4a ; do
         ffmpeg -i "$i" "$(basename $i | sed 's/m4a/aiff/g' | sed 's/ //g')"
 done
-for i in *.flac *.mp3 *.opus *.amr ; do
-        ffmpeg -i "$i" "$(basename $i | sed -e 's/flac/wav/' -e 's/mp3/wav/' -e 's/opus/wav/' -e 's/amr/wav/ | sed 's/ //g'')"
+for i in *.flac ; do
+        ffmpeg -i "$i" "$(basename $i | sed 's/flac/wav/g' | sed 's/ //g')"
+done
+for j in mp3 opus amr
+        for i in *.${j} ; do
+                ffmpeg -i "$i" "$(basename $i | sed -e 's/mp3/wav/' -e 's/opus/wav/' -e 's/amr/wav/ | sed 's/ //g'')"
+        done
 done
