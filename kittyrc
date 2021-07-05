@@ -24,3 +24,13 @@ update_check_interval 0
 
 window_border_width 0.5
 window_padding_width 0.5
+
+map ctrl+y copy_to_clipboard
+map ctrl+p paste_from_clipboard
+map ctrl+h show_scrollback
+map ctrl+k scroll_page_up
+map ctrl+j scroll_page_down
+map ctrl+plus change_font_size all +0.5
+map ctrl+minus change_font_size all -0.5
+map ctrl+o set_background_opacity +0.05
+map ctrl+i set_background_opacity -0.05
