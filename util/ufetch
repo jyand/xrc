@@ -6,11 +6,11 @@
 
 # user is already defined
 host=`uname -n`
-os='Artix'
+os='Void'
 kernel=`uname -sr`
 uptime="$(uptime -p | sed 's/up //')"
 #uptime=`uptime | awk '{print $3" "$4}' | tr -d ,`
-packages=`pacman -Q | wc -l`
+packages=`xbps-query -l | wc -l`
 shell=`basename "${SHELL}"`
 
 ## UI DETECTION

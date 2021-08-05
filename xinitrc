@@ -5,10 +5,9 @@ bgcycle &
 
 xmodmap ~/.Xmodmap
 xcompmgr -c &
-#xbanish &
-unclutter &
+xbanish &
 
-pulseaudio --check && pulseaudio --start
+#pulseaudio --check && pulseaudio --start
 
 sxhkd &
 slstatusbar

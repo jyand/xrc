@@ -104,8 +104,8 @@ fileviewer *.zip
 filetype *.pdf,*.ps,*.eps,*.ps.gz,*.djvu zathura %f 2> /dev/null & 
 filetype *.png,*.jpg,*.jpeg,*.gif,*.bmp,*.xpm,*.webp,*.ff sxiv %f 2> /dev/null &
 filetype *.csv,*.xls,*.xlsx scim
-"filetype *.wav,*.mp3,*.flac,*.m4a,*.wma,*.ape deadbeef --queue %f 2> /dev/null &
-filetype *.wav,*.aiff,*.pcm,*.mp3,*.flac,*.m4a,*.wma,*.amr,*.ape,*.ogg,*.opus mpv --window-scale=0.5 %f 2> /dev/null &
+filetype *.wav,*.aiff,*.pcm,*.flac,*.m4a,*.amr,*.mp3,*.opus deadbeef --queue %f 2> /dev/null &
+"filetype *.wav,*.aiff,*.pcm,*.flac,*.m4a,*.amr,*.mp3,*.opus mpv --window-scale=0.5 %f 2> /dev/null &
 filetype *.mkv,*.webm,*.mp4,*.avi*,.wmv,*.vob,*.mov,*.mpg,*.mpeg mpv %f 2> /dev/null &
 filetype *.o nm %f | $PAGER
 filetype *.[1-8] man ./%c

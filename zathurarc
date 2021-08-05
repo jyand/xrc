@@ -19,5 +19,5 @@ map R rotate
 map ) zoom in
 map ( zoom out
 map x quit
-unmap q
+map g gg
 map <Return> recolor

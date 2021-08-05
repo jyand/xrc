@@ -3,17 +3,17 @@
 # WM-Independent
 #
 hyper + z
-        doas zzz -H
+        doas zzz
 {mod4, hyper} + q
         xdo kill
 {mod4, hyper} + x
         xdo close
 {mod4, hyper} + period
-        {$TERMINAL -e $FILE, kitty -e $FILE}
+        {$TERMINAL -e $FILE, st -e $FILE}
 {mod4, hyper} + comma
-        {$TERMINAL -e $FILE, kitty -e $FILE}
+        {$TERMINAL -e $FILE, st -e $FILE}
 {mod4, hyper} + e
-        {$TERMINAL -e $FILE, kitty -e $FILE}
+        {$TERMINAL -e $FILE, st -e $FILE}
 mod4 + d 
         dmenu_run
 # Browsers

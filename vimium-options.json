@@ -1,10 +1,10 @@
 {
-  "settingsVersion": "1.66",
+  "settingsVersion": "1.67",
   "exclusionRules": [],
   "filterLinkHints": false,
   "waitForEnterForFilteredHints": false,
   "hideHud": false,
-  "keyMappings": "map a Vomnibar.activateInNewTab\nmap A createTab\nunmap <a-f>\nmap s toggleViewSource\nmap S LinkHints.activateModeToDownloadLink\nmap ( nextTab\nmap ) previousTab\nmap } moveTabLeft\nmap { moveTabRight\nmap 0 firstTab\nmap $ lastTab\nmap w duplicateTab\nmap U restoreTab\nmap i scrollPageDown\nmap h goBack\nmap l goForward\nmap H scrollLeft\nmap L scrollRight\nmap m LinkHints.activateModeWithQueue\nmap v goUp\nmap V goToRoot\nmap e Vomnibar.activateEditUrl\nmap y LinkHints.activateModeToCopyLinkUrl\nmap Y copyCurrentUrl\nmap \\ Vomnibar.activateTabSelection\nmap T LinkHints.activateModeToOpenInNewForegroundTab",
+  "keyMappings": "map a Vomnibar.activateInNewTab\nmap A createTab\nunmap <a-f>\nmap s toggleViewSource\nmap S LinkHints.activateModeToDownloadLink\nmap ( nextTab\nmap ) previousTab\nmap } moveTabLeft\nmap { moveTabRight\nmap 0 firstTab\nmap $ lastTab\nmap w duplicateTab\nmap U restoreTab\nmap i scrollPageDown\nmap h goBack\nmap l goForward\nmap H scrollLeft\nmap L scrollRight\nmap m LinkHints.activateModeWithQueue\nmap v goUp\nmap V goToRoot\nmap e Vomnibar.activateEditUrl\nmap y LinkHints.activateModeToCopyLinkUrl\nmap Y copyCurrentUrl\nmap \\ Vomnibar.activateTabSelection\nmap T LinkHints.activateModeToOpenInNewForegroundTab\nmap g scrollToTop",
   "linkHintCharacters": "0123456789",
   "linkHintNumbers": "0123456789",
   "newTabUrl": "chrome://newtab",
