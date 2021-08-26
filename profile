@@ -1,5 +1,3 @@
-#!/bin/sh
-
 # env
 export PATH="/opt/bin":"/usr/bin":"$HOME/.local/bin"
 #export PATH="/opt/bin":"/usr/bin":"$HOME/.local/bin":"/usr/lib/psql12/bin"

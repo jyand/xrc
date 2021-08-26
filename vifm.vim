@@ -11,7 +11,8 @@ nnoremap , :on | :!$TERMINAL -e vifm 2> /dev/null &<CR>
 nnoremap . :on | :!$TERMINAL -e $EDITOR %f 2> /dev/null &<CR>
 nnoremap C :on | :!$TERMINAL -e scim %f 2> /dev/null &<CR>
 map I :!sxiv *.png *.jpg *.gif *.jpeg *.bmp *.webp *.ff 2> /dev/null &<CR>
-map b :sp | :!chromium %f 2> /dev/null &<CR>
+map b :!ungoogled-chromium %f 2> /dev/null &<CR>
+"map b :sp | :!chromium %f 2> /dev/null &<CR>
 "map B :sp | :!firejail icecat -P reader %f 2> /dev/null &<CR>
 
 "mappings
@@ -53,6 +54,7 @@ noremap <Tab> <c-w><c-l>
 noremap z :select<CR>
 noremap ) }
 noremap ( {
+map \ :%substitute/
 
 "settings
 set vicmd=nvim
