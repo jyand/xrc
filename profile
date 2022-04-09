@@ -1,5 +1,5 @@
 # env
-export PATH="/opt/bin":"/usr/bin":"$HOME/.local/bin"
+export PATH="/opt/bin":"/usr/bin":"$HOME/.local/bin":"/opt/texlive/bin/2021/x86_64-linux"
 #export PATH="/opt/bin":"/usr/bin":"$HOME/.local/bin":"/usr/lib/psql12/bin"
 export MANPATH="/usr/share/man":"/opt/man"
 export ENV="$HOME/.kshrc"
@@ -10,7 +10,7 @@ export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_RUNTIME_DIR="/tmp/runtime-jyan"
 export VIFM="$XDG_CONFIG_HOME/vifm"
 export LESSHISTFILE="/dev/null"
-#export XAUTHORITY="$HOME/.local/.Xauthority"
+export XAUTHORITY="$HOME/.local/.Xauthority"
 export GREP_COLORS="sl=01;33"
 export MAIL=""
 #export PAGER="bat"
@@ -28,4 +28,5 @@ export IMAGE="sxiv"
 export BROWSER="ungoogled-chromium"
 
 # Auto-start desktop after logging in from tty
-! busybox pgrep -x $WIN > /dev/null && exec sx 2> /dev/null
+#! busybox pgrep -x $WIN > /dev/null && exec sx 2> /dev/null
+! busybox pgrep -x $WIN > /dev/null && exec startx

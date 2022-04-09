@@ -11,4 +11,4 @@ xbanish &
 
 sxhkd &
 slstatusbar
-exec $WIN
+sh $WIN

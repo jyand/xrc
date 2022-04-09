@@ -73,13 +73,14 @@ set vifminfo=registers
 "set vifminfo=dhistory,chistory,tui,shistory,uphistory,fhistory,dirstack
 
 "Image Previews
-fileviewer *.png,*.jpg,*.jpeg,*.gif,*.bmp,*.xpm,*.webp,*.ff
-                        \ mediainfo %c
+"fileviewer *.png,*.jpg,*.jpeg,*.gif,*.bmp,*.xpm,*.webp,*.ff
+"                        \ mediainfo %c
                         "\ kitty icat --transfer-mode=file --place=%pwx%ph@%pxx%py %c
                         "\ %pc
                         "\ kitty icat --transfer-mode=file --clear
-fileviewer *.wav,*.mp3,*.flac,*.m4a,*.wma,*.amr,*.opus,*.ogg,*.mpeg,*.mpg,*.avi,*.mp4,*.wmv,*.mkv,*.mpg,*.mpeg,*.vob,*.mov,*.webm
-                        \ mediainfo %c
+
+"fileviewer *.wav,*.mp3,*.flac,*.m4a,*.wma,*.amr,*.opus,*.ogg,*.mpeg,*.mpg,*.avi,*.mp4,*.wmv,*.mkv,*.mpg,*.mpeg,*.vob,*.mov,*.webm
+"                        \ mediainfo %c
 
 " Web Page Previews
 fileviewer *.htm,*.html,*.php
@@ -101,6 +102,10 @@ fileviewer *tar.*
                         \ tar -vtf %c
 fileviewer *.zip
                         \ busybox unzip -l %c
+fileviewer *.mkv,*.webm,*.mp4,*.avi*,.wmv,*.vob,*.mov,*.mpg,*.mpeg,*.wav,*.aiff,*.pcm,*.flac,*.m4a,*.amr,*.mp3,*.opus
+        \ ffprobe %c
+fileviewer *.png,*.jpg,*.jpeg,*.gif,*.bmp,*.xpm,*.webp,*.ff
+        \ exiv2 %c
 
 "Default file associations
 filetype *.pdf,*.ps,*.eps,*.ps.gz,*.djvu zathura %f 2> /dev/null & 

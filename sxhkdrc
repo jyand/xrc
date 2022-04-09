@@ -22,9 +22,9 @@ mod4 + i
 mod4 + o
         firejail --net=none icecat -P reader
 mod4 + b
-        $BROWSER
+        $BROWSER --js-flags=--noexpose_wasm --fingerprinting-canvas-image-data-noise --fingerprinting-canvas-measuretext-noise --bookmark-bar-ntp=never --hide-tab-close-buttons --enable-features=ClearDataOnExit,DisableQRGenerator
 mod4 + v
-        $BROWSER --js-flags=--noexpose_wasm --incognito
+        $BROWSER --js-flags=--noexpose_wasm --fingerprinting-canvas-image-data-noise --fingerprinting-canvas-measuretext-noise --bookmark-bar-ntp=never --hide-tab-close-buttons --enable-features=ClearDataOnExit,DisableQRGenerator --incognito 
 # Audio
 mod4 + m
         pamixer -t

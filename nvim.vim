@@ -32,6 +32,7 @@ nnoremap z zz
 nnoremap ce c$
 nnoremap de d$
 nnoremap \ :%s/gI<Left><Left>
+nnoremap T :set hlsearch!<CR>
 
 " Tabs are 8 space characters
 set tabstop=8 softtabstop=0 expandtab shiftwidth=8 smarttab
