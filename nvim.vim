@@ -29,8 +29,8 @@ nnoremap f /
 nnoremap F ?
 nnoremap Z zb
 nnoremap z zz
-nnoremap ce c$
-nnoremap de d$
+nnoremap ce cW
+nnoremap de dW
 nnoremap \ :%s/gI<Left><Left>
 nnoremap T :set hlsearch!<CR>
 
