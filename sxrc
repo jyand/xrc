@@ -6,8 +6,8 @@ feh --bg-fill --no-fehbg ~/.local/bgnd.webp
 xmodmap ~/.config/Xmodmap
 picom --corner-radius 6 -b
 xbanish &
-xinput set-prop "SynPS/2 Synaptics Touchpad" "libinput Natural Scrolling Enabled Default" 1
-xinput set-prop "TPPS/2 IBM TrackPoint" "libinput Natural Scrolling Enabled Default" 1
+xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Natural Scrolling Enabled" 1
+xinput set-prop "TPPS/2 IBM TrackPoint" "libinput Natural Scrolling Enabled" 1
 
 sxhkd &
 slstatusbar
