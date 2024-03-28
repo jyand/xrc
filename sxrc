@@ -1,14 +1,14 @@
 #!/bin/sh
 
-#feh --bg-fill --no-fehbg ~/.local/bgnd.webp
-bgcycle &
+feh --bg-fill --no-fehbg ~/.local/bgnd.webp
+#bgcycle &
 
-xmodmap ~/.Xmodmap
-xcompmgr -c &
+xmodmap ~/.config/Xmodmap
+picom --corner-radius 6 -b
 xbanish &
-
-#pulseaudio --check && pulseaudio --start
+xinput set-prop "SynPS/2 Synaptics Touchpad" "libinput Natural Scrolling Enabled Default" 1
+xinput set-prop "TPPS/2 IBM TrackPoint" "libinput Natural Scrolling Enabled Default" 1
 
 sxhkd &
 slstatusbar
-sh $WIN
+exec $WIN

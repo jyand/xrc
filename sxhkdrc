@@ -49,7 +49,7 @@ mod4 + r
 mod4 + t
         redshift -x
 {mod4, hyper} + p
-        {kitty -e btm -f, $TERMINAL -e htop}
+        {kitty -e btm -f --battery, $TERMINAL -e htop}
         #{kitty -e ytop -fap -c vice, $TERMINAL -e htop}
 # Bar
 mod4 + y

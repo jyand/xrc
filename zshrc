@@ -19,14 +19,14 @@ zle -N zle-line-init
 source /opt/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
-PS1='%F{cyan}%/ %F{white}'
+PS1='%F{cyan}%/%F{magenta} %F{white}' #λ
 alias q="exit"
 alias z="exit"
 alias d="doas"
 alias r="busybox clear"
 alias k="busybox kill"
 alias j="busybox pgrep"
-alias l="exa -alF --no-user --no-permissions"
+alias l="eza -alF --no-user --no-permissions"
 alias h="man"
 alias hk="apropos"
 alias t="tldr"
@@ -80,4 +80,4 @@ alias gw="git switch"
 alias gc="git checkout"
 alias M="make && doas make install && make clean"
 alias head="sed 20q"
-ufetch
+#ufetch

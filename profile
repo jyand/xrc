@@ -1,5 +1,7 @@
 # env
-export PATH="/opt/bin":"/usr/bin":"$HOME/.local/bin":"/opt/texlive/bin/2021/x86_64-linux"
+export ANDROID_HOME=/opt/Android/SDK
+export ANDROID_BIN="$ANDROID_HOME/emulator":"$ANDROID_HOME/platform-tools"
+export PATH="/opt/bin":"/usr/bin":"$HOME/.local/bin":$ANDROID_BIN:"/opt/Android/android-studio/jbr/bin"
 #export PATH="/opt/bin":"/usr/bin":"$HOME/.local/bin":"/usr/lib/psql12/bin"
 export MANPATH="/usr/share/man":"/opt/man"
 export ENV="$HOME/.kshrc"
@@ -14,8 +16,8 @@ export XAUTHORITY="$HOME/.local/.Xauthority"
 export GREP_COLORS="sl=01;33"
 export MAIL=""
 #export PAGER="bat"
-export PAGER="busybox-less"
-export MANPAGER="vimpager"
+#export PAGER="busybox-less"
+#export MANPAGER="vimpager"
 
 # Default Applications
 export WIN="bspwm"
@@ -29,4 +31,4 @@ export BROWSER="ungoogled-chromium"
 
 # Auto-start desktop after logging in from tty
 #! busybox pgrep -x $WIN > /dev/null && exec sx 2> /dev/null
-! busybox pgrep -x $WIN > /dev/null && exec startx
+! busybox pgrep -x $WIN > /dev/null && exec xinit 2> /dev/null

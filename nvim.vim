@@ -25,8 +25,6 @@ nnoremap m :
 nnoremap Q q
 nnoremap q q:
 nnoremap _ :!
-nnoremap f /
-nnoremap F ?
 nnoremap Z zb
 nnoremap z zz
 nnoremap ce cW
@@ -72,6 +70,6 @@ set wildmenu
 set nopaste
 
 autocmd BufRead,BufNewFile *.rkt setlocal filetype=racket
-autocmd BufRead,BufNewFile *.elm setlocal filetype=elm
+"autocmd BufRead,BufNewFile *.elm setlocal filetype=elm
 autocmd BufRead,BufNewFile shXX*,*.fish setlocal filetype=zsh
 autocmd BufRead,BufNewFile *.tsx,*.jsx,*.js setlocal filetype=typescript
