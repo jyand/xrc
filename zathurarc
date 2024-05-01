@@ -20,4 +20,5 @@ map ) zoom in
 map ( zoom out
 map x quit
 map g gg
+map b toggle_statusbar
 map <Return> recolor

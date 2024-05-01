@@ -1,7 +1,7 @@
 # env
 export ANDROID_HOME=/opt/Android/SDK
 export ANDROID_BIN="$ANDROID_HOME/emulator":"$ANDROID_HOME/platform-tools"
-export PATH="/opt/bin":"/usr/bin":"$HOME/.local/bin":$ANDROID_BIN:"/opt/Android/android-studio/jbr/bin"
+export PATH="/opt/bin":"/usr/bin":"$HOME/.local/bin":$ANDROID_BIN:"/opt/Android/android-studio/jbr/bin":"/opt/Android/android-studio/bin"
 #export PATH="/opt/bin":"/usr/bin":"$HOME/.local/bin":"/usr/lib/psql12/bin"
 export MANPATH="/usr/share/man":"/opt/man"
 export ENV="$HOME/.kshrc"
